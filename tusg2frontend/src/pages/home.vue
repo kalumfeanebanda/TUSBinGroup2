@@ -4,7 +4,7 @@
     <p>Kalum</p>
     <p class="lead">
       A quick landing page to introduce what we’re building.
-    </p>
+    </p>np
 
     <div class="cta-row">
       <button class="btn" @click="go()">Get Started</button>
