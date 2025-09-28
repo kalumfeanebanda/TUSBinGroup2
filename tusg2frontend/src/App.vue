@@ -6,6 +6,10 @@ import home from './pages/home.vue'
 
 <template>
   <div class="app">
+
+
+   
+
  
     <!-- Header (always visible) -->
     <Header/>
@@ -16,7 +20,8 @@ import home from './pages/home.vue'
 
 
  
->>>>>> main
+
+
     <main class="main">
       <home/>
       <!-- later replace <home /> with <router-view /> -->
