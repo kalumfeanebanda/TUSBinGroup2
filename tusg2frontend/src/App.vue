@@ -6,7 +6,7 @@ import Footer from './components/Footer.vue'
 <template>
   <div class="app">
 
-    <p style="margin: 0; font-weight: bold;">Favour</p>
+   
     <main class="main">
       <home />
     </main>
