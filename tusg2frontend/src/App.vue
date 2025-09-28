@@ -5,6 +5,11 @@ import Footer from './components/Footer.vue'
 
 <template>
   <div class="app">
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
     <main class="main">
       <home />
     </main>
