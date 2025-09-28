@@ -1,14 +1,21 @@
 <script setup>
-import home from './pages/home.vue'
+import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import home from './pages/home.vue'
 </script>
 
 <template>
   <div class="app">
+    <!-- Header (always visible) -->
+    <Header/>
+
+    <!-- Main content (page content changes here) -->
     <main class="main">
-      <home />
+      <home/>
+      <!-- later replace <home /> with <router-view /> -->
     </main>
 
+    <!-- Footer (always visible) -->
     <Footer
         projectName="Bin Pro"
         orgName="Your College"
@@ -20,7 +27,15 @@ import Footer from './components/Footer.vue'
   </div>
 </template>
 
+
 <style scoped>
-.app { min-height: 100dvh; display: flex; flex-direction: column; }
-.main { flex: 1 1 auto; }
+.app {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
 </style>
