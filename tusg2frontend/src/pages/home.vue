@@ -1,11 +1,24 @@
 <template>
   <section class="container">
     <h2 class="title">Welcome to Our Project</h2>
+
+    <p>Xiya</p>
+
     <p>Kalum</p>
+
     <p>Raiyan</p>
+
+
+    <p>Dauud</p>
+
+
+    <p>favour</p>
+
+
+
     <p class="lead">
       A quick landing page to introduce what we’re building.
-    </p>
+    </p>np
 
     <div class="cta-row">
       <button class="btn" @click="go()">Get Started</button>
