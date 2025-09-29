@@ -1,14 +1,16 @@
 <template>
   <section class="container">
     <h2 class="title">Welcome to Our Project</h2>
+
+    <p>Xiya</p>
+
     <p>Kalum</p>
 
+    <p>Dauud</p>
 
-
-
-    <p>tester</p>
 
     <p>favour</p>
+
 
     <p class="lead">
       A quick landing page to introduce what we’re building.
