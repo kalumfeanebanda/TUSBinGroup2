@@ -18,7 +18,7 @@
 
     <p class="lead">
       A quick landing page to introduce what we’re building.
-    </p>np
+    </p>
 
     <div class="cta-row">
       <button class="btn" @click="go()">Get Started</button>
