@@ -2,6 +2,8 @@
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import home from './pages/home.vue'
+import signin from './pages/signin.vue'
+import signup from './pages/signup.vue'
 </script>
 
 <template>
@@ -25,6 +27,7 @@ import home from './pages/home.vue'
     <main class="main">
       <home/>
       <!-- later replace <home /> with <router-view /> -->
+
     </main>
 
     <!-- Footer (always visible) -->
