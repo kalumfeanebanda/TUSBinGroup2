@@ -1,7 +1,7 @@
 <script setup>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
-import home from './pages/home.vue'
+import home from './pages/Home.vue'
 import Login from './pages/Login.vue'
 import Register from './pages/Register.vue'
 </script>

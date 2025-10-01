@@ -22,8 +22,9 @@
           class="search-bar"
           @keypress.enter="performSearch"
       />
-      <router-link to="/signin" class="nav-link">LOG IN</router-link>
-      <router-link to="/signup" class="nav-link">REGISTER</router-link>
+      <router-link to="/login" class="nav-link">LOG IN</router-link>
+      <router-link to="/register" class="nav-link">REGISTER</router-link>
+
     </div>
 
     <!-- Mobile Toggle -->
