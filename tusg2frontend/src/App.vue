@@ -9,9 +9,6 @@ import signup from './pages/signup.vue'
 <template>
   <div class="app">
 
-
-   
-
  
     <!-- Header (always visible) -->
     <Header/>
