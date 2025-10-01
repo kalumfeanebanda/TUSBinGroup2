@@ -2,8 +2,8 @@
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import home from './pages/home.vue'
-import signin from './pages/signin.vue'
-import signup from './pages/signup.vue'
+import Login from './pages/Login.vue'
+import Register from './pages/Register.vue'
 </script>
 
 <template>

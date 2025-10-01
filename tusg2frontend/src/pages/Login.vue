@@ -37,7 +37,7 @@
 
         <p class="mt-4 text-sm">
           Not Registered yet?
-          <a href="/signup" class="text-green-600 hover:underline">Sign Up</a>
+          <a href="/tusg2frontend/src/pages/Register" class="text-green-600 hover:underline">Register</a>
         </p>
       </div>
 

@@ -5,7 +5,7 @@
     >
       <!-- Left: Form -->
       <div class="w-full md:w-1/2 p-8">
-        <h3 class="text-gray-400 font-semibold">SignUp</h3>
+        <h3 class="text-gray-400 font-semibold">Register</h3>
         <h1 class="text-2xl font-bold mt-2">Get Started Now!</h1>
 
         <!-- Form -->
