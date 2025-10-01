@@ -6,7 +6,7 @@
 
     <p>Kalum</p>
 
-    <p>Raiyan Farhaz</p>
+    <p>Raiyan </p>
 
 
     <p>Dauud</p>
