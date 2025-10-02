@@ -1,70 +1,58 @@
 <template>
-  <div class="bg-pink-50 flex items-center justify-center min-h-screen">
-    <div
-        class="bg-white shadow-lg rounded-lg flex flex-col md:flex-row overflow-hidden w-[800px] max-w-full"
-    >
-      <!-- Left: Form -->
-      <div class="w-full md:w-1/2 p-8">
-        <h3 class="text-gray-400 font-semibold">Register</h3>
-        <h1 class="text-2xl font-bold mt-2">Get Started Now!</h1>
+  <div class="register-container">
+    <div class="register-card">
+    <!-- Left: Form -->
+    <div class="register-form">
+      <h2 class="title">Create an Account</h2>
+      <p class="subtitle">GET STARTED NOW!</p>
 
-        <!-- Form -->
-        <form @submit.prevent="handleSubmit" class="mt-6 space-y-4">
-          <input
-              v-model="form.name"
-              type="text"
-              placeholder="Name"
-              required
-              class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
-          <input
-              v-model="form.email"
-              type="email"
-              placeholder="Email"
-              required
-              class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
-          <input
-              v-model="form.password"
-              type="password"
-              placeholder="Password"
-              required
-              class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
-          <input
-              v-model="form.retypePassword"
-              type="password"
-              placeholder="Retype Password"
-              required
-              class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
+      <form @submit.prevent="handleRegister">
+        <label>Full Name</label>
+        <input
+            v-model="name"
+            type="text"
+            placeholder="Enter your full name"
+            required
+        />
 
-          <p v-if="error" class="text-red-500 text-sm">{{ error }}</p>
+        <label>Email</label>
+        <input
+            v-model="email"
+            type="email"
+            placeholder="Enter your email"
+            required
+        />
 
-          <button
-              type="submit"
-              class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition"
-          >
-            Sign Up
-          </button>
-        </form>
+        <label>Password</label>
+        <input
+            v-model="password"
+            type="password"
+            placeholder="Enter your password"
+            required
+        />
 
-        <!-- Bottom Link -->
-        <p class="text-sm text-gray-500 mt-4">
-          Have An Account?
-          <router-link to="/login" class="font-semibold text-gray-800 hover:underline">
-            Log In
-          </router-link>
-        </p>
-      </div>
+        <label>Retype Password</label>
+        <input
+            v-model="confirmPassword"
+            type="password"
+            placeholder="Re-enter your password"
+            required
+        />
 
-      <!-- Right: Illustration -->
-      <div
-          class="w-full md:w-1/2 bg-blue-100 flex items-center justify-center p-6"
-      >
-        <img src="@/assets/recycle.jpg" alt="Recycle Illustration" class="w-64 h-64 object-contain"/>
-      </div>
+        <button type="submit" class="register-btn">Sign Up</button>
+      </form>
+
+      <p class="login-text">
+        Have an account?
+        <router-link to="/login" class="login-link">Login</router-link>
+      </p>
     </div>
+
+    <!-- Right: Illustration -->
+    <div class="register-image">
+      <img src="@/assets/recycle.jpg" alt="Recycle" />
+    </div>
+  </div>
   </div>
 </template>
 
@@ -94,3 +82,114 @@ const handleSubmit = () => {
   alert("Sign Up Successful!");
 };
 </script>
+
+<style scoped>
+/* Center everything vertically and horizontally */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #fff6f6; /* same as login page */
+  padding: 1rem;
+}
+
+/* Card that holds form + image */
+.register-card {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 850px; /* same as login page */
+  width: 100%;
+  align-items: center;
+}
+
+/* Form section */
+.register-form {
+  flex: 1;
+  max-width: 350px;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: #1b5e20;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.register-btn {
+  background-color: #1b5e20;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background-color: #145a17;
+}
+
+.login-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.login-link {
+  color: #1b5e20;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 0.25rem;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* Image section */
+.register-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.register-image img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 12px;
+}
+</style>
+
