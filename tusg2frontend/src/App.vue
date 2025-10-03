@@ -1,33 +1,21 @@
 <script setup>
+// Bring in the header and footer, they stay the same on every page
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
-import home from './pages/home.vue'
 </script>
 
 <template>
   <div class="app">
-
-
-   
-
- 
-    <!-- Header (always visible) -->
+    <!-- Top of the site -->
     <Header/>
 
-    <!-- Main content (page content changes here) -->
-
- 
-
-
- 
-
-
+    <!-- The main content changes depending on the route -->
     <main class="main">
-      <home/>
-      <!-- later replace <home /> with <router-view /> -->
+      <!-- This is the "screen" where pages load -->
+      <router-view />
     </main>
 
-    <!-- Footer (always visible) -->
+    <!-- Bottom of the site -->
     <Footer
         projectName="Bin Pro"
         orgName="Your College"
@@ -39,15 +27,15 @@ import home from './pages/home.vue'
   </div>
 </template>
 
-
 <style scoped>
 .app {
-  min-height: 100dvh;
+  min-height: 100dvh; /* take full screen height */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* stack header, main, footer */
 }
 
 .main {
-  flex: 1 1 auto;
+  flex: 1 1 auto; /* main area grows/shrinks as needed */
 }
 </style>
+
