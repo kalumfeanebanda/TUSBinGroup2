@@ -13,7 +13,7 @@
 
     <!-- Main Content -->
     <main class="content">
-      <h2>Welcome To TUSBinRight Dashboard</h2>
+      <h2>Welcome To Admin Dashboard</h2>
       <div class="cards">
         <button class="card items-card">Items</button>
         <button class="card bins-card">Bins</button>
@@ -32,6 +32,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter} from "vue-router";
 
 const router = useRouter()
 const activeTab = ref('steps')
