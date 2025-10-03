@@ -22,8 +22,9 @@
           class="search-bar"
           @keypress.enter="performSearch"
       />
-      <router-link to="/signin" class="nav-link">LOG IN</router-link>
-      <router-link to="/signup" class="nav-link">REGISTER</router-link>
+      <router-link to="/login" class="nav-link" exact-active-class="active">LOG IN</router-link>
+      <router-link to="/register" class="nav-link" exact-active-class="active">REGISTER</router-link>
+
     </div>
 
     <!-- Mobile Toggle -->
@@ -33,11 +34,11 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" v-if="isMobileMenuOpen">
-      <router-link to="/" class="nav-link" @click="toggleMobileMenu">HOME</router-link>
-      <router-link to="/Search" class="nav-link" @click="toggleMobileMenu">SEARCH ITEMS</router-link>
-      <router-link to="/contactus" class="nav-link" @click="toggleMobileMenu">CONTACT US</router-link>
-      <router-link to="/login" class="nav-link" @click="toggleMobileMenu">LOG IN</router-link>
-      <router-link to="/register" class="nav-link" @click="toggleMobileMenu">REGISTER</router-link>
+      <router-link to="/" class="nav-link" exact-active-class="active" @click="toggleMobileMenu">HOME</router-link>
+      <router-link to="/Search" class="nav-link" exact-active-class="active" @click="toggleMobileMenu">SEARCH ITEMS</router-link>
+      <router-link to="/contactus" class="nav-link" exact-active-class="active" @click="toggleMobileMenu">CONTACT US</router-link>
+      <router-link to="/login" class="nav-link" exact-active-class="active" @click="toggleMobileMenu">LOG IN</router-link>
+      <router-link to="/register" class="nav-link" exact-active-class="active" @click="toggleMobileMenu">REGISTER</router-link>
     </div>
   </header>
 </template>
