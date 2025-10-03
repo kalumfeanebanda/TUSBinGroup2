@@ -10,21 +10,21 @@
 <div class="how-it-works">
      <p class="How">How it works:</p></div>
     <!-- How it works -->
-    <div class="how-it-works">
+    <div class="how-it-works-steps">
       <div>
 
 
-        <p class="bigger-text">1.Enter it or scan</p>
+       <router-link to=""> <p class="bigger-text">1.Enter it or scan</p></router-link>
 
         <img src="../images/glass.png" height="85" width="150"/></div>
       <div>
 
-        <p class="bigger-text">2.Get disposal result and instructions</p>
+        <router-link to=""><p class="bigger-text">2.Get disposal result and instructions</p></router-link>
 
         <img src="../images/result.png" height="85" width="135"/></div>
       <div>
 
-        <p class="bigger-text">3.Recycle the right way</p>
+        <router-link to=""><p class="bigger-text">3.Recycle the right way</p></router-link>
         <img src="../images/bin.png" height="85" width="120"/>
       </div>
     </div>
@@ -64,7 +64,7 @@ const router = useRouter?.() // works even if router isn’t installed yet
 .search-placeholder {
   width: 60%;
   margin: 0 auto 40px auto;
-  padding: 15px;
+  padding: 18px;
   border: 2px dashed #aaa;
   border-radius: 8px;
   color: #777;
@@ -74,7 +74,7 @@ const router = useRouter?.() // works even if router isn’t installed yet
   font-size: 20px; /* or whatever size you like */
   font-weight: bold; /* optional */
 }
-.how-it-works {
+.how-it-works-steps {
   display: flex;
   justify-content: space-around;
   gap: 20px;
