@@ -58,18 +58,22 @@ function goTo(tab) {
   width: 200px;
   background: #3ca35c;
   padding-top: 20px;
+  height: 60vh;
 }
 .sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0;
+
 }
 .sidebar li {
-  padding: 12px 20px;
+
+  padding: 25px 20px;
   cursor: pointer;
   color: #fff;
-  font-weight: 500;
   transition: 0.3s;
+  font-size: 18px;
+  font-weight: bold;
 }
 .sidebar li:hover {
   background: #2d7a45;
