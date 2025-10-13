@@ -1,7 +1,7 @@
 <template>
   <div class="register-container">
     <div class="register-card">
-    <!-- Left: Form -->
+
     <div class="register-form">
       <h2 class="title">Create an Account</h2>
       <p class="subtitle">GET STARTED NOW!</p>
@@ -48,7 +48,7 @@
       </p>
     </div>
 
-    <!-- Right: Illustration -->
+
     <div class="register-image">
       <img src="@/assets/recycle.jpg" alt="Recycle" />
     </div>

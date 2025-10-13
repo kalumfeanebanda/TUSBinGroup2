@@ -1,7 +1,7 @@
 <template>
   <div class="login-container">
     <div class="login-card">
-      <!-- Left: Form -->
+
       <div class="login-form">
         <h2 class="title">Welcome!</h2>
         <p class="subtitle">Enter your Credentials to access your account</p>
@@ -16,12 +16,25 @@
           />
 
           <label>Password</label>
-          <input
-              v-model="password"
-              type="password"
-              placeholder="Enter your password"
-              required
-          />
+          <div style="position: relative;">
+            <input
+                v-model="password"
+                :type="showPassword ? 'text' : 'password'"
+                placeholder="Enter your password"
+                required
+                style="padding-right: 2.5rem;"
+            />
+            <span
+                @click="togglePassword"
+                style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"
+            >
+              {{ showPassword ? '👁' : '👁' }}
+            </span>
+          </div>
+
+          <router-link to="/forgot-password" style="display: block; margin: 0.5rem 0 1rem; font-size: 0.85rem; color: #1b5e20; text-decoration: underline;">
+            Forgot Password?
+          </router-link>
 
           <button type="submit" class="login-btn">Login</button>
         </form>
@@ -45,37 +58,41 @@ import { ref } from 'vue'
 
 const email = ref('')
 const password = ref('')
+const showPassword = ref(false)
 
 const handleLogin = () => {
   console.log('Email:', email.value)
   console.log('Password:', password.value)
 }
+
+const togglePassword = () => {
+  showPassword.value = !showPassword.value
+}
 </script>
 
 <style scoped>
-/* Center everything vertically and horizontally */
+
+
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 90vh;
-  background-color: #fff6f6; /* Figma background */
+  background-color: #fff6f6;
   padding: 1rem;
 }
 
-/* Card that holds form + image */
 .login-card {
   display: flex;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-width: 850px; /* keeps card balanced */
+  max-width: 850px;
   width: 100%;
   align-items: center;
 }
 
-/* Form section */
 .login-form {
   flex: 1;
   max-width: 350px;
@@ -146,7 +163,6 @@ input {
   text-decoration: underline;
 }
 
-/* Image section */
 .login-image {
   flex: 1;
   display: flex;
@@ -156,8 +172,9 @@ input {
 }
 
 .login-image img {
-  max-width: 70%; /* smaller image */
+  max-width: 70%;
   height: auto;
   border-radius: 12px;
 }
 </style>
+
