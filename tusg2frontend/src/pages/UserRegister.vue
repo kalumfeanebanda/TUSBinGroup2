@@ -44,7 +44,7 @@
 
       <p class="login-text">
         Have an account?
-        <router-link to="/login" class="login-link">Login</router-link>
+        <router-link to="/src/pages/UserLogin" class="login-link">Login</router-link>
       </p>
     </div>
 

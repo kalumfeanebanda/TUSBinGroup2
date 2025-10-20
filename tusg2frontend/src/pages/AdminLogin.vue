@@ -38,11 +38,6 @@
 
           <button type="submit" class="login-btn">Login</button>
         </form>
-
-        <p class="register-text">
-          Not Registered yet?
-          <router-link to="/register" class="register-link">Register Here</router-link>
-        </p>
       </div>
 
       <!-- Right: Illustration -->
@@ -177,4 +172,3 @@ input {
   border-radius: 12px;
 }
 </style>
-
