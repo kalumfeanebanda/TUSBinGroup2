@@ -37,6 +37,11 @@
           </router-link>
 
           <button type="submit" class="login-btn">Login</button>
+
+          <p class="admin-login-text">
+            Are you an admin?
+            <router-link to="/adminlogin" class="admin-login-link">Admin Login</router-link>
+          </p>
         </form>
       </div>
 
@@ -170,5 +175,22 @@ input {
   max-width: 70%;
   height: auto;
   border-radius: 12px;
+}
+
+.admin-login-text {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.admin-login-link {
+  color: #b71c1c; /* red color to differentiate */
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 0.25rem;
+}
+
+.admin-login-link:hover {
+  text-decoration: underline;
 }
 </style>
