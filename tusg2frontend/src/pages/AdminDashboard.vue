@@ -11,7 +11,7 @@
         <router-link to="/user">User</router-link>
         <router-link to="/admin">Admin</router-link>
         <router-link to="/menu">Menu</router-link>
-        <router-link to="/login">Logout</router-link>
+        <router-link to="/adminlogin">Logout</router-link>
       </nav>
     </header>
 

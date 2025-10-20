@@ -43,9 +43,12 @@
         </form>
 
 
-        <router-link to="/login">
-          <button class="login-btn">Login</button>
-        </router-link>
+        <div class="login-section">
+          <p>Already have an account?</p>
+          <router-link to="/login">
+            <button class="small-login-btn">Login</button>
+          </router-link>
+        </div>
       </div>
 
 
@@ -63,12 +66,10 @@ const name = ref("");
 const email = ref("");
 const password = ref("");
 const confirmPassword = ref("");
-const error = ref("");
 
 const handleRegister = () => {
   if (password.value !== confirmPassword.value) {
-    error.value = "Passwords do not match!";
-    alert(error.value);
+    alert("Passwords do not match!");
     return;
   }
 
@@ -146,6 +147,7 @@ input {
   font-size: 1rem;
   cursor: pointer;
   transition: 0.3s;
+  width: 100%;
 }
 
 .register-btn:hover {
@@ -153,21 +155,29 @@ input {
 }
 
 
-.login-btn {
-  background-color: #2e7d32;
-  color: white;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
+.login-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   margin-top: 1rem;
-  width: 100%;
+  font-size: 0.9rem;
+  color: #333;
 }
 
-.login-btn:hover {
+.small-login-btn {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.small-login-btn:hover {
   background-color: #1b5e20;
 }
 
