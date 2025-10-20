@@ -1,90 +1,83 @@
 <template>
   <div class="register-container">
     <div class="register-card">
+      <div class="register-form">
+        <h2 class="title">Create an Account</h2>
+        <p class="subtitle">GET STARTED NOW!</p>
 
-    <div class="register-form">
-      <h2 class="title">Create an Account</h2>
-      <p class="subtitle">GET STARTED NOW!</p>
+        <form @submit.prevent="handleRegister">
+          <label>Full Name</label>
+          <input
+              v-model="name"
+              type="text"
+              placeholder="Enter your full name"
+              required
+          />
 
-      <form @submit.prevent="handleRegister">
-        <label>Full Name</label>
-        <input
-            v-model="name"
-            type="text"
-            placeholder="Enter your full name"
-            required
-        />
+          <label>Email</label>
+          <input
+              v-model="email"
+              type="email"
+              placeholder="Enter your email"
+              required
+          />
 
-        <label>Email</label>
-        <input
-            v-model="email"
-            type="email"
-            placeholder="Enter your email"
-            required
-        />
+          <label>Password</label>
+          <input
+              v-model="password"
+              type="password"
+              placeholder="Enter your password"
+              required
+          />
 
-        <label>Password</label>
-        <input
-            v-model="password"
-            type="password"
-            placeholder="Enter your password"
-            required
-        />
+          <label>Retype Password</label>
+          <input
+              v-model="confirmPassword"
+              type="password"
+              placeholder="Re-enter your password"
+              required
+          />
 
-        <label>Retype Password</label>
-        <input
-            v-model="confirmPassword"
-            type="password"
-            placeholder="Re-enter your password"
-            required
-        />
 
-        <button type="submit" class="register-btn">Sign Up</button>
-      </form>
+          <button type="submit" class="register-btn">Sign Up</button>
+        </form>
 
-      <p class="login-text">
-        Have an account?
-        <router-link to="/src/pages/UserLogin" class="login-link">Login</router-link>
-      </p>
+
+        <router-link to="/login">
+          <button class="login-btn">Login</button>
+        </router-link>
+      </div>
+
+
+      <div class="register-image">
+        <img src="@/assets/recycle.jpg" alt="Recycle" />
+      </div>
     </div>
-
-
-    <div class="register-image">
-      <img src="@/assets/recycle.jpg" alt="Recycle" />
-    </div>
-  </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
 
-const form = ref({
-  name: "",
-  email: "",
-  password: "",
-  retypePassword: "",
-});
-
+const name = ref("");
+const email = ref("");
+const password = ref("");
+const confirmPassword = ref("");
 const error = ref("");
 
-const handleSubmit = () => {
-
-  if (form.value.password !== form.value.retypePassword) {
+const handleRegister = () => {
+  if (password.value !== confirmPassword.value) {
     error.value = "Passwords do not match!";
+    alert(error.value);
     return;
   }
 
-  error.value = "";
-
-
-  console.log("Submitting form:", form.value);
+  console.log("Registering:", name.value, email.value);
   alert("Sign Up Successful!");
 };
 </script>
 
 <style scoped>
-
 .register-container {
   display: flex;
   justify-content: center;
@@ -94,18 +87,16 @@ const handleSubmit = () => {
   padding: 1rem;
 }
 
-
 .register-card {
   display: flex;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-width: 850px; /* same as login page */
+  max-width: 850px;
   width: 100%;
   align-items: center;
 }
-
 
 .register-form {
   flex: 1;
@@ -144,6 +135,7 @@ input {
   font-size: 1rem;
 }
 
+
 .register-btn {
   background-color: #1b5e20;
   color: white;
@@ -160,23 +152,24 @@ input {
   background-color: #145a17;
 }
 
-.login-text {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #333;
-}
 
-.login-link {
-  color: #1b5e20;
+.login-btn {
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
   font-weight: bold;
-  text-decoration: none;
-  margin-left: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 1rem;
+  width: 100%;
 }
 
-.login-link:hover {
-  text-decoration: underline;
+.login-btn:hover {
+  background-color: #1b5e20;
 }
-
 
 .register-image {
   flex: 1;
@@ -192,4 +185,5 @@ input {
   border-radius: 12px;
 }
 </style>
+
 

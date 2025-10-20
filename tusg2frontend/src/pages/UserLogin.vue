@@ -43,7 +43,7 @@
         </form>
 
 
-        <router-link to="/admin login">
+        <router-link to="/adminlogin">
           <button class="admin-login-btn">Admin Login</button>
         </router-link>
 
