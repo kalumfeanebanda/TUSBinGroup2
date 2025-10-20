@@ -1,19 +1,16 @@
 <template>
   <header class="testing-header">
-    <!-- Left: Logo -->
     <div class="logo">
       <img src="@/assets/TUSBinLogo.jfif" alt="TUSBin Logo" class="logo-img" />
       <span class="logo-text">TUSBin</span>
     </div>
 
-    <!-- Center: Navigation Links -->
+
     <nav class="nav-links">
       <router-link to="/" class="nav-link" exact-active-class="active">HOME</router-link>
-      <router-link to="/Search" class="nav-link" exact-active-class="active">SEARCH ITEMS</router-link>
-      <router-link to="/contactus" class="nav-link" exact-active-class="active">CONTACT US</router-link>
     </nav>
 
-    <!-- Right: Search & Auth Links -->
+
     <div class="actions">
       <input
           type="text"
@@ -27,16 +24,14 @@
 
     </div>
 
-    <!-- Mobile Toggle -->
+
     <button class="menu-toggle" @click="toggleMobileMenu">
       <i class="fas fa-bars"></i>
     </button>
 
-    <!-- Mobile Menu -->
+
     <div class="mobile-menu" v-if="isMobileMenuOpen">
       <router-link to="/" class="nav-link" exact-active-class="active" @click="toggleMobileMenu">HOME</router-link>
-      <router-link to="/Search" class="nav-link" exact-active-class="active" @click="toggleMobileMenu">SEARCH ITEMS</router-link>
-      <router-link to="/contactus" class="nav-link" exact-active-class="active" @click="toggleMobileMenu">CONTACT US</router-link>
       <router-link to="/login" class="nav-link" exact-active-class="active" @click="toggleMobileMenu">LOG IN</router-link>
       <router-link to="/register" class="nav-link" exact-active-class="active" @click="toggleMobileMenu">REGISTER</router-link>
     </div>
@@ -81,7 +76,7 @@ export default {
   flex-wrap: wrap;
 }
 
-/* Left: Logo */
+
 .logo {
   display: flex;
   align-items: center;
@@ -99,7 +94,7 @@ export default {
   font-size: 2rem;
 }
 
-/* Center: Navigation */
+
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -121,7 +116,7 @@ export default {
   color: #a5d6a7;
 }
 
-/* Right: Search and auth links */
+
 .actions {
   display: flex;
   align-items: center;
@@ -141,7 +136,7 @@ export default {
   border-color: #a5d6a7;
 }
 
-/* Mobile toggle */
+
 .menu-toggle {
   display: none;
   background: none;
@@ -151,7 +146,7 @@ export default {
   cursor: pointer;
 }
 
-/* Mobile menu */
+
 .mobile-menu {
   width: 100%;
   background-color: #145a17;
@@ -163,7 +158,7 @@ export default {
   border-top: 1px solid #2e7d32;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .nav-links,
   .actions {

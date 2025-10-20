@@ -1,17 +1,16 @@
 <template>
   <div class="login-container">
     <div class="login-card">
-
       <div class="login-form">
-        <h2 class="title">Welcome!</h2>
-        <p class="subtitle">Enter your Credentials to access your account</p>
+        <h2 class="title">Welcome Admin!</h2>
+        <p class="subtitle">Enter your credentials to access the admin dashboard</p>
 
         <form @submit.prevent="handleLogin">
           <label>Email</label>
           <input
               v-model="email"
               type="email"
-              placeholder="Enter your email"
+              placeholder="Enter admin email"
               required
           />
 
@@ -32,20 +31,24 @@
             </span>
           </div>
 
-          <router-link to="/forgot-password" style="display: block; margin: 0.5rem 0 1rem; font-size: 0.85rem; color: #1b5e20; text-decoration: underline;">
+          <router-link
+              to="/forgot-password"
+              style="display: block; margin: 0.5rem 0 1rem; font-size: 0.85rem; color: #1b5e20; text-decoration: underline;"
+          >
             Forgot Password?
           </router-link>
 
-          <button type="submit" class="login-btn">Login</button>
-        </form>
 
-        <p class="register-text">
-          Not Registered yet?
-          <router-link to="/register" class="register-link">Register Here</router-link>
-        </p>
+          <button type="submit" class="login-btn">Login as Admin</button>
+
+
+          <router-link to="/login">
+            <button type="button" class="back-btn">Back to User Login</button>
+          </router-link>
+        </form>
       </div>
 
-      <!-- Right: Illustration -->
+
       <div class="login-image">
         <img src="@/assets/recycle.jpg" alt="Recycle" />
       </div>
@@ -55,14 +58,21 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 const email = ref('')
 const password = ref('')
 const showPassword = ref(false)
+const router = useRouter()
 
 const handleLogin = () => {
-  console.log('Email:', email.value)
+  console.log('Admin Email:', email.value)
   console.log('Password:', password.value)
+
+
+  if (email.value && password.value) {
+    router.push('/admindashboard')
+  }
 }
 
 const togglePassword = () => {
@@ -71,8 +81,6 @@ const togglePassword = () => {
 </script>
 
 <style scoped>
-
-
 .login-container {
   display: flex;
   justify-content: center;
@@ -130,6 +138,7 @@ input {
   font-size: 1rem;
 }
 
+
 .login-btn {
   background-color: #1b5e20;
   color: white;
@@ -140,27 +149,31 @@ input {
   font-size: 1rem;
   cursor: pointer;
   transition: 0.3s;
+  margin-top: 0.5rem;
+  width: 100%;
 }
 
 .login-btn:hover {
   background-color: #145a17;
 }
 
-.register-text {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #333;
-}
 
-.register-link {
-  color: #1b5e20;
+.back-btn {
+  background-color: #b71c1c;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
   font-weight: bold;
-  text-decoration: none;
-  margin-left: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 0.8rem;
+  width: 100%;
 }
 
-.register-link:hover {
-  text-decoration: underline;
+.back-btn:hover {
+  background-color: #7f0000;
 }
 
 .login-image {
@@ -177,4 +190,3 @@ input {
   border-radius: 12px;
 }
 </style>
-
