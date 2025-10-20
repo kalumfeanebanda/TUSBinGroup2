@@ -3,13 +3,12 @@
     <h2 class="title">Dispose Right with TUSBINRight++</h2>
     <h2>Find the right bin for your taste</h2>
 
-    <!-- Empty Search Bar Placeholder -->
+
     <div class="search-placeholder">
       [ Search bar will go here ]
     </div>
 <div class="how-it-works">
      <p class="How">How it works:</p></div>
-    <!-- How it works -->
     <div class="how-it-works-steps">
       <div>
 
@@ -35,7 +34,7 @@
 <script setup>
 import { useRouter } from 'vue-router'
 
-const router = useRouter?.() // works even if router isn’t installed yet
+const router = useRouter?.()
 
 
 </script>
@@ -71,8 +70,8 @@ const router = useRouter?.() // works even if router isn’t installed yet
   font-size: 16px;
 }
 .bigger-text {
-  font-size: 20px; /* or whatever size you like */
-  font-weight: bold; /* optional */
+  font-size: 20px;
+  font-weight: bold;
 }
 .how-it-works-steps {
   display: flex;
@@ -103,7 +102,7 @@ const router = useRouter?.() // works even if router isn’t installed yet
   color: #333;
 }
 .How{
-  font-size: 27px; /* or whatever size you like */
+  font-size: 27px;
   font-weight: bold;
 }
 .btn:hover { filter: brightness(0.95); }

@@ -1,7 +1,6 @@
 <template>
   <div class="login-container">
     <div class="login-card">
-
       <div class="login-form">
         <h2 class="title">Welcome!</h2>
         <p class="subtitle">Enter your Credentials to access your account</p>
@@ -32,20 +31,29 @@
             </span>
           </div>
 
-          <router-link to="/forgot-password" style="display: block; margin: 0.5rem 0 1rem; font-size: 0.85rem; color: #1b5e20; text-decoration: underline;">
+          <router-link
+              to="/forgot-password"
+              style="display: block; margin: 0.5rem 0 1rem; font-size: 0.85rem; color: #1b5e20; text-decoration: underline;"
+          >
             Forgot Password?
           </router-link>
+
 
           <button type="submit" class="login-btn">Login</button>
         </form>
 
+
+        <router-link to="/admin login">
+          <button class="admin-login-btn">Admin Login</button>
+        </router-link>
+
         <p class="register-text">
           Not Registered yet?
-          <router-link to="/src/pages/UserRegister" class="register-link">Register Here</router-link>
+          <router-link to="/register" class="register-link">Register Here</router-link>
         </p>
       </div>
 
-      <!-- Right: Illustration -->
+
       <div class="login-image">
         <img src="@/assets/recycle.jpg" alt="Recycle" />
       </div>
@@ -55,14 +63,18 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 const email = ref('')
 const password = ref('')
 const showPassword = ref(false)
+const router = useRouter()
 
 const handleLogin = () => {
+
   console.log('Email:', email.value)
   console.log('Password:', password.value)
+  router.push('/')
 }
 
 const togglePassword = () => {
@@ -71,8 +83,6 @@ const togglePassword = () => {
 </script>
 
 <style scoped>
-
-
 .login-container {
   display: flex;
   justify-content: center;
@@ -130,6 +140,7 @@ input {
   font-size: 1rem;
 }
 
+
 .login-btn {
   background-color: #1b5e20;
   color: white;
@@ -144,6 +155,25 @@ input {
 
 .login-btn:hover {
   background-color: #145a17;
+}
+
+
+.admin-login-btn {
+  background-color: #b71c1c;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 0.8rem;
+  width: 100%;
+}
+
+.admin-login-btn:hover {
+  background-color: #7f0000;
 }
 
 .register-text {
@@ -177,4 +207,5 @@ input {
   border-radius: 12px;
 }
 </style>
+
 

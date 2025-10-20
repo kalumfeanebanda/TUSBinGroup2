@@ -84,17 +84,17 @@ const handleSubmit = () => {
 </script>
 
 <style scoped>
-/* Center everything vertically and horizontally */
+
 .register-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 90vh;
-  background-color: #fff6f6; /* same as login page */
+  background-color: #fff6f6;
   padding: 1rem;
 }
 
-/* Card that holds form + image */
+
 .register-card {
   display: flex;
   background: #fff;
@@ -106,7 +106,7 @@ const handleSubmit = () => {
   align-items: center;
 }
 
-/* Form section */
+
 .register-form {
   flex: 1;
   max-width: 350px;
@@ -177,7 +177,7 @@ input {
   text-decoration: underline;
 }
 
-/* Image section */
+
 .register-image {
   flex: 1;
   display: flex;
