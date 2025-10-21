@@ -19,23 +19,22 @@
     <div class="main-content">
       <aside class="sidebar">
         <ul>
-          <li>Steps</li>
-          <li>Items</li>
-          <li>User</li>
-          <li>Staff</li>
+          <li @click="goTo('steps')" :class="{ active: activeTab === 'steps' }">Steps</li>
+          <li @click="goTo('items')" :class="{ active: activeTab === 'items' }">Items</li>
+          <li @click="goTo('user')" :class="{ active: activeTab === 'user' }">User</li>
+          <li @click="goTo('staff')" :class="{ active: activeTab === 'staff' }">Staff</li>
         </ul>
       </aside>
 
 
-      <section class="dashboard">
-        <h2>Welcome To TUSBinRight Dashboard</h2>
-
-        <div class="card-container">
-          <div class="card items">Items</div>
-          <div class="card bins">Bins</div>
-          <div class="card location">Location</div>
+      <main class="content">
+        <h2>Welcome To Admin Dashboard</h2>
+        <div class="cards">
+          <button class="card items-card">Items</button>
+          <button class="card bins-card">Bins</button>
+          <button class="card location-card">Location</button>
         </div>
-      </section>
+      </main>
     </div>
 
 
@@ -53,8 +52,20 @@
   </div>
 </template>
 
-<style scoped>
+<script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
+const activeTab = ref('steps')
+
+function goTo(tab) {
+  activeTab.value = tab
+  console.log(`Navigated to ${tab}`)
+}
+</script>
+
+<style scoped>
 .dashboard-container {
   display: flex;
   flex-direction: column;
@@ -111,87 +122,21 @@
 
 
 .sidebar {
-  background-color: #388e3c;
-  color: white;
   width: 220px;
-  padding: 1.5rem 1rem;
-  border-top-right-radius: 10px;
-}
-
-
-
-<template>
-  <div class="dashboard">
-    <!-- Side Nav -->
-    <aside class="sidebar">
-      <ul>
-        <li @click="goTo('steps')" :class="{ active: activeTab === 'steps' }">Steps</li>
-        <li @click="goTo('items')" :class="{ active: activeTab === 'items' }">Items</li>
-        <li @click="goTo('user')" :class="{ active: activeTab === 'user' }">User</li>
-        <li @click="goTo('staff')" :class="{ active: activeTab === 'staff' }">Staff</li>
-      </ul>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="content">
-      <h2>Welcome To Admin Dashboard</h2>
-      <div class="cards">
-        <button class="card items-card">Items</button>
-        <button class="card bins-card">Bins</button>
-        <button class="card location-card">Location</button>
-      </div>
-    </main>
-  </div>
-
-
-
-
-
-
-
-</template>
-
-<script setup>
-import { ref } from 'vue'
-import { useRouter} from "vue-router";
-
-const router = useRouter()
-const activeTab = ref('steps')
-
-function goTo(tab) {
-  activeTab.value = tab
-  router.push(`/${tab}`)}
-
-
-
-</script>
-
-
-<style scoped>
-
-.dashboard {
-  display: flex;
-  height: 100%;
-}
-
-
-.sidebar {
-  width: 200px;
-  background: #3ca35c;
+  background: #388e3c;
   padding-top: 20px;
-  height: 60vh;
+  color: #fff;
 }
-  
+
 .sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0;
-
 }
 
 .sidebar li {
   background-color: #66bb6a;
-  margin-bottom: 1rem;
+  margin: 10px 15px;
   padding: 0.9rem;
   text-align: center;
   font-weight: bold;
@@ -201,58 +146,62 @@ function goTo(tab) {
 }
 
 .sidebar li:hover {
-  background-color: #2e7d32;
-  transform: scale(1.05);
+  background: #2e7d32;
+}
+
+.sidebar li.active {
+  background: #256b3b;
 }
 
 
-.dashboard {
+.content {
   flex: 1;
-  padding: 2rem;
+  padding: 30px;
   text-align: center;
 }
 
-.dashboard h2 {
+.content h2 {
+  margin-bottom: 30px;
   font-weight: bold;
-  font-size: 1.5rem;
   color: #1b5e20;
-  margin-bottom: 2rem;
 }
 
-.card-container {
+.cards {
   display: flex;
   justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
-  gap: 1.5rem;
 }
 
 
 .card {
   flex: 1;
-  min-width: 180px;
-  max-width: 250px;
-  padding: 2rem 1rem;
-  color: #000;
+  max-width: 200px;
+  padding: 40px 0;
+  border-radius: 12px;
+  font-size: 18px;
   font-weight: bold;
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  opacity: 0.9;
 }
 
-.card.items {
-  background-color: #cddc39;
+.items-card {
+  background: #a2c94d;
 }
 
-.card.bins {
-  background-color: #8bc34a;
+.bins-card {
+  background: #4cc97f;
 }
 
-.card.location {
-  background-color: #4caf50;
+.location-card {
+  background: #4db8c9;
 }
 
 
@@ -277,78 +226,14 @@ function goTo(tab) {
 
   .sidebar {
     width: 100%;
-    border-radius: 0;
     text-align: center;
   }
 
-  .card-container {
+  .cards {
     flex-direction: column;
     align-items: center;
   }
 }
 </style>
 
-
-
-}
-.sidebar li {
-
-  padding: 25px 20px;
-  cursor: pointer;
-  color: #fff;
-  transition: 0.3s;
-  font-size: 18px;
-  font-weight: bold;
-}
-.sidebar li:hover {
-  background: #2d7a45;
-}
-.sidebar li.active {
-  background: #256b3b;
-}
-
-
-.content {
-  flex: 1;
-  padding: 30px;
-  text-align: center;
-}
-.content h2 {
-  margin-bottom: 30px;
-  font-weight: bold;
-  color: #222;
-}
-
-
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-.card {
-  flex: 1;
-  max-width: 200px;
-  padding: 40px 0;
-  border-radius: 12px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s, opacity 0.2s;
-}
-.card:hover {
-  transform: translateY(-5px);
-  opacity: 0.9;
-}
-.items-card {
-  background: #a2c94d;
-}
-.bins-card {
-  background: #4cc97f;
-}
-.location-card {
-  background: #4db8c9;
-}
-</style>
 
