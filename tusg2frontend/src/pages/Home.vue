@@ -1,43 +1,64 @@
 <template>
-  <section class="container">
-    <h2 class="title">Dispose Right with TUSBINRight++</h2>
-    <h2>Find the right bin for your taste</h2>
+<section class="container">
+<h2 class="title">Dispose Right with TUSBINRight++</h2>
+<h2>Find the right bin for your taste</h2>
 
-    <!-- Empty Search Bar Placeholder -->
-    <div class="search-placeholder">
-      [ Search bar will go here ]
-    </div>
+<!-- Search & Scanner Section -->
+<div class="search-placeholder">
+  <input
+      v-model="searchInput"
+      placeholder="Enter product name or barcode..."
+  />
+  <button @click="toggleScanner" class="scan-btn">
+    📷 Scan
+  </button>
+</div>
+
+<!-- Scanner appears when toggled -->
+<div v-if="showScanner" class="scanner-area">
+  <BarcodeScanner @scanned="handleScanned" />
+  <button @click="toggleScanner" class="close-btn">Close Scanner</button>
+</div>
+
 <div class="how-it-works">
-     <p class="How">How it works:</p></div>
-    <!-- How it works -->
-    <div class="how-it-works-steps">
-      <div>
+  <p class="How">How it works:</p>
+</div>
 
-
-       <router-link to=""> <p class="bigger-text">1.Enter it or scan</p></router-link>
-
-        <img src="../images/glass.png" height="85" width="150"/></div>
-      <div>
-
-        <router-link to=""><p class="bigger-text">2.Get disposal result and instructions</p></router-link>
-
-        <img src="../images/result.png" height="85" width="135"/></div>
-      <div>
-
-        <router-link to=""><p class="bigger-text">3.Recycle the right way</p></router-link>
-        <img src="../images/bin.png" height="85" width="120"/>
-      </div>
-    </div>
-  </section>
+<!-- How it works -->
+<div class="how-it-works-steps">
+  <div>
+    <p class="bigger-text">1. Enter it or scan</p>
+    <img src="../images/glass.png" height="85" width="150" />
+  </div>
+  <div>
+    <p class="bigger-text">2. Get disposal result and instructions</p>
+    <img src="../images/result.png" height="85" width="135" />
+  </div>
+  <div>
+    <p class="bigger-text">3. Recycle the right way</p>
+    <img src="../images/bin.png" height="85" width="120" />
+  </div>
+</div>
+</section>
 
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router'
+import { ref } from "vue";
+import BarcodeScanner from "@/components/BarcodeScanner.vue";
 
-const router = useRouter?.() // works even if router isn’t installed yet
+const searchInput = ref("");
+const showScanner = ref(false);
 
+const toggleScanner = () => {
+  showScanner.value = !showScanner.value;
+};
 
+const handleScanned = (code) => {
+  searchInput.value = code; // fill input with scanned code
+  showScanner.value = false;
+  alert(`Scanned: ${code}`); // temporary feedback
+};
 </script>
 
 <style scoped>
@@ -55,25 +76,47 @@ const router = useRouter?.() // works even if router isn’t installed yet
   margin-bottom: 10px;
 }
 
-.subtitle {
-  font-size: 18px;
-  color: #444;
-  margin-bottom: 30px;
-}
-
 .search-placeholder {
   width: 60%;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 20px auto;
   padding: 18px;
   border: 2px dashed #aaa;
   border-radius: 8px;
-  color: #777;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.scan-btn,
+.close-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2c7a7b;
+  color: white;
+  cursor: pointer;
   font-size: 16px;
 }
-.bigger-text {
-  font-size: 20px; /* or whatever size you like */
-  font-weight: bold; /* optional */
+
+.close-btn {
+  background-color: #e74c3c;
+  margin-top: 10px;
 }
+
+.scanner-area {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.How {
+  font-size: 27px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
 .how-it-works-steps {
   display: flex;
   justify-content: space-around;
@@ -82,30 +125,8 @@ const router = useRouter?.() // works even if router isn’t installed yet
   flex-wrap: wrap;
 }
 
-.step {
-  flex: 1;
-  min-width: 200px;
-  max-width: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.step img {
-  height: 70px;
-  width: 72px;
-  margin-bottom: 10px;
-}
-
-.step p {
-  font-size: 16px;
-  font-weight: 500;
-  color: #333;
-}
-.How{
-  font-size: 27px; /* or whatever size you like */
+.bigger-text {
+  font-size: 20px;
   font-weight: bold;
 }
-.btn:hover { filter: brightness(0.95); }
-
 </style>
