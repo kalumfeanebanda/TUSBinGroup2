@@ -1,55 +1,55 @@
-<script setup>
-import { onMounted, onUnmounted, defineEmits } from "vue";
-import { Html5Qrcode } from "html5-qrcode";
-
-const emit = defineEmits(["scanned"]);
-let html5QrCode;
-
-onMounted(async () => {
-  const cameras = await Html5Qrcode.getCameras();
-
-  if (cameras && cameras.length) {
-    const cameraId = cameras[0].id; // pick first camera
-    html5QrCode = new Html5Qrcode("reader");
-
-    html5QrCode
-        .start(
-            cameraId,
-            { fps: 10, qrbox: 250 },
-            (decodedText) => {
-              emit("scanned", decodedText); // send code to parent
-              stopScanner();
-            },
-            (errorMessage) => {
-              console.log("Scanning...", errorMessage);
-            }
-        )
-        .catch((err) => console.error("Camera start failed", err));
-  } else {
-    alert("No camera found on this device");
-  }
-});
-
-const stopScanner = () => {
-  if (html5QrCode) {
-    html5QrCode.stop().then(() => html5QrCode.clear());
-  }
-};
-
-onUnmounted(stopScanner);
-</script>
-
 <template>
   <div class="scanner-container">
-    <div id="reader" style="width: 320px; height: 320px;"></div>
+    <video id="video" width="320" height="240" autoplay></video>
+    <p v-if="scannedCode">Scanned Code: {{ scannedCode }}</p>
   </div>
 </template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+import { BrowserMultiFormatReader } from '@zxing/browser'
+
+const scannedCode = ref('')
+let codeReader
+
+onMounted(async () => {
+  codeReader = new BrowserMultiFormatReader()
+
+  try {
+    // Get all cameras
+    const devices = await BrowserMultiFormatReader.listVideoInputDevices()
+
+    // Try to pick the back camera if available
+    let selectedDeviceId = devices[0].deviceId
+    const backCam = devices.find(d => d.label.toLowerCase().includes('back'))
+    if (backCam) selectedDeviceId = backCam.deviceId
+
+    // Start scanning
+    await codeReader.decodeFromVideoDevice(selectedDeviceId, 'video', (result, err) => {
+      if (result) {
+        scannedCode.value = result.getText()
+        alert(`Scanned Code: ${scannedCode.value}`)
+      }
+    })
+  } catch (error) {
+    console.error('Error starting scanner:', error)
+  }
+})
+
+onUnmounted(() => {
+  if (codeReader) codeReader.reset()
+})
+</script>
 
 <style scoped>
 .scanner-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin-top: 20px;
+}
+video {
+  border: 3px solid #4caf50;
+  border-radius: 10px;
 }
 </style>
