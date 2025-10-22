@@ -3,7 +3,7 @@
     <h2 class="title">Dispose Right with TUSBINRight++</h2>
     <h2>Find the right bin for your taste</h2>
 
-
+    <!-- Search & Scanner Section -->
     <div class="search-placeholder">
       <input
           v-model="searchInput"
@@ -16,10 +16,6 @@
         📷 Scan
       </button>
     </div>
-<div class="how-it-works">
-     <p class="How">How it works:</p></div>
-    <div class="how-it-works-steps">
-      <div
 
     <!-- Scanner appears when toggled -->
     <div v-if="showScanner" class="scanner-area">
@@ -50,7 +46,6 @@
 </template>
 
 <script setup>
-
 import { ref } from "vue";
 import BarcodeScanner from "@/components/BarcodeScanner.vue";
 
@@ -77,9 +72,6 @@ const submitBarcode = () => {
   alert(`Submitted Barcode/Product: ${searchInput.value}`);
   // Later you’ll send this to backend using Axios (e.g., to get bin info)
 };
-import { useRouter } from 'vue-router'
-
-const router = useRouter?.()
 </script>
 
 <style scoped>
@@ -119,13 +111,8 @@ const router = useRouter?.()
   font-size: 16px;
 }
 
-
 .scan-btn {
   background-color: #2c7a7b;
-=======
-.bigger-text {
-  font-size: 20px;
-  font-weight: bold;
 }
 
 .submit-btn {
@@ -158,13 +145,8 @@ const router = useRouter?.()
   flex-wrap: wrap;
 }
 
-
 .bigger-text {
   font-size: 20px;
-
-.How{
-  font-size: 27px;
-
   font-weight: bold;
 }
 </style>
