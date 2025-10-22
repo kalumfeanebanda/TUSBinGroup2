@@ -1,38 +1,54 @@
 <template>
   <div class="login-container">
     <div class="login-card">
-      <!-- Left: Form -->
       <div class="login-form">
-        <h2 class="title">Welcome!</h2>
-        <p class="subtitle">Enter your Credentials to access your account</p>
+        <h2 class="title">Welcome Admin!</h2>
+        <p class="subtitle">Enter your credentials to access the admin dashboard</p>
 
         <form @submit.prevent="handleLogin">
           <label>Email</label>
           <input
               v-model="email"
               type="email"
-              placeholder="Enter your email"
+              placeholder="Enter admin email"
               required
           />
 
           <label>Password</label>
-          <input
-              v-model="password"
-              type="password"
-              placeholder="Enter your password"
-              required
-          />
+          <div style="position: relative;">
+            <input
+                v-model="password"
+                :type="showPassword ? 'text' : 'password'"
+                placeholder="Enter your password"
+                required
+                style="padding-right: 2.5rem;"
+            />
+            <span
+                @click="togglePassword"
+                style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"
+            >
+              {{ showPassword ? '👁' : '👁' }}
+            </span>
+          </div>
 
-          <button type="submit" class="login-btn">Login</button>
+          <router-link
+              to="/forgot-password"
+              style="display: block; margin: 0.5rem 0 1rem; font-size: 0.85rem; color: #1b5e20; text-decoration: underline;"
+          >
+            Forgot Password?
+          </router-link>
+
+
+          <button type="submit" class="login-btn">Login as Admin</button>
+
+
+          <router-link to="/login">
+            <button type="button" class="back-btn">Back to User Login</button>
+          </router-link>
         </form>
-
-        <p class="register-text">
-          Not Registered yet?
-          <router-link to="/register" class="register-link">Register Here</router-link>
-        </p>
       </div>
 
-      <!-- Right: Illustration -->
+
       <div class="login-image">
         <img src="@/assets/recycle.jpg" alt="Recycle" />
       </div>
@@ -42,40 +58,49 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 const email = ref('')
 const password = ref('')
+const showPassword = ref(false)
+const router = useRouter()
 
 const handleLogin = () => {
-  console.log('Email:', email.value)
+  console.log('Admin Email:', email.value)
   console.log('Password:', password.value)
+
+
+  if (email.value && password.value) {
+    router.push('/admindashboard')
+  }
+}
+
+const togglePassword = () => {
+  showPassword.value = !showPassword.value
 }
 </script>
 
 <style scoped>
-/* Center everything vertically and horizontally */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 90vh;
-  background-color: #fff6f6; /* Figma background */
+  background-color: #fff6f6;
   padding: 1rem;
 }
 
-/* Card that holds form + image */
 .login-card {
   display: flex;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-width: 850px; /* keeps card balanced */
+  max-width: 850px;
   width: 100%;
   align-items: center;
 }
 
-/* Form section */
 .login-form {
   flex: 1;
   max-width: 350px;
@@ -113,6 +138,7 @@ input {
   font-size: 1rem;
 }
 
+
 .login-btn {
   background-color: #1b5e20;
   color: white;
@@ -123,30 +149,33 @@ input {
   font-size: 1rem;
   cursor: pointer;
   transition: 0.3s;
+  margin-top: 0.5rem;
+  width: 100%;
 }
 
 .login-btn:hover {
   background-color: #145a17;
 }
 
-.register-text {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #333;
-}
 
-.register-link {
-  color: #1b5e20;
+.back-btn {
+  background-color: #b71c1c;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
   font-weight: bold;
-  text-decoration: none;
-  margin-left: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 0.8rem;
+  width: 100%;
 }
 
-.register-link:hover {
-  text-decoration: underline;
+.back-btn:hover {
+  background-color: #7f0000;
 }
 
-/* Image section */
 .login-image {
   flex: 1;
   display: flex;
@@ -156,7 +185,7 @@ input {
 }
 
 .login-image img {
-  max-width: 70%; /* smaller image */
+  max-width: 70%;
   height: auto;
   border-radius: 12px;
 }
