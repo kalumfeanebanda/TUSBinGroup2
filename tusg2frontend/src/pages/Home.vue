@@ -1,152 +1,173 @@
 <template>
-  <section class="container">
-    <h2 class="title">Dispose Right with TUSBINRight++</h2>
-    <h2>Find the right bin for your taste</h2>
+  <div class="home-page">
 
-    <!-- Search & Scanner Section -->
-    <div class="search-placeholder">
-      <input
-          v-model="searchInput"
-          placeholder="Enter product name or barcode..."
-      />
-      <button @click="submitBarcode" class="submit-btn">
-        🔍 Submit
-      </button>
-      <button @click="toggleScanner" class="scan-btn">
-        📷 Scan
-      </button>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Dispose Right with TUSBinRight++</h1>
+        <p>Find the right bin for your taste</p>
+        <div class="hero-buttons">
+          <button class="btn how-btn">How it works</button>
+          <button class="btn scan-btn" @click="goToSearchItems">Scan Now</button>
+        </div>
+      </div>
+    </section>
 
-    <!-- Scanner appears when toggled -->
-    <div v-if="showScanner" class="scanner-area">
-      <BarcodeScanner @scanned="handleScanned" />
-      <button @click="toggleScanner" class="close-btn">Close Scanner</button>
-    </div>
-
-    <div class="how-it-works">
-      <p class="How">How it works:</p>
-    </div>
+    <!-- What is this -->
+    <section class="info-section">
+      <h2>What is this?</h2>
+      <div class="info-columns">
+        <div class="info-box">
+          <p>
+            <strong>TUSBinRight++</strong> is a detailed recycling search database with website
+            and mobile app including barcode scanning and search items.
+          </p>
+        </div>
+        <div class="info-box">
+          <p>
+            <strong>TUSBinRight++</strong> helps your residents work out what to recycle where.
+            Our simple to use recycling search tool on your website or via our mobile apps incl.
+            barcode scanning. We can save you time and money dealing with questions.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- How it works -->
-    <div class="how-it-works-steps">
-      <div>
-        <p class="bigger-text">1. Enter it or scan</p>
-        <img src="../images/glass.png" height="85" width="150" />
+    <section class="how-section">
+      <h2>How it works:</h2>
+      <div class="steps">
+        <div>
+          <img src="../images/glass.png" height="60" />
+          <p>1. Enter it or scan</p>
+        </div>
+        <div>
+          <img src="../images/result.png" height="60" />
+          <p>2. Get disposal result and instructions</p>
+        </div>
+        <div>
+          <img src="../images/bin.png" height="60" />
+          <p>3. Recycle the right way</p>
+        </div>
       </div>
-      <div>
-        <p class="bigger-text">2. Get disposal result and instructions</p>
-        <img src="../images/result.png" height="85" width="135" />
+    </section>
+
+    <!-- What it does -->
+    <section class="what-it-does">
+      <h2>What it does?</h2>
+      <div class="info-columns">
+        <div class="info-box">
+          <p>
+            <strong>TUSBinRight++</strong> helps you save time, money and reduce contamination.
+            It also helps your residents work out what to recycle where. The scanning process
+            feels modern and engaging, improving app usability and satisfaction.
+            Encourages repeated use of the platform.
+          </p>
+        </div>
+        <div class="info-box">
+          <p>
+            Scanning ensures precise item recognition, reducing human error from spelling mistakes
+            or incorrect item names. Leads to more accurate waste categorization and cleaner
+            recycling streams. Helps users learn proper waste disposal habits by providing
+            immediate, reliable feedback.
+          </p>
+        </div>
       </div>
-      <div>
-        <p class="bigger-text">3. Recycle the right way</p>
-        <img src="../images/bin.png" height="85" width="120" />
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import BarcodeScanner from "@/components/BarcodeScanner.vue";
+import { useRouter } from "vue-router"; // ✅ import router
 
-const searchInput = ref("");
-const showScanner = ref(false);
+const router = useRouter();
 
-const toggleScanner = () => {
-  showScanner.value = !showScanner.value;
-};
-
-// 🔹 Handles scanned barcode from the scanner
-const handleScanned = (code) => {
-  searchInput.value = code; // fill input with scanned code
-  showScanner.value = false;
-  alert(`Scanned: ${code}`); // temporary feedback
-};
-
-// 🔹 Handles manual barcode submission
-const submitBarcode = () => {
-  if (!searchInput.value.trim()) {
-    alert("Please enter or scan a barcode first!");
-    return;
-  }
-  alert(`Submitted Barcode/Product: ${searchInput.value}`);
-  // Later you’ll send this to backend using Axios (e.g., to get bin info)
+// ✅ Navigate to SearchItems page
+const goToSearchItems = () => {
+  router.push("/search-items");
 };
 </script>
 
 <style scoped>
-.container {
+.home-page {
+  font-family: Arial, sans-serif;
   text-align: center;
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
-.title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 10px;
+/* Hero Section */
+.hero {
+  background: url("../images/rethink.jpg") center/cover no-repeat;
+  color: white;
+  padding: 100px 20px;
+  position: relative;
 }
 
-.search-placeholder {
-  width: 60%;
-  margin: 0 auto 20px auto;
-  padding: 18px;
-  border: 2px dashed #aaa;
-  border-radius: 8px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.55);
+  display: inline-block;
+  padding: 30px;
+  border-radius: 10px;
 }
 
-.scan-btn,
-.close-btn,
-.submit-btn {
-  padding: 8px 14px;
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
   border: none;
   border-radius: 6px;
-  color: white;
-  cursor: pointer;
   font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+  color: white;
+}
+
+.how-btn {
+  background-color: #4caf50;
 }
 
 .scan-btn {
   background-color: #2c7a7b;
 }
 
-.submit-btn {
-  background-color: #1d8348;
+/* Info Sections */
+.info-section,
+.what-it-does {
+  padding: 40px 20px;
 }
 
-.close-btn {
-  background-color: #e74c3c;
-  margin-top: 10px;
-}
-
-.scanner-area {
-  margin: 20px auto;
+.info-columns {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-.How {
-  font-size: 27px;
-  font-weight: bold;
-  margin-top: 40px;
+.info-box {
+  max-width: 400px;
+  text-align: left;
 }
 
-.how-it-works-steps {
+/* How it works */
+.how-section {
+  background-color: #93c47d;
+  padding: 40px 20px;
+  color: black;
+}
+
+.steps {
   display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  margin-top: 30px;
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
-.bigger-text {
-  font-size: 20px;
+.steps p {
   font-weight: bold;
+  margin-top: 10px;
 }
+
+
 </style>
