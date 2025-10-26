@@ -16,7 +16,8 @@ const routes = [
     { path: '/register', name: 'register', component: Register },
     { path: '/adminlogin', name: 'adminlogin', component: AdminLogin },
     { path: '/admindashboard', name: 'admindashboard', component: AdminDashboard },
-    { path: '/search-items', name: 'search-items', component: SearchItems }
+    { path: '/search-items', name: 'search-items', component: SearchItems },
+    { path: '/bins', name: 'bins', component: () => import('@/pages/BinsList.vue') }
 ]
 
 

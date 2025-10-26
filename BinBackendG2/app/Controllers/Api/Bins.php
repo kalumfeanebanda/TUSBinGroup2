@@ -1,6 +1,6 @@
 <?php namespace App\Controllers\Api;
 
-namespace App\Controllers\Api;
+use CodeIgniter\RESTful\ResourceController;
 
 class Bins extends ResourceController
 {
