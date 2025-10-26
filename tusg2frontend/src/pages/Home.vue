@@ -3,15 +3,18 @@
 
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-content">
-        <h1>Dispose Right with TUSBinRight++</h1>
-        <p>Find the right bin for your taste</p>
-        <div class="hero-buttons">
-          <button class="btn how-btn">How it works</button>
-          <button class="btn scan-btn" @click="goToSearchItems">Scan Now</button>
+      <div class="overlay">
+        <div class="hero-content">
+          <h1>Dispose Right with TUSBinRight++</h1>
+          <p>Find the right bin for your taste</p>
+          <div class="hero-buttons">
+            <button class="btn how-btn">How it works</button>
+            <button class="btn scan-btn" @click="goToSearchItems">Scan Now</button>
+          </div>
         </div>
       </div>
     </section>
+
 
     <!-- What is this -->
     <section class="info-section">
@@ -96,17 +99,39 @@ const goToSearchItems = () => {
 
 /* Hero Section */
 .hero {
-  background: url("../images/rethink.jpg") center/cover no-repeat;
-  color: white;
-  padding: 100px 20px;
+  background: url("../images/BG.jpg") center/cover no-repeat; /* temporary background */
+  height: 72vh; /* full screen height */
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
+/* dark transparent overlay so text stands out */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* text box centered over background */
 .hero-content {
-  background-color: rgba(0, 0, 0, 0.55);
-  display: inline-block;
+  text-align: center;
+  z-index: 2;
   padding: 30px;
   border-radius: 10px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .hero-buttons {
@@ -130,6 +155,7 @@ const goToSearchItems = () => {
 .scan-btn {
   background-color: #2c7a7b;
 }
+
 
 /* Info Sections */
 .info-section,
