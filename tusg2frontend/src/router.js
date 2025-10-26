@@ -6,14 +6,17 @@ import Login from './pages/UserLogin.vue'
 import Register from './pages/UserRegister.vue'
 import AdminLogin from './pages/AdminLogin.vue'
 import AdminDashboard from './pages/AdminDashboard.vue'
+import SearchItems from './pages/SearchItems.vue'
 
 
 const routes = [
     { path: '/', name: 'home', component: Home },
+
     { path: '/login', name: 'login', component: Login },
     { path: '/register', name: 'register', component: Register },
     { path: '/adminlogin', name: 'adminlogin', component: AdminLogin },
-    { path: '/admindashboard', name: 'admindashboard', component: AdminDashboard }
+    { path: '/admindashboard', name: 'admindashboard', component: AdminDashboard },
+    { path: '/search-items', name: 'search-items', component: SearchItems }
 ]
 
 

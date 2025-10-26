@@ -8,6 +8,7 @@
 
     <nav class="nav-links">
       <router-link to="/" class="nav-link" exact-active-class="active">HOME</router-link>
+      <router-link to="/search-items" class="nav-link" exact-active-class="active">SEARCH ITEMS</router-link>
     </nav>
 
 
@@ -32,6 +33,7 @@
 
     <div class="mobile-menu" v-if="isMobileMenuOpen">
       <router-link to="/" class="nav-link" exact-active-class="active" @click="toggleMobileMenu">HOME</router-link>
+      <router-link to="/search-items" class="nav-link" exact-active-class="active" @click="toggleMobileMenu">SEARCH ITEMS</router-link>
       <router-link to="/login" class="nav-link" exact-active-class="active" @click="toggleMobileMenu">LOG IN</router-link>
       <router-link to="/register" class="nav-link" exact-active-class="active" @click="toggleMobileMenu">REGISTER</router-link>
     </div>
@@ -40,9 +42,11 @@
 
 <script>
 import { useRouter } from "vue-router";
+import SearchItems from "@/pages/SearchItems.vue";
 
 export default {
   name: "NavBar",
+  components: {SearchItems},
   data() {
     return {
       isMobileMenuOpen: false,
