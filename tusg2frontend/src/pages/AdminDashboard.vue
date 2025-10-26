@@ -31,7 +31,7 @@
         <h2>Welcome To Admin Dashboard</h2>
         <div class="cards">
           <button class="card items-card">Items</button>
-          <button class="card bins-card">Bins</button>
+          <RouterLink to="/bins" class="card bins-card">Bins</RouterLink>
           <button class="card location-card">Location</button>
         </div>
       </main>
