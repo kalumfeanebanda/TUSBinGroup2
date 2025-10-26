@@ -14,7 +14,7 @@
           <input
               type="text"
               v-model="searchInput"
-              placeholder="Search item name"
+              placeholder="Search item "
               class="item-search-input"
               @keypress.enter="performTextSearch"
           />
