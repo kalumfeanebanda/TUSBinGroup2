@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { listBins } from '@/services/bins'
+import { deleteBin } from '@/services/bins';
 
 const bins = ref([])
 const loading = ref(true)
@@ -12,6 +13,21 @@ async function load(){
   catch { error.value = 'Could not load bins.' }
   finally { loading.value = false }
 }
+
+
+async function onDelete(id) {
+  const yes = confirm('Delete this bin?');
+  if (!yes) return;
+
+  try {
+    await deleteBin(id);
+    await load();
+  } catch (err) {
+    alert(err?.response?.data?.message ?? 'Delete failed');
+  }
+}
+
+
 onMounted(load)
 </script>
 
@@ -43,7 +59,7 @@ onMounted(load)
         <td class="actions">
           <button class="btn view">View</button>
           <button class="btn update">Update</button>
-          <button class="btn delete">Delete</button>
+          <button class="btn delete" @click="onDelete(b.binTypeID)">Delete</button>
         </td>
       </tr>
       </tbody>
