@@ -18,6 +18,41 @@ class Bins extends ResourceController
         return $this->respond(['data' => $rows]);
     }
 
+
+    public function create()
+    {
+        $data = $this->request->getJSON(true);
+
+        if (empty($data['binName'])) {
+            return $this->response->setStatusCode(400)->setJSON([
+                'status' => 'error',
+                'message' => 'Bin name is required.',
+            ]);
+        }
+
+        $model = new \App\Models\BinModel();
+
+        $newId = $model->createBin($data['binName'], $data['binDesc'] ?? null);
+
+        if ($newId) {
+            return $this->response->setStatusCode(201)->setJSON([
+                'status' => 'ok',
+                'data' => [
+                    'binTypeID' => $newId,
+                    'binName'   => $data['binName'],
+                    'binDesc'   => $data['binDesc'] ?? null,
+                ],
+            ]);
+        }
+
+        return $this->response->setStatusCode(500)->setJSON([
+            'status' => 'error',
+            'message' => 'Failed to create bin.',
+        ]);
+    }
+
+
+
     public function delete($id = null)
     {
         $id = (int)$id;
