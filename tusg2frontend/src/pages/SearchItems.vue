@@ -1,5 +1,4 @@
 <template>
-  <section class="image">
   <section class="search-items-page-container">
     <h1 class="main-title">Search Items</h1>
     <p class="subtitle">What way you want to choose?</p>
@@ -54,7 +53,6 @@
       <button @click="toggleScanner" class="close-btn">Close Scanner</button>
     </div>
   </section>
-  </section>
 </template>
 
 <script setup>
@@ -103,12 +101,7 @@ const submitBarcode = () => {
 /* ==================================== */
 /* BASE LAYOUT & TEXT */
 /* ==================================== */
-/* .image{
-  background:url("../images/BG.jpg");}*/
-
-
 .search-items-page-container {
-
   text-align: center;
   padding: 40px 20px;
   max-width: 1000px; /* Wider container for the two columns */

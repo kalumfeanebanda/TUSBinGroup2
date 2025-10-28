@@ -1,4 +1,3 @@
-
 <template>
   <div class="home-page">
 
@@ -82,8 +81,7 @@
 </template>
 
 <script setup>
-import { useRouter } from "vue-router";
-import Header from "@/App.vue"; // ✅ import router
+import { useRouter } from "vue-router"; // ✅ import router
 
 const router = useRouter();
 
@@ -161,9 +159,7 @@ const goToSearchItems = () => {
 
 /* Info Sections */
 .info-section,
-
 .what-it-does {
-
   padding: 40px 20px;
 }
 

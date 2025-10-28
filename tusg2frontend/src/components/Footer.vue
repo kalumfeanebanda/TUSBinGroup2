@@ -13,9 +13,6 @@
           </nav>
         </section>
 
-
-
-
         <!--Contact -->
         <section class="col">
           <h3 class="title">Contact Us</h3>
@@ -57,8 +54,8 @@ const icons = {
 <style scoped>
 .footer {
   width: 100%;
-  background:#066502;
-  color: white;
+  background: linear-gradient(180deg, #2e7d32 0%, #2b6f2e 60%, #2b6f2e 60%);
+  color: #e9f5ea;
   border-radius: 6px;
   margin: 0 auto;
 }
@@ -100,7 +97,7 @@ const icons = {
 
 .footer-bottom {
   background: #63a35c;
-  color: #066502;
+  color: #0f2e12;
   padding: 0.6rem 1.25rem;
   font-size: 0.95rem;
   text-align: center;
