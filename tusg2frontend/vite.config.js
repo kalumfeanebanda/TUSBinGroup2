@@ -19,7 +19,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost/TUSBinGroup2/BinBackendG2/public',
+        target: 'http://localhost/TUSBinGroup2/BinBackendG2/public/index.php',
         changeOrigin: true,
       },
     },
