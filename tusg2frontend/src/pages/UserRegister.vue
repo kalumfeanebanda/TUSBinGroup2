@@ -38,10 +38,12 @@
               required
           />
 
-
           <button type="submit" class="register-btn">Sign Up</button>
         </form>
 
+        <!-- ✅ Messages -->
+        <p v-if="successMessage" class="success-msg">{{ successMessage }}</p>
+        <p v-if="errorMessage" class="error-msg">{{ errorMessage }}</p>
 
         <div class="login-section">
           <p>Already have an account?</p>
@@ -50,7 +52,6 @@
           </router-link>
         </div>
       </div>
-
 
       <div class="register-image">
         <img src="@/assets/recycle.jpg" alt="Recycle" />
@@ -61,20 +62,54 @@
 
 <script setup>
 import { ref } from "vue";
+import axios from "axios";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const name = ref("");
 const email = ref("");
 const password = ref("");
 const confirmPassword = ref("");
+const successMessage = ref("");
+const errorMessage = ref("");
 
-const handleRegister = () => {
+const handleRegister = async () => {
   if (password.value !== confirmPassword.value) {
-    alert("Passwords do not match!");
+    errorMessage.value = "Passwords do not match!";
+    successMessage.value = "";
     return;
   }
 
-  console.log("Registering:", name.value, email.value);
-  alert("Sign Up Successful!");
+  // Split full name into first and last names
+  const [fname, ...rest] = name.value.trim().split(" ");
+  const lname = rest.join(" ") || "";
+
+  try {
+    const response = await axios.post("http://localhost:8080/api/register", {
+      fname,
+      lname,
+      email: email.value,
+      password: password.value,
+    });
+
+    if (response.data.status === "ok") {
+      successMessage.value = "Registration successful! Redirecting to login...";
+      errorMessage.value = "";
+
+      setTimeout(() => {
+        router.push("/login");
+      }, 2000);
+    } else {
+      errorMessage.value = response.data.message || "Registration failed.";
+      successMessage.value = "";
+    }
+  } catch (err) {
+    console.error(err);
+    errorMessage.value =
+        err.response?.data?.message || "Server error. Please try again.";
+    successMessage.value = "";
+  }
 };
 </script>
 
@@ -84,13 +119,13 @@ const handleRegister = () => {
   justify-content: center;
   align-items: center;
   min-height: 90vh;
-  background:url("../images/BG.jpg");
+  background: url("../images/BG.jpg");
   padding: 1rem;
 }
 
 .register-card {
   display: flex;
-  background: #FFF9E0;
+  background: #fff9e0;
   border-radius: 12px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -136,7 +171,6 @@ input {
   font-size: 1rem;
 }
 
-
 .register-btn {
   background-color: #1b5e20;
   color: white;
@@ -154,6 +188,19 @@ input {
   background-color: #145a17;
 }
 
+.success-msg {
+  color: #2e7d32;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.error-msg {
+  color: #c62828;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
 
 .login-section {
   display: flex;
@@ -195,5 +242,6 @@ input {
   border-radius: 12px;
 }
 </style>
+
 
 
