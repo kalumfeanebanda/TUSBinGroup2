@@ -5,16 +5,12 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+$routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($routes) {
+    $routes->get('bins', 'Bins::index');
+    $routes->post('bins', 'Bins::create');
+    $routes->delete('bins/(:num)', 'Bins::delete/$1');
 
-
-$routes->group('api', static function($routes) {
-
-$routes->get('bins', 'Api\Bins::index');
-$routes->post('bins', 'Api\Bins::create');
-$routes->delete('bins/(:num)', 'Api\Bins::delete/$1');
-
-$routes->post('register', 'Api\Users::register');
-
-
+    // ✅ This will now correctly map to App\Controllers\Api\Users
+    $routes->post('register', 'Users::register');
 });
+
