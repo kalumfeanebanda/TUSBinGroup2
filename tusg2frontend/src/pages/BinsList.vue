@@ -1,11 +1,19 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { listBins } from '@/services/bins'
-import { deleteBin } from '@/services/bins';
+import { listBins, deleteBin, createBin, updateBin } from '@/services/bins'
+
+
+
 
 const bins = ref([])
 const loading = ref(true)
 const error = ref('')
+
+
+const showForm = ref(false)      // controls if form is visible
+const editing = ref(null)        // holds bin being edited
+const form = ref({ binName: '', binDesc: '' })
+
 
 async function load(){
   loading.value = true; error.value = ''
@@ -27,6 +35,46 @@ async function onDelete(id) {
   }
 }
 
+// SHOW CREATE
+function openCreate() {
+  showForm.value = true
+  editing.value = null
+  form.value = { binName: '', binDesc: '' }
+}
+
+// SHOW UPDATE
+function openEdit(bin) {
+  showForm.value = true
+  editing.value = bin
+  form.value = { binName: bin.binName, binDesc: bin.binDesc }
+}
+
+// CANCEL FORM
+function cancelForm() {
+  showForm.value = false
+  editing.value = null
+  form.value = { binName: '', binDesc: '' }
+}
+
+// SAVE (create or update)
+async function saveBin() {
+  try {
+    if (!form.value.binName) return alert('Bin name is required.')
+    if (editing.value) {
+      const row = await updateBin(editing.value.binTypeID, form.value)
+      const i = bins.value.findIndex(b => b.binTypeID === editing.value.binTypeID)
+      if (i !== -1) bins.value[i] = row
+      alert('Bin updated!')
+    } else {
+      const row = await createBin(form.value)
+      bins.value.unshift(row)
+      alert('Bin created!')
+    }
+    cancelForm()
+  } catch (err) {
+    alert(err?.response?.data?.message ?? 'Save failed')
+  }
+}
 
 onMounted(load)
 </script>
@@ -35,8 +83,32 @@ onMounted(load)
   <section class="bins-section">
     <div class="bins-header">
       <h2>Manage Bins</h2>
-      <button class="btn refresh" @click="load">Refresh</button>
+      <div class="controls">
+        <button class="btn add" @click="openCreate">+ Add Bin</button>
+        <button class="btn refresh" @click="load">Refresh</button>
+      </div>
     </div>
+
+
+    <!-- Create / Update Form -->
+    <div v-if="showForm" class="bin-form">
+      <h3>{{ editing ? 'Update Bin' : 'Create New Bin' }}</h3>
+      <div class="form-row">
+        <label>Bin Name:</label>
+        <input v-model="form.binName" placeholder="Enter name" />
+      </div>
+      <div class="form-row">
+        <label>Description:</label>
+        <input v-model="form.binDesc" placeholder="Enter description" />
+      </div>
+      <div class="form-actions">
+        <button class="btn save" @click="saveBin">{{ editing ? 'Save Changes' : 'Create Bin' }}</button>
+        <button class="btn cancel" @click="cancelForm">Cancel</button>
+      </div>
+    </div>
+
+
+
 
     <div v-if="loading" class="state">Loading…</div>
     <div v-else-if="error" class="state error">{{ error }}</div>
@@ -58,7 +130,7 @@ onMounted(load)
         <td>{{ b.binDesc }}</td>
         <td class="actions">
           <button class="btn view">View</button>
-          <button class="btn update">Update</button>
+          <button class="btn update" @click="openEdit(b)">Update</button>
           <button class="btn delete" @click="onDelete(b.binTypeID)">Delete</button>
         </td>
       </tr>
@@ -127,6 +199,39 @@ onMounted(load)
   transition: none; /* disables hover transitions */
 }
 
+.btn.refresh { background-color: purple; }
+.btn.add {
+  background-color: pink ;
+   }
+.btn.view { background-color: var(--blue); }
+.btn.update { background-color: var(--green); }
+.btn.delete { background-color: var(--red); }
+
+
+.bin-form {
+  background: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.form-row {
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
+
+
+
+
 /* Each button color */
 .btn.view {
   background-color: #0275d8; /* blue */
@@ -185,4 +290,17 @@ onMounted(load)
   border-color: #f0c2c2;
   color: #b91c1c;
 }
+
+.bin-form .btn.save {
+  background-color: #3a7f2a; /* softer green */
+}
+
+.bin-form .btn.cancel {
+  background-color: #aaa; /* neutral gray */
+}
+.bin-form .btn.cancel:hover {
+  background-color: #888;
+}
+
+
 </style>

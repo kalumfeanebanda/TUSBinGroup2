@@ -7,22 +7,20 @@ class Bins extends ResourceController
 
     protected $format = 'json';
 
-    public function index(){
-        $db   = \Config\Database::connect();
-        $q    = $db->query("CALL adm_Read_bins();");
+    public function index()
+    {
+        $db = \Config\Database::connect();
+        $q  = $db->query('CALL adm_Read_bins()');
         $rows = $q->getResultArray();
+        if (method_exists($q,'nextResult')) $q->nextResult();
+        if (method_exists($q,'freeResult'))  $q->freeResult();
 
-        // flush extra result sets after CALL
-        while ($db->connID->more_results() && $db->connID->next_result()) {}
-
-        return $this->respond(['data' => $rows]);
+        return $this->respond(['status' => 'ok', 'data' => $rows]);
     }
-
 
     public function create()
     {
         $data = $this->request->getJSON(true);
-
         if (empty($data['binName'])) {
             return $this->response->setStatusCode(400)->setJSON([
                 'status' => 'error',
@@ -31,7 +29,6 @@ class Bins extends ResourceController
         }
 
         $model = new \App\Models\BinModel();
-
         $newId = $model->createBin($data['binName'], $data['binDesc'] ?? null);
 
         if ($newId) {
@@ -51,31 +48,45 @@ class Bins extends ResourceController
         ]);
     }
 
-
-
-    public function delete($id = null)
+    public function update($id = null)
     {
-        $id = (int)$id;
+        $id = (int) ($id ?? 0);
         if ($id <= 0) {
             return $this->failValidationErrors('Invalid bin id');
         }
 
-        try {
-            $db = \Config\Database::connect();
-            $q = $db->query('CALL adm_Delete_bin(?)', [$id]);
+        $data  = $this->request->getJSON(true);
+        $model = new \App\Models\BinModel();
 
-            // flush extra result sets after CALL
-            while ($db->connID->more_results() && $db->connID->next_result()) {
-            }
+        $ok = $model->updateBin($id, $data['binName'], $data['binDesc'] ?? null);
 
-
-            if ($db->affectedRows() > 0) {
-                return $this->respond(['success' => true]);
-            }
-            return $this->failNotFound('Bin not found');
-        } catch (\Throwable $e) {
-            return $this->failServerError($e->getMessage());
+        if ($ok) {
+            return $this->response->setJSON([
+                'status' => 'ok',
+                'data' => [
+                    'binTypeID' => $id,
+                    'binName'   => $data['binName'],
+                    'binDesc'   => $data['binDesc'] ?? null,
+                ],
+            ]);
         }
-    }
 
+        return $this->response->setStatusCode(500)->setJSON([
+            'status' => 'error',
+            'message' => 'Failed to update bin.',
+        ]);
+    }
+    public function delete($id = null)
+    {
+        $id = (int)$id;
+        if ($id <= 0) return $this->failValidationErrors('Invalid bin id');
+
+        $db = \Config\Database::connect();
+        $q  = $db->query('CALL adm_Delete_bin(?)', [$id]);
+        if (method_exists($q,'nextResult')) $q->nextResult();
+        if (method_exists($q,'freeResult'))  $q->freeResult();
+
+        if ($db->affectedRows() > 0) return $this->respond(['status'=>'ok','success'=>true]);
+        return $this->failNotFound('Bin not found');
+    }
 }
