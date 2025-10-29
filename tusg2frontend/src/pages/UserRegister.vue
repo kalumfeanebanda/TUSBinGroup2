@@ -86,7 +86,7 @@ const handleRegister = async () => {
   const lname = rest.join(" ") || "";
 
   try {
-    const response = await axios.post("http://localhost:8080/api/register", {
+    const response = await axios.post("http://localhost:8081/api/register", {
       fname,
       lname,
       email: email.value,
