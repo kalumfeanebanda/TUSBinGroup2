@@ -8,7 +8,7 @@
 
       <nav class="nav-links">
         <router-link to="/">Home</router-link>
-        <router-link to="/user">User</router-link>
+        <router-link to="/users">User</router-link>
         <router-link to="/admin">Admin</router-link>
         <router-link to="/menu">Menu</router-link>
         <router-link to="/adminlogin">Logout</router-link>
