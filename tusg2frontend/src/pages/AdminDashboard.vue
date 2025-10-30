@@ -8,7 +8,7 @@
 
       <nav class="nav-links">
         <router-link to="/">Home</router-link>
-        <router-link to="/user">User</router-link>
+        <router-link to="/users">User</router-link>
         <router-link to="/admin">Admin</router-link>
         <router-link to="/menu">Menu</router-link>
         <router-link to="/adminlogin">Logout</router-link>
@@ -31,7 +31,7 @@
         <h2>Welcome To Admin Dashboard</h2>
         <div class="cards">
           <button class="card items-card">Items</button>
-          <button class="card bins-card">Bins</button>
+          <RouterLink to="/bins" class="card bins-card">Bins</RouterLink>
           <button class="card location-card">Location</button>
         </div>
       </main>

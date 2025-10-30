@@ -1,4 +1,5 @@
 <template>
+  <section class="image">
   <section class="search-items-page-container">
     <h1 class="main-title">Search Items</h1>
     <p class="subtitle">What way you want to choose?</p>
@@ -14,7 +15,7 @@
           <input
               type="text"
               v-model="searchInput"
-              placeholder="Search item name"
+              placeholder="Search item "
               class="item-search-input"
               @keypress.enter="performTextSearch"
           />
@@ -52,6 +53,7 @@
       <BarcodeScanner @scanned="handleScanned" />
       <button @click="toggleScanner" class="close-btn">Close Scanner</button>
     </div>
+  </section>
   </section>
 </template>
 
@@ -101,7 +103,12 @@ const submitBarcode = () => {
 /* ==================================== */
 /* BASE LAYOUT & TEXT */
 /* ==================================== */
+/* .image{
+  background:url("../images/BG.jpg");}*/
+
+
 .search-items-page-container {
+
   text-align: center;
   padding: 40px 20px;
   max-width: 1000px; /* Wider container for the two columns */

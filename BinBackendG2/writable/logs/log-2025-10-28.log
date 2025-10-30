@@ -1,0 +1,140 @@
+CRITICAL - 2025-10-28 17:39:38 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 17:39:44 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 17:40:06 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 17:40:10 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 17:40:10 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 17:40:10 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 17:40:11 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 17:40:11 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 17:40:48 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 17:48:41 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 17:58:15 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 17:58:16 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 17:58:17 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 17:58:17 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 55.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 18:11:42 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 51.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-28 18:11:43 --> ErrorException: Declaration of App\Controllers\Api\Bins::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/bins]
+in APPPATH\Controllers\Api\Bins.php on line 51.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2025-10-28 18:17:31 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'tusbinright2', 3306, '', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_b...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_b...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#9 {main}
+CRITICAL - 2025-10-28 18:17:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: api/bins]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-10-28 18:17:36 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'tusbinright2', 3306, '', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_b...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_b...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#9 {main}
+CRITICAL - 2025-10-28 18:17:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: api/bins]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
@@ -12,7 +11,17 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@':fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    },
+  },
+
+  // 👇 ADD THIS SECTION BELOW (proxy to your CI4 backend on XAMPP)
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost/TUSBinGroup2/BinBackendG2/public/index.php',
+        changeOrigin: true,
+      },
     },
   },
 })

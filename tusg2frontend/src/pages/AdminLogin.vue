@@ -86,13 +86,13 @@ const togglePassword = () => {
   justify-content: center;
   align-items: center;
   min-height: 90vh;
-  background-color: #fff6f6;
+  background:url("../images/BG.jpg");
   padding: 1rem;
 }
 
 .login-card {
   display: flex;
-  background: #fff;
+  background: #FFF9E0;
   border-radius: 12px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
