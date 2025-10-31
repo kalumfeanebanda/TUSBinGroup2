@@ -20,4 +20,5 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($r
 
     // User registration
     $routes->post('register', 'Users::register');
+    $routes->post('login', 'Users::login');
 });
