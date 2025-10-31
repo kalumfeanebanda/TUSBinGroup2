@@ -1,14 +1,9 @@
 <template>
   <div class="login-container">
-
-
     <div class="login-card">
       <div class="login-form">
-
-
-
-        <h2 class="title">Welcome!</h2>
-        <p class="subtitle">Enter your Credentials to access your account</p>
+        <h2 class="title">Welcome Back</h2>
+        <p class="subtitle">LOG IN TO YOUR ACCOUNT</p>
 
         <form @submit.prevent="handleLogin">
           <label>Email</label>
@@ -20,44 +15,26 @@
           />
 
           <label>Password</label>
-          <div style="position: relative;">
-            <input
-                v-model="password"
-                :type="showPassword ? 'text' : 'password'"
-                placeholder="Enter your password"
-                required
-                style="padding-right: 2.5rem;"
-            />
-            <span
-                @click="togglePassword"
-                style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"
-            >
-              {{ showPassword ? '👁' : '👁' }}
-            </span>
-          </div>
+          <input
+              v-model="password"
+              type="password"
+              placeholder="Enter your password"
+              required
+          />
 
-          <router-link
-              to="/forgot-password"
-              style="display: block; margin: 0.5rem 0 1rem; font-size: 0.85rem; color: #1b5e20; text-decoration: underline;"
-          >
-            Forgot Password?
-          </router-link>
-
-
-          <button type="submit" class="login-btn">Login</button>
+          <button type="submit" class="login-btn">Log In</button>
         </form>
 
+        <p v-if="successMessage" class="success-msg">{{ successMessage }}</p>
+        <p v-if="errorMessage" class="error-msg">{{ errorMessage }}</p>
 
-        <router-link to="/adminlogin">
-          <button class="admin-login-btn">Admin Login</button>
-        </router-link>
-
-        <p class="register-text">
-          Not Registered yet?
-          <router-link to="/register" class="register-link">Register Here</router-link>
-        </p>
+        <div class="register-section">
+          <p>Don't have an account?</p>
+          <router-link to="/register">
+            <button class="small-register-btn">Sign Up</button>
+          </router-link>
+        </div>
       </div>
-
 
       <div class="login-image">
         <img src="@/assets/recycle.jpg" alt="Recycle" />
@@ -67,24 +44,57 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref } from "vue";
+import axios from "axios";
+import { useRouter } from "vue-router";
 
-const email = ref('')
-const password = ref('')
-const showPassword = ref(false)
-const router = useRouter()
+const router = useRouter();
 
-const handleLogin = () => {
+const email = ref("");
+const password = ref("");
+const successMessage = ref("");
+const errorMessage = ref("");
 
-  console.log('Email:', email.value)
-  console.log('Password:', password.value)
-  router.push('/')
-}
+const handleLogin = async () => {
+  // --- Client-Side Validation (Minimal for Login) ---
+  if (!email.value || !password.value) {
+    errorMessage.value = "Please enter both email and password.";
+    successMessage.value = "";
+    return;
+  }
 
-const togglePassword = () => {
-  showPassword.value = !showPassword.value
-}
+  // Clear previous messages
+  errorMessage.value = "";
+  successMessage.value = "";
+
+  try {
+    const response = await axios.post("http://localhost:8081/api/login", {
+      email: email.value,
+      password: password.value,
+    });
+
+    if (response.data.status === "ok") {
+      // Assuming the API returns a token or user data on success
+      successMessage.value = "Login successful! Redirecting...";
+
+      // TODO: Store the authentication token/session data here
+      // Example: localStorage.setItem('userToken', response.data.token);
+
+      setTimeout(() => {
+        // Redirect to a dashboard or home page
+        router.push("/dashboard");
+      }, 1500);
+    } else {
+      // The server returned a 200 OK but with status: 'error'
+      errorMessage.value = response.data.message || "Login failed.";
+    }
+  } catch (err) {
+    // Handle HTTP errors (e.g., 400 Bad Request, 500 Server Error)
+    console.error("Login Error:", err);
+    errorMessage.value =
+        err.response?.data?.message || "Invalid credentials or server error. Please try again.";
+  }
+};
 </script>
 
 <style scoped>
