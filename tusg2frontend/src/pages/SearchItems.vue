@@ -39,7 +39,9 @@
               @keypress.enter="submitBarcode"
           />
         </div>
-
+        <button @click="submitBarcode" class="search-btn primary-btn">
+          Submit Barcode
+        </button>
         <p class="or-separator">- OR -</p>
 
         <button @click="toggleScanner" class="scan-your-barcode-btn primary-btn">
