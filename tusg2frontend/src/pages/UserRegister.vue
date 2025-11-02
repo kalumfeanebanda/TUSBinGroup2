@@ -41,7 +41,7 @@
           <button type="submit" class="register-btn">Sign Up</button>
         </form>
 
-        <!-- ✅ Messages -->
+        <!-- Messages -->
         <p v-if="successMessage" class="success-msg">{{ successMessage }}</p>
         <p v-if="errorMessage" class="error-msg">{{ errorMessage }}</p>
 
@@ -62,7 +62,7 @@
 
 <script setup>
 import { ref } from "vue";
-import axios from "axios";
+import api from "@/lib/api";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
@@ -86,7 +86,7 @@ const handleRegister = async () => {
   const lname = rest.join(" ") || "";
 
   try {
-    const response = await axios.post("http://localhost:8081/api/register", {
+    const response = await api.post("/register", {
       fname,
       lname,
       email: email.value,
