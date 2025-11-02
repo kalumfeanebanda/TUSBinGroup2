@@ -47,6 +47,9 @@
           <button type="submit" class="login-btn">Login</button>
         </form>
 
+        <p v-if="successMessage" class="message success-msg">{{ successMessage }}</p>
+        <p v-if="errorMessage" class="message error-msg">{{ errorMessage }}</p>
+
 
         <router-link to="/adminlogin">
           <button class="admin-login-btn">Admin Login</button>
@@ -69,17 +72,56 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import axios from 'axios' // 👈 Import axios
 
 const email = ref('')
 const password = ref('')
 const showPassword = ref(false)
+const successMessage = ref('') // 👈 Add success message ref
+const errorMessage = ref('')   // 👈 Add error message ref
 const router = useRouter()
+const API_URL = 'http://localhost:8080/api/login' // 👈 Updated API endpoint
 
-const handleLogin = () => {
+const handleLogin = async () => {
+  // Clear previous messages
+  errorMessage.value = ''
+  successMessage.value = ''
 
-  console.log('Email:', email.value)
-  console.log('Password:', password.value)
-  router.push('/')
+  if (!email.value || !password.value) {
+    errorMessage.value = "Please enter both email and password."
+    return
+  }
+
+  try {
+    const response = await axios.post(API_URL, {
+      email: email.value,
+      password: password.value,
+    });
+
+    if (response.data.status === "ok") {
+      // 1. Success Message
+      successMessage.value = "Login successful! Redirecting..."
+
+      // 2. Store the user ID (you might store a JWT token here later)
+      // Example: localStorage.setItem('userToken', response.data.token);
+      console.log('User ID:', response.data.userID)
+
+      // 3. Redirect after a short delay
+      setTimeout(() => {
+        router.push('/') // Redirect to the home/dashboard page
+      }, 1500)
+    } else {
+      // This part handles a 200 OK response with a non-'ok' status, though your backend uses HTTP status codes for failure
+      errorMessage.value = response.data.message || "Login failed due to an unknown issue."
+    }
+  } catch (err) {
+    // This catches failed HTTP status codes (e.g., 401 Unauthorized, 400 Bad Request, 500 Server Error)
+    console.error("Login Error:", err)
+
+    // Check for specific error message from the backend response
+    errorMessage.value =
+        err.response?.data?.message || "Invalid credentials or server error. Please try again."
+  }
 }
 
 const togglePassword = () => {
@@ -88,6 +130,11 @@ const togglePassword = () => {
 </script>
 
 <style scoped>
+/*
+  I've added the styles for the new message elements below.
+  The rest of your original CSS is preserved.
+*/
+
 .login-container {
   display: flex;
   justify-content: center;
@@ -212,6 +259,27 @@ input {
   height: auto;
   border-radius: 12px;
 }
+
+/* --- New Styles for Messages --- */
+.message {
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.success-msg {
+  background-color: #e8f5e9; /* Light Green */
+  color: #1b5e20; /* Dark Green */
+  border: 1px solid #1b5e20;
+}
+
+.error-msg {
+  background-color: #ffebee; /* Light Red */
+  color: #b71c1c; /* Dark Red */
+  border: 1px solid #b71c1c;
+}
+
 </style>
-
-

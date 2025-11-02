@@ -27,14 +27,16 @@ class Cors extends BaseConfig
     public array $default = [
         /**
          * Origins for the `Access-Control-Allow-Origin` header.
-         *
-         * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
-         *
-         * E.g.:
-         *   - ['http://localhost:8080']
-         *   - ['https://www.example.com']
          */
-        'allowedOrigins' => [],
+        'allowedOrigins' => [
+            'http://localhost:5173',  // <-- ADD YOUR VUE FRONTEND URL
+            'http://127.0.0.1:5173'
+        ],
+
+        // ... (allowedOriginsPatterns remains empty) ...
+
+        // ... (supportsCredentials remains false, which is typical) ...
+
 
         /**
          * Origin regex patterns for the `Access-Control-Allow-Origin` header.
@@ -68,7 +70,16 @@ class Cors extends BaseConfig
          *
          * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers
          */
-        'allowedHeaders' => [],
+        'allowedHeaders' => [
+            'X-API-KEY',
+            'Origin',
+            'X-Requested-With',
+            'Content-Type', // <-- ESSENTIAL for JSON data
+            'Accept',
+            'Access-Control-Request-Method',
+            'Access-Control-Request-Headers',
+            'Authorization' // <-- For future token use
+        ],
 
         /**
          * Set headers to expose.
@@ -93,7 +104,13 @@ class Cors extends BaseConfig
          *
          * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods
          */
-        'allowedMethods' => [],
+        'allowedMethods' => [
+            'GET',
+            'POST',    // <-- ESSENTIAL for the login request
+            'OPTIONS', // <-- ESSENTIAL for the CORS preflight check
+            'PUT',
+            'DELETE'
+        ],
 
         /**
          * Set how many seconds the results of a preflight request can be cached.
