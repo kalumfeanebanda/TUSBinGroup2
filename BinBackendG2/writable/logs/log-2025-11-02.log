@@ -14,3 +14,15 @@ CRITICAL - 2025-11-02 04:59:41 --> ErrorException: Declaration of App\Controller
 [Method: GET, Route: api/items]
 in APPPATH\Controllers\Api\Items.php on line 33.
  1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-02 05:05:30 --> ErrorException: Declaration of App\Controllers\Api\Items::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/items]
+in APPPATH\Controllers\Api\Items.php on line 33.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-02 05:05:39 --> ErrorException: Declaration of App\Controllers\Api\Items::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/items]
+in APPPATH\Controllers\Api\Items.php on line 33.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-02 05:07:40 --> ErrorException: Declaration of App\Controllers\Api\Items::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+[Method: GET, Route: api/items]
+in APPPATH\Controllers\Api\Items.php on line 33.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

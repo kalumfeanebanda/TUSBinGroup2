@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { listItems, deleteItem, createItem, updateItem } from '@/services/items'
+import { listItems, deleteItem, createItem, updateItem } from '@/services/items.js'
 
 const items = ref([])
 const loading = ref(true)
