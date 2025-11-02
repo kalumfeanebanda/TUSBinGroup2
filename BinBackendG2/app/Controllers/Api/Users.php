@@ -55,40 +55,39 @@ class Users extends ResourceController
         try {
             $db = \Config\Database::connect();
 
-            // 3. Find the user by email
-            // NOTE: You must have a database stored procedure or direct query to fetch the user
+            // 3. Find the user by email and get the HASHED 'password' column
             $userQuery = $db->query("
-                SELECT userID, email, password_hash
-                FROM tusbinright2  
-                WHERE email = ?
-            ", [$data['email']]);
+            SELECT userID, email, password 
+            FROM user                     
+            WHERE email = ?
+        ", [$data['email']]);
 
             $user = $userQuery->getRow();
 
-            // 4. Check if user exists
+            // 4. Check if user was found in the database
             if (!$user) {
-                // Use failUnauthorized for incorrect credentials
+                // User not found -> Invalid credentials
                 return $this->failUnauthorized('Invalid email or password.');
             }
 
             // 5. Verify the password hash
-            // The stored password_hash must be retrieved from the database
-            if (password_verify($data['password'], $user->password_hash)) {
-                // 6. Login Successful!
+            // We use the HASH stored in $user->password against the plain text password from the request
+            if (password_verify($data['password'], $user->password)) {
 
-                // TODO: Here you would typically generate a JWT token for session
-                // management and return it to the client. For now, we return basic success.
+                // 6. Login Successful!
+                // TODO: Here you would typically generate a JWT token for session management
 
                 return $this->respond([
                     'status' => 'ok',
                     'message' => 'Login successful!',
                     'userID' => $user->userID,
-                    // 'token' => 'YOUR_JWT_TOKEN_HERE'
                 ]);
+
             } else {
                 // 7. Password incorrect
                 return $this->failUnauthorized('Invalid email or password.');
             }
+
         } catch (\Throwable $e) {
             // Log the error and return a generic server failure
             log_message('error', 'Login error: ' . $e->getMessage());

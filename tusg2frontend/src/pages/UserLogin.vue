@@ -80,7 +80,7 @@ const showPassword = ref(false)
 const successMessage = ref('') // 👈 Add success message ref
 const errorMessage = ref('')   // 👈 Add error message ref
 const router = useRouter()
-const API_URL = 'http://localhost:8081/api/users/login' // 👈 Updated API endpoint
+const API_URL = 'http://localhost:8080/api/login' // 👈 Updated API endpoint
 
 const handleLogin = async () => {
   // Clear previous messages
