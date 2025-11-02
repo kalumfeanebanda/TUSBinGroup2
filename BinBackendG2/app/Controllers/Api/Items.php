@@ -9,7 +9,7 @@ class Items extends ResourceController
     public function index()
     {
         $db = \Config\Database::connect();
-        $q = $db->query("CALL sp_read_items()");
+        $q = $db->query("CALL sp_get_items()");
         $rows = $q->getResultArray();
 
         if (method_exists($q, 'nextResult')) $q->nextResult();

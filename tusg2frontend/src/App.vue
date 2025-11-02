@@ -12,7 +12,7 @@ import Footer from './components/Footer.vue'
 const route = useRoute()
 
 // Hide layout on admin dashboard page only
-const hideLayout = computed(() => route.path === '/admindashboard')
+const hideLayout = computed(() => route.path === '/admindashboard', '/items')
 </script>
 
 <template>
