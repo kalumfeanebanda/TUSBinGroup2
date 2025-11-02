@@ -6,23 +6,25 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
-$routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($routes) {
-    $routes->get('bins', 'Bins::index');
-    $routes->post('bins', 'Bins::create');
-    $routes->delete('bins/(:num)', 'Bins::delete/$1');
-
+// Public home route (not inside API group)
 $routes->get('/', 'Home::index');
 
+// API Routes Group
+$routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($routes) {
 
-$routes->group('api', static function($routes) {
+    // Bin routes
+    $routes->get('bins', 'Bins::index');
+    $routes->post('bins', 'Bins::create');
+    $routes->put('bins/(:num)', 'Bins::update/$1');
+    $routes->delete('bins/(:num)', 'Bins::delete/$1');
 
-$routes->get('bins', 'Api\Bins::index');
-$routes->post('bins', 'Api\Bins::create');
-$routes->put('bins/(:num)', 'Api\Bins::update/$1');
-$routes->delete('bins/(:num)', 'Api\Bins::delete/$1');
+    // Item routes
+    $routes->get('items', 'Items::index');
+    $routes->post('items', 'Items::create');
+    $routes->put('items/(:num)', 'Items::update/$1');
+    $routes->delete('items/(:num)', 'Items::delete/$1');
 
 
-    // map to App\Controllers\Api\Users
+    // User registration
     $routes->post('register', 'Users::register');
 });
-
