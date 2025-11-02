@@ -1,22 +1,30 @@
 <script setup>
-// Bring in the header and footer, they stay the same on every page
+import { useRoute } from 'vue-router'
+
+// Bring in the header and footer
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+
+// Get the current route info
+const route = useRoute()
+
+// Hide layout on admin dashboard page only
+const hideLayout = route.path === '/admindashboard'
 </script>
 
 <template>
   <div class="app">
-    <!-- Top of the site -->
-    <Header/>
 
-    <!-- The main content changes depending on the route -->
+    <!-- Header only if NOT admindashboard -->
+    <Header v-if="!hideLayout" />
+
     <main class="main">
-      <!-- This is the "screen" where pages load -->
       <router-view />
     </main>
 
-    <!-- Bottom of the site -->
+    <!-- Footer only if NOT admindashboard -->
     <Footer
+        v-if="!hideLayout"
         projectName="Bin Pro"
         orgName="Your College"
         :links="[
@@ -29,13 +37,12 @@ import Footer from './components/Footer.vue'
 
 <style scoped>
 .app {
-  min-height: 100dvh; /* take full screen height */
+  min-height: 100dvh;
   display: flex;
-  flex-direction: column; /* stack header, main, footer */
+  flex-direction: column;
 }
 
 .main {
-  flex: 1 1 auto; /* main area grows/shrinks as needed */
+  flex: 1 1 auto;
 }
 </style>
-
