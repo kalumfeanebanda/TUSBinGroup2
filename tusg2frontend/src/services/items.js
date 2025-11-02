@@ -2,7 +2,7 @@ import api from '@/lib/api'
 
 export async function listItems() {
     const r = await api.get('/items')
-    return r.data.data
+    return r.data
 }
 
 export async function createItem(data) {
