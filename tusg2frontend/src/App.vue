@@ -1,5 +1,8 @@
 <script setup>
 import { useRoute } from 'vue-router'
+import { computed } from 'vue'
+
+
 
 // Bring in the header and footer
 import Header from './components/Header.vue'
@@ -9,7 +12,7 @@ import Footer from './components/Footer.vue'
 const route = useRoute()
 
 // Hide layout on admin dashboard page only
-const hideLayout = route.path === '/admindashboard'
+const hideLayout = computed(() => route.path === '/admindashboard')
 </script>
 
 <template>
