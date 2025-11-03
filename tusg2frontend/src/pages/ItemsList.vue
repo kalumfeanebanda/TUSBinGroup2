@@ -306,11 +306,53 @@ onMounted(load)
   background-color: #ffb6c1;
 }
 
-.btn.refresh { background-color: purple; }
-.btn.update { background-color: var(--green); }
-.btn.delete { background-color: var(--red); }
-.btn.create { background-color: var(--green); }
-.btn.cancel { background-color: #aaa; }
+.btn.refresh {
+  background-color: pink;
+  color: #000;
+  font-weight: 600;
+}
+
+.btn.refresh:hover {
+  background-color: #ffb6c1;
+}
+.btn.update {
+  background-color: pink;
+  color: #000;
+  font-weight: 600;
+}
+
+.btn.update:hover {
+  background-color: #ffb6c1;
+}
+
+.btn.delete {
+  background-color: pink;
+  color: #000;
+  font-weight: 600;
+}
+
+.btn.delete:hover {
+  background-color: #ffb6c1;
+}
+.btn.create {
+  background-color: pink;
+  color: #000;
+  font-weight: 600;
+}
+
+.btn.create:hover {
+  background-color: #ffb6c1;
+}
+.btn.cancel {
+  background-color: pink;
+  color: #000;
+  font-weight: 600;
+}
+
+.btn.cancel:hover {
+  background-color: #ffb6c1;
+}
+
 .btn.back { background: #0275d8; }
 
 .items-table {
