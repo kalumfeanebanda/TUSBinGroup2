@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { listBins, deleteBin, createBin, updateBin } from '@/services/bins'
+import {createRouter as $router} from "vue-router";
 
 
 
@@ -82,6 +83,10 @@ onMounted(load)
 <template>
   <section class="bins-section">
     <div class="bins-header">
+      <div class="items-header">
+        <button class="btn back" @click="$router.push('/admindashboard')">
+          ⬅ Back to Admin Dashboard
+        </button>
       <h2>Manage Bins</h2>
       <div class="controls">
         <button class="btn add" @click="openCreate">+ Add Bin</button>
@@ -301,6 +306,16 @@ onMounted(load)
 .bin-form .btn.cancel:hover {
   background-color: #888;
 }
-
+.btn.back {
+  background: #0275d8;
+  color: #fff;
+  padding: .45rem .9rem;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.btn.back:hover {
+  background: #0256a4;
+}
 
 </style>
