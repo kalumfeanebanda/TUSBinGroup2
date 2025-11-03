@@ -1,8 +1,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 import { listItems, deleteItem, createItem, updateItem } from '@/services/items.js'
-import {createRouter as $router} from "vue-router";
 
+const router = useRouter()
 const items = ref([])
 const loading = ref(true)
 const error = ref('')
@@ -69,69 +70,115 @@ async function remove(id) {
 onMounted(load)
 </script>
 
+
 <template>
-  <section class="items-section">
-    <div class="items-header">
-      <button class="btn back" @click="$router.push('/admindashboard')">
-        ⬅ Back to Admin Dashboard
-      </button>
+  <div class="dashboard-container">
 
-      <h2>Manage Items</h2>
-      <div class="controls">
-        <button class="btn add" @click="openCreate">Create Item</button>
-        <button class="btn refresh" @click="load">Refresh</button>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo-section">
+        <img src="@/assets/recycle.jpg" alt="TUSBinRight++" class="logo" />
+        <h1 class="title-text">TUSBinRight++</h1>
       </div>
+      <nav class="nav-links">
+        <router-link to="/">Home</router-link>
+        <router-link to="/users">User</router-link>
+        <router-link to="/admin">Admin</router-link>
+        <router-link to="/menu">Menu</router-link>
+        <router-link to="/adminlogin">Logout</router-link>
+      </nav>
+    </header>
+
+    <div class="main-content">
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <ul>
+          <li @click="router.push('/admindashboard')">Steps</li>
+          <li class="active">Items</li>
+          <li @click="router.push('/bins')">Bins</li>
+          <li>User</li>
+          <li>Staff</li>
+        </ul>
+      </aside>
+
+      <!-- Items Section -->
+      <main class="content">
+        <section class="items-section">
+          <div class="items-header">
+            <button class="btn back" @click="router.push('/admindashboard')">
+              ⬅ Back to Admin Dashboard
+            </button>
+
+            <h2>Manage Items</h2>
+            <div class="controls">
+              <button class="btn add" @click="openCreate">Create Item</button>
+              <button class="btn refresh" @click="load">Refresh</button>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div v-if="showForm" class="item-form">
+            <h3>{{ editing ? 'Update Item' : 'Create New Item' }}</h3>
+
+            <div class="form-row">
+              <label>Item Name:</label>
+              <input v-model="form.itemName" placeholder="Enter item name" />
+            </div>
+
+            <div class="form-row">
+              <label>Description:</label>
+              <input v-model="form.itemDesc" placeholder="Enter description" />
+            </div>
+
+            <div class="form-actions">
+              <button class="btn create" @click="save">
+                {{ editing ? 'Update Item' : 'Create Item' }}
+              </button>
+              <button class="btn cancel" @click="cancel">Cancel</button>
+            </div>
+          </div>
+
+          <div v-if="loading" class="state">Loading…</div>
+          <div v-else-if="error" class="state error">{{ error }}</div>
+          <div v-else-if="items.length === 0" class="state">No items found.</div>
+
+          <table v-else class="items-table">
+            <thead>
+            <tr>
+              <th>#</th>
+              <th>Item Name</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="i in items" :key="i.itemID">
+              <td class="muted">{{ i.itemID }}</td>
+              <td>{{ i.itemName }}</td>
+              <td>{{ i.itemDesc }}</td>
+              <td class="actions">
+                <button class="btn update" @click="openEdit(i)">Update</button>
+                <button class="btn delete" @click="remove(i.itemID)">Delete</button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
     </div>
 
-    <!-- Create / Edit Form -->
-    <div v-if="showForm" class="item-form">
-      <h3>{{ editing ? 'Update Item' : 'Create New Item' }}</h3>
+    <!-- Footer -->
+    <footer class="footer">
+      <p><strong>Contact Us</strong></p>
+      <p>Technological University of Shannon</p>
+      <p>support@tusbinright.tus.ie | (087) 066 0662</p>
+      <p>© 2025 TUSBinRight++. All rights reserved. Developed by Group 2</p>
+    </footer>
 
-      <div class="form-row">
-        <label>Item Name:</label>
-        <input v-model="form.itemName" placeholder="Enter item name" />
-      </div>
-
-      <div class="form-row">
-        <label>Description:</label>
-        <input v-model="form.itemDesc" placeholder="Enter description" />
-      </div>
-
-      <div class="form-actions">
-        <button class="btn create" @click="save">
-          {{ editing ? 'Update Item' : 'Create Item' }}
-        </button>
-        <button class="btn cancel" @click="cancel">Cancel</button>
-      </div>
-    </div>
-
-    <div v-if="loading" class="state">Loading…</div>
-    <div v-else-if="error" class="state error">{{ error }}</div>
-    <div v-else-if="items.length === 0" class="state">No items found.</div>
-
-    <table v-else class="items-table">
-      <thead>
-      <tr>
-        <th style="width: 80px">#</th>
-        <th>Item Name</th>
-        <th>Description</th>
-        <th style="width: 220px">Actions</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr v-for="i in items" :key="i.itemID">
-        <td class="muted">{{ i.itemID }}</td>
-        <td>{{ i.itemName }}</td>
-        <td>{{ i.itemDesc }}</td>
-        <td class="actions">
-          <button class="btn update" @click="openEdit(i)">Update</button>
-          <button class="btn delete" @click="remove(i.itemID)">Delete</button>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-  </section>
+  </div>
 </template>
+
 
 <style scoped>
 :root {
@@ -142,17 +189,90 @@ onMounted(load)
   --border: #e0e0e0;
 }
 
-/* Layout */
+/* ---- ADMIN WRAPPER UI ---- */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff6f6;
+}
+
+.navbar {
+  background-color: #4caf50;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.25rem;
+  font-weight: bold;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 220px;
+  background: #388e3c;
+  padding-top: 20px;
+  color: #fff;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  background-color: #66bb6a;
+  margin: 10px 15px;
+  padding: 0.9rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sidebar li.active {
+  background: #256b3b;
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* ---- ORIGINAL ITEMS CSS ---- */
+
 .items-section {
   background: #fff;
   padding: 1rem 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  margin: 2rem auto;
+  margin: 1rem auto;
   max-width: 900px;
 }
 
-/* Header */
 .items-header {
   display: flex;
   justify-content: space-between;
@@ -162,71 +282,54 @@ onMounted(load)
   margin-bottom: 1rem;
 }
 
-.items-header h2 {
-  margin: 0;
-  color: #2f4f27;
-  font-size: 1.4rem;
-}
-
 .controls {
   display: flex;
   gap: 0.5rem;
 }
 
-/* Buttons */
 .btn {
   color: #fff;
   padding: 0.4rem 0.85rem;
   border: none;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 0.85rem;
   cursor: pointer;
 }
 
 .btn.add {
-  background-color: var(--green);
+  background-color: pink;
+  color: #000;
+  font-weight: 600;
 }
+
 .btn.add:hover {
-  background-color: var(--green-d);
+  background-color: #ffb6c1;
 }
 
 .btn.refresh { background-color: purple; }
 .btn.update { background-color: var(--green); }
 .btn.delete { background-color: var(--red); }
+.btn.create { background-color: var(--green); }
+.btn.cancel { background-color: #aaa; }
+.btn.back { background: #0275d8; }
 
-.btn.create {
-  background-color: var(--green);
-}
-.btn.create:hover {
-  background-color: var(--green-d);
-}
-
-.btn.cancel {
-  background-color: #aaa;
-}
-.btn.cancel:hover {
-  background-color: #888;
-}
-
-/* Table */
 .items-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
 }
+
 .items-table th,
 .items-table td {
   border: 1px solid var(--border);
   padding: 0.75rem 1rem;
 }
+
 .items-table th {
   background-color: #e7f3e5;
   font-weight: 700;
-  color: #2f4f27;
 }
 
-/* Form */
 .item-form {
   background: #f9f9f9;
   padding: 1rem;
@@ -237,46 +340,29 @@ onMounted(load)
 
 .form-row {
   margin-bottom: 0.75rem;
-  display: flex;
-  flex-direction: column;
 }
 
-.form-row input {
-  padding: 0.7rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-}
-
-.form-actions {
-  display: flex;
-  gap: 0.5rem;
-}
-
-/* State messages */
 .state {
   padding: 1rem;
   border: 1px solid var(--border);
   border-radius: 10px;
   text-align: center;
 }
+
 .state.error {
-  border-color: #f0c2c2;
   color: #b91c1c;
 }
 
 .muted {
   color: var(--muted);
 }
-.btn.back {
-  background: #0275d8;
-  color: #fff;
-  padding: .45rem .9rem;
-  border-radius: 6px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.btn.back:hover {
-  background: #0256a4;
-}
 
+/* Footer */
+.footer {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-top: 3px solid #1b5e20;
+}
 </style>
