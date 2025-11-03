@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { listItems, deleteItem, createItem, updateItem } from '@/services/items.js'
+import {createRouter as $router} from "vue-router";
 
 const items = ref([])
 const loading = ref(true)
@@ -71,6 +72,10 @@ onMounted(load)
 <template>
   <section class="items-section">
     <div class="items-header">
+      <button class="btn back" @click="$router.push('/admindashboard')">
+        ⬅ Back to Admin Dashboard
+      </button>
+
       <h2>Manage Items</h2>
       <div class="controls">
         <button class="btn add" @click="openCreate">Create Item</button>
@@ -262,4 +267,16 @@ onMounted(load)
 .muted {
   color: var(--muted);
 }
+.btn.back {
+  background: #0275d8;
+  color: #fff;
+  padding: .45rem .9rem;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.btn.back:hover {
+  background: #0256a4;
+}
+
 </style>
