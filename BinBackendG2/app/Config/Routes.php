@@ -18,6 +18,15 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($r
     $routes->put('bins/(:num)', 'Bins::update/$1');
     $routes->delete('bins/(:num)', 'Bins::delete/$1');
 
+
+    // Item routes
+    $routes->get('items', 'Items::index');
+    $routes->post('items', 'Items::create');
+    $routes->put('items/(:num)', 'Items::update/$1');
+    $routes->delete('items/(:num)', 'Items::delete/$1');
+
+
+
     // User registration
     $routes->post('register', 'Users::register');
     $routes->post('login', 'Users::login');
