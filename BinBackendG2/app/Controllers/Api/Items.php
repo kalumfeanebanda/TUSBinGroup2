@@ -30,7 +30,7 @@ class Items extends ResourceController
         return $this->respondCreated(['status'=>'ok','message'=>'Item added']);
     }
 
-    public function update($id)
+    public function update($id = null)
     {
         $input = $this->request->getJSON(true);
         $name = $input['itemName'] ?? '';
@@ -42,7 +42,7 @@ class Items extends ResourceController
         return $this->respond(['status'=>'ok','message'=>'Item updated']);
     }
 
-    public function delete($id)
+    public function delete($id = null)
     {
         $db = \Config\Database::connect();
         $db->query("CALL sp_delete_item(?)", [$id]);

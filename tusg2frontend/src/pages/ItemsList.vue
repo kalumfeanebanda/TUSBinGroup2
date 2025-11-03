@@ -49,7 +49,7 @@ async function save() {
       alert("Item updated!")
     } else {
       await createItem(form.value)
-      alert("Item added!")
+      alert("Item created!")
     }
 
     cancel()
@@ -73,14 +73,14 @@ onMounted(load)
     <div class="items-header">
       <h2>Manage Items</h2>
       <div class="controls">
-        <button class="btn add" @click="openCreate">+ Add Item</button>
+        <button class="btn add" @click="openCreate">Create Item</button>
         <button class="btn refresh" @click="load">Refresh</button>
       </div>
     </div>
 
     <!-- Create / Edit Form -->
     <div v-if="showForm" class="item-form">
-      <h3>{{ editing ? 'Edit Item' : 'Create New Item' }}</h3>
+      <h3>{{ editing ? 'Update Item' : 'Create New Item' }}</h3>
 
       <div class="form-row">
         <label>Item Name:</label>
@@ -93,7 +93,9 @@ onMounted(load)
       </div>
 
       <div class="form-actions">
-        <button class="btn update" @click="save">Save</button>
+        <button class="btn create" @click="save">
+          {{ editing ? 'Update Item' : 'Create Item' }}
+        </button>
         <button class="btn cancel" @click="cancel">Cancel</button>
       </div>
     </div>
@@ -131,7 +133,6 @@ onMounted(load)
   --green: #4b8b3b;
   --green-d: #3d7a31;
   --red: #d9534f;
-  --blue: #0275d8;
   --muted: #6b7280;
   --border: #e0e0e0;
 }
@@ -165,7 +166,6 @@ onMounted(load)
 .controls {
   display: flex;
   gap: 0.5rem;
-  align-items: center;
 }
 
 /* Buttons */
@@ -179,10 +179,30 @@ onMounted(load)
   cursor: pointer;
 }
 
+.btn.add {
+  background-color: var(--green);
+}
+.btn.add:hover {
+  background-color: var(--green-d);
+}
+
 .btn.refresh { background-color: purple; }
-.btn.add { background-color: pink; }
 .btn.update { background-color: var(--green); }
 .btn.delete { background-color: var(--red); }
+
+.btn.create {
+  background-color: var(--green);
+}
+.btn.create:hover {
+  background-color: var(--green-d);
+}
+
+.btn.cancel {
+  background-color: #aaa;
+}
+.btn.cancel:hover {
+  background-color: #888;
+}
 
 /* Table */
 .items-table {
@@ -190,31 +210,15 @@ onMounted(load)
   border-collapse: collapse;
   font-size: 0.95rem;
 }
-
 .items-table th,
 .items-table td {
   border: 1px solid var(--border);
   padding: 0.75rem 1rem;
-  text-align: left;
 }
-
 .items-table th {
   background-color: #e7f3e5;
   font-weight: 700;
   color: #2f4f27;
-}
-
-.items-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.actions {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.muted {
-  color: var(--muted);
 }
 
 /* Form */
@@ -243,26 +247,19 @@ onMounted(load)
   gap: 0.5rem;
 }
 
-.btn.cancel {
-  background-color: #aaa;
-}
-
-.btn.cancel:hover {
-  background-color: #888;
-}
-
 /* State messages */
 .state {
   padding: 1rem;
-  background: #fff;
   border: 1px solid var(--border);
   border-radius: 10px;
   text-align: center;
-  color: #374151;
 }
-
 .state.error {
   border-color: #f0c2c2;
   color: #b91c1c;
+}
+
+.muted {
+  color: var(--muted);
 }
 </style>
