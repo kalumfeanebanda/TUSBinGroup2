@@ -72,15 +72,15 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import axios from 'axios' // 👈 Import axios
+import axios from 'axios' //  Import axios
 
 const email = ref('')
 const password = ref('')
 const showPassword = ref(false)
-const successMessage = ref('') // 👈 Add success message ref
-const errorMessage = ref('')   // 👈 Add error message ref
+const successMessage = ref('') //  Add success message ref
+const errorMessage = ref('')   //  Add error message ref
 const router = useRouter()
-const API_URL = 'http://localhost:8080/api/login' // 👈 Updated API endpoint
+const API_URL = 'http://localhost:8080/api/login' //  Updated API endpoint
 
 const handleLogin = async () => {
   // Clear previous messages
