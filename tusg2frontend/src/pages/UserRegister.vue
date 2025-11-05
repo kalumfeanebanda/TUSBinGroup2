@@ -74,6 +74,21 @@ const confirmPassword = ref("");
 const successMessage = ref("");
 const errorMessage = ref("");
 
+const validatePassword = () => {
+  const regex =
+      /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+  if (!regex.test(password.value)) {
+    errorMessage.value =
+        "Password must be 8+ characters, include 1 uppercase letter, 1 number & 1 special character.";
+    successMessage.value = "";
+    return false;
+  }
+
+  return true;
+};
+
+
 const handleRegister = async () => {
   if (password.value !== confirmPassword.value) {
     errorMessage.value = "Passwords do not match!";
