@@ -100,7 +100,7 @@ onMounted(load)
       <div class="form-row">
         <label>Description:</label>
         <input v-model="form.binDesc" placeholder="Enter description" />
-      </div>
+      </div>cd
       <div class="form-actions">
         <button class="btn save" @click="saveBin">{{ editing ? 'Save Changes' : 'Create Bin' }}</button>
         <button class="btn cancel" @click="cancelForm">Cancel</button>

@@ -1,0 +1,20 @@
+import api from '@/lib/api'
+
+export async function listItems() {
+    const r = await api.get('/items')
+    return r.data.data
+}
+
+export async function createItem(data) {
+    const r = await api.post('/items', data)
+    return r.data
+}
+
+export async function updateItem(id, data) {
+    const r = await api.put(`/items/${id}`, data)
+    return r.data
+}
+
+export async function deleteItem(id) {
+    await api.delete(`/items/${id}`)
+}
