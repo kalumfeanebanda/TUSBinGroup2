@@ -29,6 +29,9 @@
               placeholder="Enter your password"
               required
           />
+          <small class="password-hint">
+            Must be 8+ chars, 1 uppercase, 1 number & 1 special symbol.
+          </small>
 
           <label>Retype Password</label>
           <input
@@ -74,12 +77,31 @@ const confirmPassword = ref("");
 const successMessage = ref("");
 const errorMessage = ref("");
 
+const validatePassword = () => {
+  const regex =
+      /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+  if (!regex.test(password.value)) {
+    errorMessage.value =
+        "Password must be 8+ characters, include 1 uppercase letter, 1 number & 1 special character.";
+    successMessage.value = "";
+    return false;
+  }
+
+  return true;
+};
+
+
+
+
 const handleRegister = async () => {
   if (password.value !== confirmPassword.value) {
     errorMessage.value = "Passwords do not match!";
     successMessage.value = "";
     return;
   }
+
+  if (!validatePassword()) return;
 
   // Split full name into first and last names
   const [fname, ...rest] = name.value.trim().split(" ");
@@ -170,6 +192,13 @@ input {
   border-radius: 6px;
   font-size: 1rem;
 }
+.password-hint {
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: -8px;
+  margin-bottom: -2px;
+}
+
 
 .register-btn {
   background-color: #1b5e20;
