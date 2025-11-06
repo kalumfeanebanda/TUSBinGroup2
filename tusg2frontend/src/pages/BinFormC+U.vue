@@ -35,11 +35,11 @@
 import { computed, reactive, watch, ref } from 'vue'
 import { createBin, updateBin } from '@/services/bins'
 
-// Props: pass an existing bin for edit, or nothing for create
+
 const props = defineProps({
   bin: {
     type: Object,
-    default: null, // { binTypeID, binName, binDesc }
+    default: null,
   },
 })
 
