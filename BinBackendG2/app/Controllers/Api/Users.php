@@ -57,10 +57,10 @@ class Users extends ResourceController
 
             // 3. Find the user by email and get the HASHED 'password' column
             $userQuery = $db->query("
-            SELECT userID, email, password 
-            FROM user                     
-            WHERE email = ?
-        ", [$data['email']]);
+        SELECT userID, email, TRIM(password) as password_hash_trimmed 
+        FROM user                     
+        WHERE email = ?
+    ", [$data['email']]);
 
             $user = $userQuery->getRow();
 
@@ -72,7 +72,7 @@ class Users extends ResourceController
 
             // 5. Verify the password hash
             // We use the HASH stored in $user->password against the plain text password from the request
-            if (password_verify($data['password'], $user->password)) {
+            if (password_verify($data['password'], $user->password_hash_trimmed)) {
 
                 // 6. Login Successful!
                 // TODO: Here you would typically generate a JWT token for session management
