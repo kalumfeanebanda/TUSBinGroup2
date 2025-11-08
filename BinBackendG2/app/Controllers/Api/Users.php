@@ -94,46 +94,12 @@ class Users extends ResourceController
         $db = \Config\Database::connect();
         $q  = $db->query('CALL adm_Delete_user(?)', [$id]);
 
-        try {
-            $db = \Config\Database::connect();
+        if (method_exists($q, 'nextResult')) $q->nextResult();
+        if (method_exists($q, 'freeResult')) $q->freeResult();
 
-            // 3. Find the user by email and get the HASHED 'password' column
-            $userQuery = $db->query("
-        SELECT userID, email, TRIM(password) as password_hash_trimmed 
-        FROM user                     
-        WHERE email = ?
-    ", [$data['email']]);
+        if ($db->affectedRows() > 0)
+            return $this->respond(['status' => 'ok', 'success' => true]);
 
-            $user = $userQuery->getRow();
-
-            // 4. Check if user was found in the database
-            if (!$user) {
-                // User not found -> Invalid credentials
-                return $this->failUnauthorized('Invalid email or password.');
-            }
-
-            // 5. Verify the password hash
-            // We use the HASH stored in $user->password against the plain text password from the request
-            if (password_verify($data['password'], $user->password_hash_trimmed)) {
-
-                // 6. Login Successful!
-                // TODO: Here you would typically generate a JWT token for session management
-
-                return $this->respond([
-                    'status' => 'ok',
-                    'message' => 'Login successful!',
-                    'userID' => $user->userID,
-                ]);
-
-            } else {
-                // 7. Password incorrect
-                return $this->failUnauthorized('Invalid email or password.');
-            }
-
-        } catch (\Throwable $e) {
-            // Log the error and return a generic server failure
-            log_message('error', 'Login error: ' . $e->getMessage());
-            return $this->failServerError('An unexpected error occurred during login.');
-        }
+        return $this->failNotFound('User not found.');
     }
 }
