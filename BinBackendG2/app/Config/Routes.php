@@ -25,6 +25,12 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($r
     $routes->put('items/(:num)', 'Items::update/$1');
     $routes->delete('items/(:num)', 'Items::delete/$1');
 
+// User CRUD routes
+    $routes->get('users', 'Users::index');
+    $routes->post('users', 'Users::create');
+    $routes->put('users/(:num)', 'Users::update/$1');
+    $routes->delete('users/(:num)', 'Users::delete/$1');
+
 
 
     // User registration
