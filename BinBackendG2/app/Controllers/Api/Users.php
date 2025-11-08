@@ -75,8 +75,7 @@ class Users extends ResourceController
             if (password_verify($data['password'], $user->password_hash_trimmed)) {
 
                 // 6. Login Successful!
-                // TODO: Here you would typically generate a JWT token for session management
-
+                
                 return $this->respond([
                     'status' => 'ok',
                     'message' => 'Login successful!',
