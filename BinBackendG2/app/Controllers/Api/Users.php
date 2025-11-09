@@ -75,7 +75,7 @@ class Users extends ResourceController
             if (password_verify($data['password'], $user->password_hash_trimmed)) {
 
                 // 6. Login Successful!
-                
+
                 return $this->respond([
                     'status' => 'ok',
                     'message' => 'Login successful!',
