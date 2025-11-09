@@ -56,8 +56,9 @@ class Users extends ResourceController
             $db = \Config\Database::connect();
 
             // 3. Find the user by email and get the HASHED 'password' column
+            // We select the 'password' column directly now.
             $userQuery = $db->query("
-        SELECT userID, email, TRIM(password) as password_hash_trimmed 
+        SELECT userID, email, password  
         FROM user                     
         WHERE email = ?
     ", [$data['email']]);
@@ -70,9 +71,14 @@ class Users extends ResourceController
                 return $this->failUnauthorized('Invalid email or password.');
             }
 
+            // --- CRITICAL CHANGE: CLEAN THE HASH IN PHP ---
+            // Explicitly trim the hash to guarantee no leading/trailing whitespace before verifying.
+            $storedHash = trim($user->password);
+            // ----------------------------------------------
+
             // 5. Verify the password hash
-            // We use the HASH stored in $user->password against the plain text password from the request
-            if (password_verify($data['password'], $user->password_hash_trimmed)) {
+            // We use the CLEAN HASH stored in $storedHash against the plain text password from the request
+            if (password_verify($data['password'], $storedHash)) {
 
                 // 6. Login Successful!
 
