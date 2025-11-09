@@ -1,0 +1,368 @@
+ERROR - 2025-11-05 08:07:12 --> mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_ite...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_ite...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_ite...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_ite...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-11-05 08:07:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+[Method: GET, Route: api/items]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 08:07:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 3 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 08:07:12 --> [Caused by] mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_items()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 4 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-05 08:07:15 --> mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_ite...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_ite...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_ite...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_ite...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-11-05 08:07:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+[Method: GET, Route: api/items]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 08:07:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 3 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 08:07:15 --> [Caused by] mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_items()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 4 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-05 08:07:16 --> mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_ite...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_ite...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_ite...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_ite...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-11-05 08:07:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+[Method: GET, Route: api/items]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 08:07:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 3 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 08:07:16 --> [Caused by] mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_items()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 4 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-05 09:54:46 --> mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_ite...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_ite...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_ite...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_ite...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-11-05 09:54:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+[Method: GET, Route: api/items]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 09:54:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 3 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 09:54:46 --> [Caused by] mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_items()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 4 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-05 09:54:48 --> mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_ite...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_ite...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_ite...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_ite...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-11-05 09:54:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+[Method: GET, Route: api/items]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 09:54:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 3 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 09:54:48 --> [Caused by] mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_items()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 4 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-05 10:00:00 --> mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_ite...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_ite...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_ite...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_ite...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-11-05 10:00:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+[Method: GET, Route: api/items]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 10:00:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 3 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 10:00:00 --> [Caused by] mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_items()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 4 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-05 10:03:58 --> mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_ite...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_ite...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_ite...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_ite...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-11-05 10:03:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+[Method: GET, Route: api/items]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 10:03:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 3 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 10:03:58 --> [Caused by] mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_items()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 4 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-05 10:09:06 --> mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_ite...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_ite...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_ite...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_ite...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-11-05 10:09:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+[Method: GET, Route: api/items]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 10:09:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 3 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-05 10:09:06 --> [Caused by] mysqli_sql_exception: Table 'tusbinright2.itemcode' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL sp_get_items()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL sp_get_items()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL sp_get_items()')
+ 4 APPPATH\Controllers\Api\Items.php(12): CodeIgniter\Database\BaseConnection->query('CALL sp_get_items()')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Items->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Items))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
