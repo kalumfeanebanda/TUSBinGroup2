@@ -2,14 +2,35 @@
 
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\API\ResponseTrait;
-
+use CodeIgniter\HTTP\Response;
 class Users extends ResourceController
 {
     use ResponseTrait;
     protected $format = 'json';
+// 1. ADDED CORS HANDLER METHOD (Essential for connection)
+    // =========================================================
+    protected function handleCors(): ?Response
+    {
+        // Set headers to allow Vue frontend (localhost:5173) to communicate with API (localhost:8080)
+        $this->response->setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+        $this->response->setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+        $this->response->setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Requested-With, Authorization');
+        $this->response->setHeader('Access-Control-Allow-Credentials', 'true');
+
+        // Handle the OPTIONS (preflight) request from the browser
+        if ($this->request->getMethod() === 'options') {
+            return $this->response->setStatusCode(200);
+        }
+
+        return null; // Continue processing the request
+    }
 
     public function register()
     {
+        // === NEW CORS CALL START ===
+        $response = $this->handleCors();
+        if ($response) return $response; // Stops execution if it was an OPTIONS request
+        // === NEW CORS CALL END ===
         $data = $this->request->getJSON(true);
 
         if (empty($data['fname']) || empty($data['lname']) || empty($data['email']) || empty($data['password'])) {
@@ -44,6 +65,10 @@ class Users extends ResourceController
     // New Login Method for User Verification
     public function login()
     {
+        // === NEW CORS CALL START ===
+        $response = $this->handleCors();
+        if ($response) return $response; // Stops execution if it was an OPTIONS request
+        // === NEW CORS CALL END ===
         // 1. Get incoming JSON data
         $data = $this->request->getJSON(true);
 
