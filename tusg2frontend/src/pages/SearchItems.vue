@@ -50,7 +50,9 @@
       </div>
 
     </div>
-
+    <div>
+      <p class="subtitle"></p>
+    </div>
     <div v-if="showScanner" class="scanner-area">
       <BarcodeScanner @scanned="handleScanned" />
       <button @click="toggleScanner" class="close-btn">Close Scanner</button>
