@@ -82,13 +82,13 @@
             </tr>
             </thead>
             <tbody>
-            <tr v-for="i in steps" :key="i.prepStepID">
-              <td class="muted">{{ i.prepStepID }}</td>
+            <tr v-for="i in steps" :key="i.prepStepId">
+              <td class="muted">{{ i.prepStepId }}</td>
               <td>{{ i.stepTitle }}</td>
               <td>{{ i.stepDesc }}</td>
               <td class="actions">
                 <button class="btn update" @click="openEdit(i)">Update</button>
-                <button class="btn delete" @click="remove(i.prepStepID)">Delete</button>
+                <button class="btn delete" @click="remove(i.prepStepId)">Delete</button>
               </td>
             </tr>
             </tbody>
@@ -165,7 +165,7 @@ async function save() {
 
     if (editing.value) {
       // Use stepID for update
-      await updateStep(editing.value.prepStepID, form.value)
+      await updateStep(editing.value.prepStepId, form.value)
       window.alert("Step updated!")
     } else {
       await createStep(form.value)

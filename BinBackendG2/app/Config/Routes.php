@@ -34,6 +34,7 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($r
     $routes->delete('steps/(:num)', 'Steps::delete/$1');
 
     // User registration
+    $routes->match(['options', 'post'], 'login', 'Users::login');
     $routes->post('register', 'Users::register');
-    $routes->post('login', 'Users::login');
+
 });
