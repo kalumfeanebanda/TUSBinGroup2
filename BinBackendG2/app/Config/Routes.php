@@ -27,7 +27,14 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($r
 
 
 
+    // Step routes (The Steps Controller handles CRUD for /api/steps)
+    $routes->get('steps', 'Steps::index');
+    $routes->post('steps', 'Steps::create'); // FIXES YOUR 404 ERROR
+    $routes->put('steps/(:num)', 'Steps::update/$1');
+    $routes->delete('steps/(:num)', 'Steps::delete/$1');
+
     // User registration
+    $routes->match(['options', 'post'], 'login', 'Users::login');
     $routes->post('register', 'Users::register');
-    $routes->post('login', 'Users::login');
+
 });
