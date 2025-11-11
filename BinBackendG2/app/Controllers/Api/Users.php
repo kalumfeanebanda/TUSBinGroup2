@@ -24,6 +24,7 @@ class Users extends ResourceController
 
         return null; // Continue processing the request
     }
+ph
 
     public function register()
     {
