@@ -97,18 +97,14 @@ const submitBarcode = () => {
     alert("Please enter or scan a barcode first!");
     return;
   }
-  // In a real app, you would check if the input is a valid barcode number
+
   alert(`Submitted Barcode: ${searchInput.value}`);
   searchInput.value = "";
 };
 </script>
 
 <style scoped>
-/* ==================================== */
-/* BASE LAYOUT & TEXT */
-/* ==================================== */
-/* .image{
-  background:url("../images/BG.jpg");}*/
+
 
 
 .search-items-page-container {
@@ -219,9 +215,7 @@ const submitBarcode = () => {
 }
 
 
-/* ==================================== */
-/* SCANNER AREA (Reused) */
-/* ==================================== */
+
 .scanner-area {
   margin-top: 40px;
   display: flex;
