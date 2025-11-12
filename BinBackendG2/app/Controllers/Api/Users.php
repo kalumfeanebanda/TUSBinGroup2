@@ -7,11 +7,10 @@ class Users extends ResourceController
 {
     use ResponseTrait;
     protected $format = 'json';
-// 1. ADDED CORS HANDLER METHOD (Essential for connection)
-    // =========================================================
+
     protected function handleCors(): ?Response
     {
-        // Set headers to allow Vue frontend (localhost:5173) to communicate with API (localhost:8080)
+
         $this->response->setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
         $this->response->setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
         $this->response->setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Requested-With, Authorization');
@@ -28,10 +27,10 @@ class Users extends ResourceController
 
     public function register()
     {
-        // === NEW CORS CALL START ===
+
         $response = $this->handleCors();
         if ($response) return $response; // Stops execution if it was an OPTIONS request
-        // === NEW CORS CALL END ===
+
         $data = $this->request->getJSON(true);
 
         if (empty($data['fname']) || empty($data['lname']) || empty($data['email']) || empty($data['password'])) {
@@ -66,7 +65,7 @@ class Users extends ResourceController
     // New Login Method for User Verification
     public function login()
     {
-        // === NEW CORS CALL START ===
+
         $response = $this->handleCors();
         if ($response) return $response; // Stops execution if it was an OPTIONS request
         // === NEW CORS CALL END ===
@@ -82,7 +81,7 @@ class Users extends ResourceController
             $db = \Config\Database::connect();
 
             // 3. Find the user by email and get the HASHED 'password' column
-            // We select the 'password' column directly now.
+
             $userQuery = $db->query("
         SELECT userID, email, password  
         FROM user                     
@@ -97,7 +96,7 @@ class Users extends ResourceController
                 return $this->failUnauthorized('Invalid email or password.');
             }
 
-            // --- CRITICAL CHANGE: CLEAN THE HASH IN PHP ---
+
             // Explicitly trim the hash to guarantee no leading/trailing whitespace before verifying.
             $storedHash = trim($user->password);
             // ----------------------------------------------
