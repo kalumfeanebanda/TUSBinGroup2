@@ -38,19 +38,19 @@ class Steps extends ResourceController
      */
     public function create()
     {
-        // Get JSON input from the request body
         $input = $this->request->getJSON(true);
-        $title = $input['stepTitle'] ?? ''; // This is the data we want to save
-        // REMOVED: $desc = $input['stepDesc'] ?? ''; // This second field is ignored
+        $title = $input['stepTitle'] ?? '';
+        // ADDED: Read the separate description field from the frontend
+        $desc = $input['stepDesc'] ?? '';
 
-        // Simple validation to ensure required fields are present
         if (empty($title)) {
             return $this->fail('Step title is required', 400);
         }
 
         $db = \Config\Database::connect();
-        // CHANGED: The SP call now only uses ONE parameter, mapping stepTitle to the DB's stepDesc column.
-        $db->query("CALL sp_add_step(?)", [$title]);
+        // CHANGED: The SP call now uses TWO parameters: title and description
+        // You will need to create sp_add_step with two params in Step 3.
+        $db->query("CALL sp_add_step(?, ?)", [$title, $desc]);
 
         return $this->respondCreated(['status'=>'ok','message'=>'Step added']);
     }
@@ -62,19 +62,19 @@ class Steps extends ResourceController
      */
     public function update($id = null)
     {
-        // Get JSON input from the request body
         $input = $this->request->getJSON(true);
-        $title = $input['stepTitle'] ?? ''; // This is the data we want to save
-        // REMOVED: $desc = $input['stepDesc'] ?? ''; // This second field is ignored
+        $title = $input['stepTitle'] ?? '';
+        // ADDED: Read the separate description field from the frontend
+        $desc = $input['stepDesc'] ?? '';
 
-        // Simple validation
         if (is_null($id) || empty($title)) {
             return $this->fail('Invalid request or missing step ID/title', 400);
         }
 
         $db = \Config\Database::connect();
-        // CHANGED: The SP call now uses TWO parameters: the ID (prepStepId) and the data (stepTitle).
-        $db->query("CALL sp_update_step(?, ?)", [$id, $title]);
+        // CHANGED: The SP call now uses THREE parameters: ID, title, and description
+        // You will need to create sp_update_step with three params in Step 3.
+        $db->query("CALL sp_update_step(?, ?, ?)", [$id, $title, $desc]);
 
         return $this->respond(['status'=>'ok','message'=>'Step updated']);
     }
