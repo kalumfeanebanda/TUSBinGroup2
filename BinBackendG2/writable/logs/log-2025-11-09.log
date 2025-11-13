@@ -1,0 +1,28 @@
+Stack trace:
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+Stack trace:
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+Stack trace:
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_b...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+[Method: GET, Route: api/bins]
+Stack trace:
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
