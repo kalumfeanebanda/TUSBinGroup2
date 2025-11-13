@@ -9,7 +9,6 @@ import AdminDashboard from './pages/AdminDashboard.vue'
 import SearchItems from './pages/SearchItems.vue'
 
 
-
 const routes = [
     { path: '/', name: 'home', component: Home },
 
@@ -20,9 +19,7 @@ const routes = [
     { path: '/search-items', name: 'search-items', component: SearchItems },
     { path: '/items', name: 'items', component: () => import('@/pages/ItemsList.vue') },
     { path: '/bins', name: 'bins', component: () => import('@/pages/BinsList.vue') },
-    { path: '/users', name: 'users', component: () => import('@/pages/UserList.vue') },
-    { path: '/users/new', name: 'user-create', component: () => import('@/pages/UserForm.vue')},
-    { path: '/users/:id/edit', name: 'user-edit', component: () => import('@/pages/UserForm.vue')}
+    { path: '/users', name: 'users', component: () => import('@/pages/UserList.vue') }
 ]
 
 
