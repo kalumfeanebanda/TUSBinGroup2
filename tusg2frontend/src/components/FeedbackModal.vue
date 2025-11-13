@@ -3,7 +3,6 @@
     <div class="modal-box">
 
       <button class="close-btn" @click="$emit('close')">×</button>
-
       
 
       <Feedback :showFeedback="true" />
