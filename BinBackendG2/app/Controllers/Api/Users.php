@@ -1,37 +1,70 @@
 <?php namespace App\Controllers\Api;
 
+// =========================================================
+// UNIVERSAL DYNAMIC CORS HANDLER — runs before CodeIgniter
+// =========================================================
+if (isset($_SERVER['HTTP_ORIGIN'])) {
+    $origin = $_SERVER['HTTP_ORIGIN'];
+
+    // Automatically allow any localhost or 127.0.0.1 port (for Vue dev)
+    if (preg_match('/^http:\/\/(localhost|127\.0\.0\.1):\d+$/', $origin)) {
+        header("Access-Control-Allow-Origin: $origin");
+    } else {
+        // Fallback for production (you can later restrict this)
+        header("Access-Control-Allow-Origin: *");
+    }
+
+    header("Access-Control-Allow-Credentials: true");
+    header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+    header("Access-Control-Allow-Headers: Content-Type, X-Requested-With, Authorization");
+}
+
+// Stop OPTIONS requests early (browser preflight)
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit;
+}
+
+// =========================================================
+// CODEIGNITER CONTROLLER
+// =========================================================
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\API\ResponseTrait;
 use CodeIgniter\HTTP\Response;
+
 class Users extends ResourceController
 {
     use ResponseTrait;
     protected $format = 'json';
-// 1. ADDED CORS HANDLER METHOD (Essential for connection)
-    // =========================================================
+
+    // Optional internal CORS handling (CodeIgniter response layer)
     protected function handleCors(): ?Response
     {
-        // Set headers to allow Vue frontend (localhost:5173) to communicate with API (localhost:8080)
-        $this->response->setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+        $origin = $this->request->getHeaderLine('Origin');
+
+        if (preg_match('/^http:\/\/(localhost|127\.0\.0\.1):\d+$/', $origin)) {
+            $this->response->setHeader('Access-Control-Allow-Origin', $origin);
+        } else {
+            $this->response->setHeader('Access-Control-Allow-Origin', '*');
+        }
+
         $this->response->setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
         $this->response->setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Requested-With, Authorization');
         $this->response->setHeader('Access-Control-Allow-Credentials', 'true');
 
-        // Handle the OPTIONS (preflight) request from the browser
         if ($this->request->getMethod() === 'options') {
             return $this->response->setStatusCode(200);
         }
 
-        return null; // Continue processing the request
+        return null;
     }
-ph
 
+    // REGISTER USER
     public function register()
     {
-        // === NEW CORS CALL START ===
         $response = $this->handleCors();
-        if ($response) return $response; // Stops execution if it was an OPTIONS request
-        // === NEW CORS CALL END ===
+        if ($response) return $response;
+
         $data = $this->request->getJSON(true);
 
         if (empty($data['fname']) || empty($data['lname']) || empty($data['email']) || empty($data['password'])) {
@@ -42,7 +75,6 @@ ph
             $db = \Config\Database::connect();
             $passwordHash = password_hash($data['password'], PASSWORD_BCRYPT);
 
-            // Prepare OUT parameter
             $db->query("CALL reg_Create_user(?, ?, ?, ?, @p_userID)", [
                 $data['fname'],
                 $data['lname'],
@@ -50,7 +82,6 @@ ph
                 $passwordHash
             ]);
 
-            // Get the output value (new user ID)
             $query = $db->query("SELECT @p_userID AS userID");
             $result = $query->getRow();
 
@@ -60,67 +91,48 @@ ph
                 'userID' => $result->userID
             ]);
         } catch (\Throwable $e) {
-            return $this->failServerError($e->getMessage());
+            return $this->failServerError('Registration failed: ' . $e->getMessage());
         }
     }
-    // New Login Method for User Verification
+
+    // LOGIN METHOD
     public function login()
     {
-        // === NEW CORS CALL START ===
         $response = $this->handleCors();
-        if ($response) return $response; // Stops execution if it was an OPTIONS request
-        // === NEW CORS CALL END ===
-        // 1. Get incoming JSON data
+        if ($response) return $response;
+
         $data = $this->request->getJSON(true);
 
-        // 2. Server-Side Validation: Check if fields are present
         if (empty($data['email']) || empty($data['password'])) {
             return $this->failValidationErrors('Email and password are required.');
         }
 
         try {
             $db = \Config\Database::connect();
-
-            // 3. Find the user by email and get the HASHED 'password' column
-            // We select the 'password' column directly now.
             $userQuery = $db->query("
-        SELECT userID, email, password  
-        FROM user                     
-        WHERE email = ?
-    ", [$data['email']]);
+                SELECT userID, email, password  
+                FROM user                     
+                WHERE email = ?
+            ", [$data['email']]);
 
             $user = $userQuery->getRow();
 
-            // 4. Check if user was found in the database
             if (!$user) {
-                // User not found -> Invalid credentials
                 return $this->failUnauthorized('Invalid email or password.');
             }
 
-            // --- CRITICAL CHANGE: CLEAN THE HASH IN PHP ---
-            // Explicitly trim the hash to guarantee no leading/trailing whitespace before verifying.
             $storedHash = trim($user->password);
-            // ----------------------------------------------
 
-            // 5. Verify the password hash
-            // We use the CLEAN HASH stored in $storedHash against the plain text password from the request
             if (password_verify($data['password'], $storedHash)) {
-
-                // 6. Login Successful!
-
                 return $this->respond([
                     'status' => 'ok',
                     'message' => 'Login successful!',
                     'userID' => $user->userID,
                 ]);
-
             } else {
-                // 7. Password incorrect
                 return $this->failUnauthorized('Invalid email or password.');
             }
-
         } catch (\Throwable $e) {
-            // Log the error and return a generic server failure
             log_message('error', 'Login error: ' . $e->getMessage());
             return $this->failServerError('An unexpected error occurred during login.');
         }
