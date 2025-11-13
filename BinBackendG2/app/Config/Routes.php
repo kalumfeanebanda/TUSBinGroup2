@@ -35,6 +35,7 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($r
 
     // User registration
     $routes->match(['options', 'post'], 'login', 'Users::login');
+
     $routes->post('register', 'Users::register');
 
 });
