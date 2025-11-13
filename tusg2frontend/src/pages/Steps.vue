@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard-container">
 
-    <!-- Navbar (Copied from ItemsList.vue) -->
+
     <header class="navbar">
       <div class="logo-section">
         <img src="@/assets/recycle.jpg" alt="TUSBinRight++" class="logo" />
@@ -97,7 +97,7 @@
       </main>
     </div>
 
-    <!-- Footer (Copied from ItemsList.vue) -->
+
     <footer class="footer">
       <p><strong>Contact Us</strong></p>
       <p>Technological University of Shannon</p>
@@ -111,7 +111,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-// Use the newly implemented service
+
 import { listSteps, deleteStep, createStep, updateStep } from '@/services/steps.js'
 
 const router = useRouter()
@@ -159,8 +159,8 @@ function cancel() {
 
 async function save() {
   try {
-    // Use window.alert as document.alert is not available and confirm/alert are mandated to be avoided
-    // NOTE: If you decide to use a custom modal later, replace this part.
+
+
     if (!form.value.stepTitle) return window.alert("Step title required")
 
     if (editing.value) {
@@ -194,7 +194,7 @@ onMounted(load)
 </script>
 
 <style scoped>
-/* Importing all styles from ItemsList.vue's CSS to maintain visual consistency */
+
 :root {
   --green: #4b8b3b;
   --green-d: #3d7a31;
@@ -276,7 +276,7 @@ onMounted(load)
   padding: 30px;
 }
 
-/* ---- STEPS CSS (Adapted from Items CSS) ---- */
+
 
 .steps-section {
   background: #fff;
@@ -310,7 +310,7 @@ onMounted(load)
   cursor: pointer;
 }
 
-/* Pink Buttons (Copied from ItemsList.vue style) */
+
 .btn.add, .btn.refresh, .btn.update, .btn.delete, .btn.create, .btn.cancel {
   background-color: pink;
   color: #000;
