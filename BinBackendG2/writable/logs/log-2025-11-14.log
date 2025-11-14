@@ -266,3 +266,65 @@ WARNING - 2025-11-14 02:44:56 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-14 16:38:25 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
+ 2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
+ 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
+ 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-14 16:38:25 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 APPPATH\Config\Routes.php(37): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
+ 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
+ 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-14 16:38:25 --> Error connecting to the database: mysqli_sql_exception: Host 'localhost' is not allowed to connect to this MariaDB server in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'tusbinright2', 3306, '', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Steps.php(24): CodeIgniter\Database\BaseConnection->query('CALL sp_get_ste...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Steps->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Steps))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Host 'localhost' is not allowed to connect to this MariaDB server in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Steps.php(24): CodeIgniter\Database\BaseConnection->query('CALL sp_get_ste...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Steps->index()
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Steps))
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#9 {main}
+CRITICAL - 2025-11-14 16:38:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Host 'localhost' is not allowed to connect to this MariaDB server
+[Method: GET, Route: api/steps]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Api\Steps.php(24): CodeIgniter\Database\BaseConnection->query('CALL sp_get_steps()')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Steps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Steps))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
