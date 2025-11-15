@@ -75,7 +75,7 @@
           <table v-else class="steps-table">
             <thead>
             <tr>
-              <th>#</th>
+              <th>prepStepId</th>
               <th>Step Title</th>
               <th>Description</th>
               <th>Actions</th>
