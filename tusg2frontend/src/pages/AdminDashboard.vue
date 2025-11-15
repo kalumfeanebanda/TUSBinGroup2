@@ -63,6 +63,7 @@ const activeTab = ref('steps')
 function goTo(tab) {
   activeTab.value = tab
   console.log(`Navigated to ${tab}`)
+  router.push('/' + tab)
 }
 </script>
 
