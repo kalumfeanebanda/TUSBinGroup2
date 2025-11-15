@@ -1,0 +1,4 @@
+# CI4 writable logs
+writable/logs/*
+!writable/logs/.htaccess
+!writable/logs/index.html
