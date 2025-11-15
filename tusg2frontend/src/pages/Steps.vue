@@ -97,7 +97,7 @@
       </main>
     </div>
 
-
+    <!-- Footer -->
     <footer class="footer">
       <p><strong>Contact Us</strong></p>
       <p>Technological University of Shannon</p>
