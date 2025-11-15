@@ -19,7 +19,8 @@ const routes = [
     { path: '/steps', name: 'steps', component: () => import('@/pages/Steps.vue') },
     { path: '/items', name: 'items', component: () => import('@/pages/ItemsList.vue') },
     { path: '/bins', name: 'bins', component: () => import('@/pages/BinsList.vue') },
-    { path: '/users', name: 'users', component: () => import('@/pages/UserList.vue') }
+    { path: '/users', name: 'users', component: () => import('@/pages/UserList.vue') },
+    {path: '/item-result', name: 'item-result', component: () => import('@/pages/ItemResult.vue')}
 ]
 
 
