@@ -71,6 +71,10 @@
       <button @click="toggleScanner" class="close-btn">Close Scanner</button>
     </div>
   </section>
+    <FeedbackModal
+        :show="showFeedback"
+        @close="showFeedback = false"
+    />
   </section>
 </template>
 
@@ -79,15 +83,20 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import BarcodeScanner from "@/components/BarcodeScanner.vue";
 import { searchNames } from "@/services/items";
+import FeedbackModal from "@/components/FeedbackModal.vue";
 
 
 const router = useRouter();
-
-// Reusing searchInput for both text and barcode number entry for simplicity
-const textSearch = ref("");      // for typing item names
+  
+  const showFeedback = ref(false);
+  
+  
+  const textSearch = ref("");      // for typing item names
 const barcodeSearch = ref("");   // for manual barcode entry
 const showScanner = ref(false);
 const matches = ref([]);
+
+
 
 const toggleScanner = () => {
   showScanner.value = !showScanner.value;
@@ -117,6 +126,7 @@ const performTextSearch = async () => {
     alert("Please enter an item name to search!");
     return;
   }
+
 
   try {
     const results = await searchNames(q);
@@ -158,8 +168,13 @@ const goToResult = (id) => {
 
 
 const handleNameNotFound = (q) => {
-  alert(`No item found for "${q}".`);
+  showFeedback.value = true;                 // open FeedbackModal
+  alert(`No item found for "${q}".`);        // current simple behaviour
 };
+
+
+
+ 
 
 
 const submitBarcode = () => {
@@ -168,8 +183,18 @@ const submitBarcode = () => {
     return;
   }
 
+  const found = false;                      
+  if (!found) showFeedback.value = true;
+
   alert(`Submitted Barcode: ${barcodeSearch.value}`);
   barcodeSearch.value = "";
+};
+
+
+const handleScanned = (code) => {
+  barcodeSearch.value = code;   
+  showScanner.value = false;
+  submitBarcode();              
 };
 </script>
 
