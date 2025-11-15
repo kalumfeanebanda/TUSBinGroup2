@@ -19,6 +19,11 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($r
     $routes->delete('bins/(:num)', 'Bins::delete/$1');
 
 
+    //search + result routes
+    $routes->get('items/search-names', 'Items::searchNames');
+    $routes->get('items/(:num)', 'Items::resultP/$1');
+
+
     // Item routes
     $routes->get('items', 'Items::index');
     $routes->post('items', 'Items::create');

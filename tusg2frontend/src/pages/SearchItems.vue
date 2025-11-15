@@ -14,11 +14,24 @@
 
           <input
               type="text"
-              v-model="searchInput"
-              placeholder="Search item "
+              v-model="textSearch"
+              placeholder="Search item"
               class="item-search-input"
-              @keypress.enter="performTextSearch"
+              @input="onTextInput"
+              @keypress.enter.prevent="performTextSearch"
           />
+        </div>
+        <div v-if="matches.length" class="match-results-box">
+          <ul>
+            <li
+                v-for="item in matches"
+                :key="item.itemID"
+                class="match-item"
+                @click="goToResult(item.itemID)"
+            >
+              {{ item.itemName }}
+            </li>
+          </ul>
         </div>
 
         <button @click="performTextSearch" class="search-btn primary-btn">
@@ -33,7 +46,7 @@
           <i class="fas fa-barcode barcode-icon-prefix"></i>
           <input
               type="text"
-              v-model="searchInput"
+              v-model="barcodeSearch"
               placeholder="Enter BarCode Number"
               class="barcode-input"
               @keypress.enter="submitBarcode"
@@ -67,61 +80,160 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 import BarcodeScanner from "@/components/BarcodeScanner.vue";
+import { searchNames } from "@/services/items";
 import FeedbackModal from "@/components/FeedbackModal.vue";
-const showFeedback = ref(false);
-// Reusing searchInput for both text and barcode number entry for simplicity
-const searchInput = ref("");
+
+
+const router = useRouter();
+  
+  const showFeedback = ref(false);
+  
+  
+  const textSearch = ref("");      // for typing item names
+const barcodeSearch = ref("");   // for manual barcode entry
 const showScanner = ref(false);
+const matches = ref([]);
+
+
 
 const toggleScanner = () => {
   showScanner.value = !showScanner.value;
 };
 
-// 🔹 Handles scanned barcode from the scanner
-const handleScanned = (code) => {
-  searchInput.value = code; // fill input with scanned code
-  showScanner.value = false;
-  alert(`Scanned barcode: ${code}`);
-  submitBarcode(); // Auto-submit after scan
+const onTextInput = async () => {
+  const q = textSearch.value.trim();
+
+  if (q.length < 2) {
+    matches.value = [];
+    return;
+  }
+
+  try {
+    const results = await searchNames(q);
+    matches.value = results;
+  } catch (err) {
+    console.error(err);
+  }
 };
 
-// 🔹 Handles product name submission (Text Search)
-const performTextSearch = () => {
-  if (!searchInput.value.trim()) {
+
+
+const performTextSearch = async () => {
+  const q = textSearch.value.trim();
+  if (!q) {
     alert("Please enter an item name to search!");
     return;
   }
-  const found = false; // if can't found by text
-  if (!found) showFeedback.value = true;
-  alert(`Searching for product name: ${searchInput.value.trim()}`);
-  searchInput.value = "";
 
 
+  try {
+    const results = await searchNames(q);
 
-  searchInput.value = "";
+    if (results.length === 0) {
+      handleNameNotFound(q);
+      matches.value = []; // make sure list clears when nothing found
+      return;
+    }
+
+    const exact = results.find(
+        item => item.itemName.toLowerCase() === q.toLowerCase()
+    );
+
+    if (exact) {
+      goToResult(exact.itemID);
+      return;
+    }
+
+
+    handleNameNotFound(q);
+    matches.value = [];
+
+  } catch (err) {
+    console.error(err);
+    alert("Search failed. Try again.");
+  }
 };
 
-// 🔹 Handles manual barcode number submission
+
+
+const goToResult = (id) => {
+  router.push({
+    name: "item-result",
+    query: { id }
+  });
+};
+
+
+
+const handleNameNotFound = (q) => {
+  showFeedback.value = true;                 // open FeedbackModal
+  alert(`No item found for "${q}".`);        // current simple behaviour
+};
+
+
+
+ 
+
+
 const submitBarcode = () => {
-  if (!searchInput.value.trim()) {
+  if (!barcodeSearch.value.trim()) {
     alert("Please enter or scan a barcode first!");
     return;
   }
-  const found = false;
+
+  const found = false;                      
   if (!found) showFeedback.value = true;
-  alert(`Submitted Barcode: ${searchInput.value}`);
-  searchInput.value = "";
 
-
-
-  searchInput.value = "";
+  alert(`Submitted Barcode: ${barcodeSearch.value}`);
+  barcodeSearch.value = "";
 };
 
 
+const handleScanned = (code) => {
+  barcodeSearch.value = code;   
+  showScanner.value = false;
+  submitBarcode();              
+};
 </script>
 
 <style scoped>
+
+/* search name styles */
+
+.match-results-box {
+  margin-top: 10px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 350px;
+  width: 100%;
+  text-align: left;
+}
+
+.match-results-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+}
+
+.match-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.match-item + .match-item {
+  border-top: 1px solid #eee;
+}
+
+.match-item:hover {
+  background-color: #f0f0f0;
+}
+/* end search names */
+
+
+
 
 
 

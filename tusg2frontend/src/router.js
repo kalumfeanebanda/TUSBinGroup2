@@ -20,8 +20,10 @@ const routes = [
     { path: '/items', name: 'items', component: () => import('@/pages/ItemsList.vue') },
     { path: '/bins', name: 'bins', component: () => import('@/pages/BinsList.vue') },
     { path: '/users', name: 'users', component: () => import('@/pages/UserList.vue') },
-    { path: '/users/new', name: 'user-create', component: () => import('@/pages/UserForm.vue')},
-    { path: '/users/:id/edit', name: 'user-edit', component: () => import('@/pages/UserForm.vue')}
+  
+{ path: '/item-result', name: 'item-result', component: () => import('@/pages/ItemResult.vue') },
+  { path: '/users/new', name: 'user-create', component: () => import('@/pages/UserForm.vue') },
+  { path: '/users/:id/edit', name: 'user-edit', component: () => import('@/pages/UserForm.vue') }
 ]
 
 
