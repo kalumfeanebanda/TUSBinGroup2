@@ -20,6 +20,8 @@ const routes = [
 
     { path: '/logged-in-home', name: 'logged-in-home', component: () => import('@/pages/LoggedInHome.vue') },
 
+    { path: '/user-profile', name: 'user-profile', component: () => import('@/pages/UserProfile.vue') },
+
     { path: '/steps', name: 'steps', component: () => import('@/pages/Steps.vue') },
     { path: '/items', name: 'items', component: () => import('@/pages/ItemsList.vue') },
     { path: '/bins', name: 'bins', component: () => import('@/pages/BinsList.vue') },
