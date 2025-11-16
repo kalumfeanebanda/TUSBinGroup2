@@ -4,7 +4,7 @@
 
     <nav class="navbar">
       <div class="logo" @click="router.push('/logged-in-home')">
-        <img src="../images/logo.png" alt="Logo" />
+        <img src="@/assets/TUSBinLogo.jfif" alt="Logo" />
         <span>TUSBinRight++</span>
       </div>
 

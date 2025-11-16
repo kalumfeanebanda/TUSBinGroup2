@@ -1,8 +1,23 @@
 <template>
   <div class="home-page">
 
-    <!-- GLOBAL NAVBAR (Header.vue) -->
-    <Header />
+    <!-- CUSTOM HEADER ONLY FOR LOGGED-IN USERS -->
+    <header class="header">
+      <div class="header-left" @click="router.push('/')">
+        <img src="@/assets/TUSBinLogo.jfif" class="logo" alt="Logo" />
+        <h1 class="brand">TUSBin</h1>
+      </div>
+
+      <div class="header-center">
+        <router-link to="/" class="nav-link">HOME</router-link>
+        <router-link to="/search-items" class="nav-link">SEARCH ITEMS</router-link>
+      </div>
+
+      <div class="header-right">
+        <router-link to="/user-profile" class="btn login-btn">PROFILE</router-link>
+        <button @click="logout" class="btn logout-btn">LOG OUT</button>
+      </div>
+    </header>
 
     <!-- WELCOME USER -->
     <div class="welcome-box">
@@ -86,7 +101,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
-import Header from "@/components/Header.vue";   // <-- Make sure this is correct!
 
 const router = useRouter();
 const user = ref({ fname: "", lname: "" });
@@ -100,25 +114,105 @@ onMounted(() => {
   }
 });
 
+const logout = () => {
+  localStorage.removeItem("loggedUser");
+  router.push("/login");
+};
+
 const goToSearchItems = () => {
   router.push("/search-items");
 };
 </script>
 
 <style scoped>
+/* ------------------ CUSTOM HEADER ------------------ */
+.header {
+  background-color: #066502;
+  color: white;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #a5d6a7;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 50px;
+  object-fit: contain;
+}
+
+.brand {
+  font-size: 1.7rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.header-center {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #a5d6a7;
+}
+
+.header-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn {
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-btn {
+  background-color: #2e7d32;
+}
+
+.login-btn:hover {
+  background-color: #388e3c;
+}
+
+.logout-btn {
+  background-color: #b00000;
+}
+
+.logout-btn:hover {
+  background-color: #800000;
+}
+
+/* ------------------ Existing Styles ------------------ */
 .home-page {
   font-family: Arial, sans-serif;
   text-align: center;
 }
 
-/* Welcome User */
 .welcome-box {
   margin-top: 15px;
   font-size: 1.2rem;
   color: #2d6a4f;
 }
 
-/* Hero Section */
 .hero {
   background: url("../images/BG.jpg") center/cover no-repeat;
   height: 72vh;
@@ -148,10 +242,6 @@ const goToSearchItems = () => {
   border-radius: 10px;
 }
 
-.hero-content h1 {
-  font-size: 2.5rem;
-}
-
 .btn {
   padding: 10px 20px;
   border: none;
@@ -168,7 +258,6 @@ const goToSearchItems = () => {
   background-color: #2c7a7b;
 }
 
-/* Info Sections */
 .info-section,
 .what-it-does {
   padding: 40px 20px;
@@ -186,7 +275,6 @@ const goToSearchItems = () => {
   text-align: left;
 }
 
-/* How it works */
 .how-section {
   background-color: #93c47d;
   padding: 40px 20px;
