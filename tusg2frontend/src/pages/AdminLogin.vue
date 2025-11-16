@@ -5,7 +5,8 @@
         <h2 class="title">Welcome Admin!</h2>
         <p class="subtitle">Enter your credentials to access the admin dashboard</p>
 
-        <form @submit.prevent="handleLogin">
+        <!-- Using v-on:submit and handling preventDefault in the JS function -->
+        <form v-on:submit="handleLogin">
           <label>Email</label>
           <input
               v-model="email"
@@ -41,7 +42,8 @@
 
           <button type="submit" class="login-btn">Login as Admin</button>
 
-
+          <p v-if="successMessage" class="message success-msg">{{ successMessage }}</p>
+          <p v-if="errorMessage" class="message error-msg">{{ errorMessage }}</p>
           <router-link to="/login">
             <button type="button" class="back-btn">Back to User Login</button>
           </router-link>
@@ -63,15 +65,45 @@ import { useRouter } from 'vue-router'
 const email = ref('')
 const password = ref('')
 const showPassword = ref(false)
+const successMessage = ref('')
+const errorMessage = ref('')
 const router = useRouter()
 
-const handleLogin = () => {
-  console.log('Admin Email:', email.value)
-  console.log('Password:', password.value)
+// --- MULTI-ADMIN CREDENTIALS LIST ---
+const ADMIN_ACCOUNTS = [
+  { email: 'Kalum@gmail.com', password: 'Kalum123' },
+  { email: 'Raiyan@gmail.com', password: 'Raiyan123' },
+  { email: 'Daud@gmail.com', password: 'Daud123' },
+  { email: 'Xiya@gmail.com', password: 'Xiya123' },
+  { email: 'Favour@gmail.com', password: 'Favour123' },
+];
 
+const handleLogin = async (e) => {
+  e.preventDefault();
 
-  if (email.value && password.value) {
-    router.push('/admindashboard')
+  errorMessage.value = '';
+  successMessage.value = '';
+
+  if (!email.value || !password.value) {
+    errorMessage.value = "Please enter both email and password.";
+    return;
+  }
+
+  // Check if the entered credentials match any account in the list
+  const valid = ADMIN_ACCOUNTS.some(account =>
+      account.email === email.value && account.password === password.value
+  );
+
+  if (valid) {
+    successMessage.value = "Admin Login successful! Redirecting in 1.5 seconds...";
+
+    // Redirect to the admin dashboard
+    setTimeout(() => {
+      router.push('/admindashboard');
+    }, 1500);
+
+  } else {
+    errorMessage.value = "Invalid email or password. Please use one of the authorized admin accounts.";
   }
 }
 
@@ -81,6 +113,28 @@ const togglePassword = () => {
 </script>
 
 <style scoped>
+/* 💡 Added message styles for success/error feedback */
+.message {
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.success-msg {
+  background-color: #e8f5e9; /* Light Green */
+  color: #1b5e20; /* Dark Green */
+  border: 1px solid #1b5e20;
+}
+
+.error-msg {
+  background-color: #ffebee; /* Light Red */
+  color: #b71c1c; /* Dark Red */
+  border: 1px solid #b71c1c;
+}
+/* (Rest of the original styles...) */
 .login-container {
   display: flex;
   justify-content: center;
@@ -190,3 +244,5 @@ input {
   border-radius: 12px;
 }
 </style>
+
+

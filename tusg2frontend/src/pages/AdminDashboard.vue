@@ -12,6 +12,7 @@
         <router-link to="/admin">Admin</router-link>
         <router-link to="/menu">Menu</router-link>
         <router-link to="/adminlogin">Logout</router-link>
+        <router-link to="/steps">Steps</router-link>
       </nav>
     </header>
 
@@ -62,6 +63,7 @@ const activeTab = ref('steps')
 function goTo(tab) {
   activeTab.value = tab
   console.log(`Navigated to ${tab}`)
+  router.push('/' + tab)
 }
 </script>
 

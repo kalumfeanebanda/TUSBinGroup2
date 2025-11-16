@@ -18,3 +18,17 @@ export async function updateItem(id, data) {
 export async function deleteItem(id) {
     await api.delete(`/items/${id}`)
 }
+
+// search functions
+export async function searchNames(q) {
+    const r = await api.get('/items/search-names', {
+        params: { q }
+    })
+    return r.data
+}
+
+
+export async function getItem(id) {
+    const r = await api.get(`/items/${id}`)
+    return r.data
+}
