@@ -52,4 +52,9 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($r
     $routes->match(['options', 'post'], 'login', 'Users::login');
     $routes->post('register', 'Users::register');
 
+    //For admin
+
+    $routes->group('admin', static function($routes) {
+        $routes->post('login', 'Admin::login');
+    });
 });
