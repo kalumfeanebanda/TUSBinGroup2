@@ -5,7 +5,8 @@
         <h2 class="title">Welcome Admin!</h2>
         <p class="subtitle">Enter your credentials to access the admin dashboard</p>
 
-        <form @submit.prevent="handleLogin">
+        <!-- Using v-on:submit and handling preventDefault in the JS function -->
+        <form v-on:submit="handleLogin">
           <label>Email</label>
           <input
               v-model="email"
@@ -60,7 +61,6 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-// AXIOS REMOVED
 
 const email = ref('')
 const password = ref('')
@@ -69,30 +69,42 @@ const successMessage = ref('')
 const errorMessage = ref('')
 const router = useRouter()
 
-const handleLogin = async () => {
-  // Clear previous messages
-  errorMessage.value = ''
-  successMessage.value = ''
+// --- MULTI-ADMIN CREDENTIALS LIST ---
+const ADMIN_ACCOUNTS = [
+  { email: 'Kalum@gmail.com', password: 'Kalum123' },
+  { email: 'Raiyan@gmail.com', password: 'Raiyan123' },
+  { email: 'Daud@gmail.com', password: 'Daud123' },
+  { email: 'Xiya@gmail.com', password: 'Xiya123' },
+  { email: 'Favour@gmail.com', password: 'Favour123' },
+];
+
+const handleLogin = async (e) => {
+  e.preventDefault();
+
+  errorMessage.value = '';
+  successMessage.value = '';
 
   if (!email.value || !password.value) {
-    errorMessage.value = "Please enter both email and password."
-    return
+    errorMessage.value = "Please enter both email and password.";
+    return;
   }
 
-  // ----------------------------------------------------
-  // CLIENT-SIDE BYPASS: ALWAYS SUCCEEDS FOR NOW
-  // ----------------------------------------------------
+  // Check if the entered credentials match any account in the list
+  const valid = ADMIN_ACCOUNTS.some(account =>
+      account.email === email.value && account.password === password.value
+  );
 
-  // 1. Success Message
-  successMessage.value = "Admin Login successful! Redirecting (Bypass Mode)..."
+  if (valid) {
+    successMessage.value = "Admin Login successful! Redirecting in 1.5 seconds...";
 
-  // 2. Simulate storing an admin ID (Optional, but good practice)
-  console.log('Admin ID:', 999)
+    // Redirect to the admin dashboard
+    setTimeout(() => {
+      router.push('/admindashboard');
+    }, 1500);
 
-  // 3. Redirect after a short delay
-  setTimeout(() => {
-    router.push('/admindashboard') // Redirect to the admin dashboard
-  }, 1000)
+  } else {
+    errorMessage.value = "Invalid email or password. Please use one of the authorized admin accounts.";
+  }
 }
 
 const togglePassword = () => {
@@ -232,3 +244,5 @@ input {
   border-radius: 12px;
 }
 </style>
+
+
