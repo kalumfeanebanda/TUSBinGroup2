@@ -18,7 +18,6 @@
 
     <div class="main-content">
 
-      <!-- Sidebar (Adapted for Steps) -->
       <aside class="sidebar">
         <ul>
           <li class="active">Steps</li>
@@ -29,7 +28,6 @@
         </ul>
       </aside>
 
-      <!-- Steps Section -->
       <main class="content">
         <section class="steps-section">
           <div class="steps-header">
@@ -44,7 +42,6 @@
             </div>
           </div>
 
-          <!-- Form -->
           <div v-if="showForm" class="step-form">
             <h3>{{ editing ? 'Update Step' : 'Create New Step' }}</h3>
 
@@ -66,24 +63,26 @@
             </div>
           </div>
 
-          <!-- State Messages -->
           <div v-if="loading" class="state">Loading…</div>
           <div v-else-if="error" class="state error">{{ error }}</div>
           <div v-else-if="steps.length === 0" class="state">No steps found.</div>
 
-          <!-- Table -->
           <table v-else class="steps-table">
             <thead>
             <tr>
-              <th>#</th>
-              <th>Step Title</th>
-              <th>Description</th>
+              <th>prepStepId</th>
+              <th>binTypeID</th>
+              <th>stepOrder</th>
+              <th>stepTitle</th>
+              <th>stepLongDesc</th>
               <th>Actions</th>
             </tr>
             </thead>
             <tbody>
             <tr v-for="i in steps" :key="i.prepStepId">
               <td class="muted">{{ i.prepStepId }}</td>
+              <td class="muted">{{ i.binTypeID }}</td>
+              <td class="muted">{{ i.stepOrder }}</td>
               <td>{{ i.stepTitle }}</td>
               <td>{{ i.stepDesc }}</td>
               <td class="actions">
@@ -96,7 +95,6 @@
         </section>
       </main>
     </div>
-
 
     <footer class="footer">
       <p><strong>Contact Us</strong></p>

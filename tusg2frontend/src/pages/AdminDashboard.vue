@@ -12,6 +12,7 @@
         <router-link to="/admin">Admin</router-link>
         <router-link to="/menu">Menu</router-link>
         <router-link to="/adminlogin">Logout</router-link>
+        <router-link to="/steps">Steps</router-link>
       </nav>
     </header>
 
@@ -19,11 +20,10 @@
     <div class="main-content">
       <aside class="sidebar">
         <ul>
-          <li @click="goTo('/steps')" :class="{ active: route.path.includes('/steps') || route.path === '/admindashboard' }">Steps</li>
-          <li @click="goTo('/items')" :class="{ active: route.path.includes('/items') }">Items</li>
-          <li @click="goTo('/bins')" :class="{ active: route.path.includes('/bins') }">Bins</li>
-          <li @click="goTo('/users')" :class="{ active: route.path.includes('/users') }">User</li>
-          <li @click="goTo('/staff')" :class="{ active: route.path.includes('/staff') }">Staff</li>
+          <li @click="goTo('steps')" :class="{ active: activeTab === 'steps' }">Steps</li>
+          <li @click="goTo('items')" :class="{ active: activeTab === 'items' }">Items</li>
+          <li @click="goTo('user')" :class="{ active: activeTab === 'user' }">User</li>
+          <li @click="goTo('staff')" :class="{ active: activeTab === 'staff' }">Staff</li>
         </ul>
       </aside>
 
@@ -54,25 +54,16 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue' // Import computed
-import { useRouter, useRoute } from 'vue-router' // Import useRoute
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 const router = useRouter()
-const route = useRoute() // Access the current route object
+const activeTab = ref('steps')
 
-// Use a computed property to determine the active tab based on the current route path
-const activeTab = computed(() => {
-  const path = route.path
-  if (path.includes('/steps')) return 'steps'
-  if (path.includes('/items')) return 'items'
-  if (path.includes('/user')) return 'user'
-  if (path.includes('/staff')) return 'staff'
-  return 'steps' // Default to steps if on dashboard and no sub-route is active
-})
-
-// Update goTo function to use router.push for all sidebar links
-function goTo(pathName) {
-  router.push(pathName)
+function goTo(tab) {
+  activeTab.value = tab
+  console.log(`Navigated to ${tab}`)
+  router.push('/' + tab)
 }
 </script>
 

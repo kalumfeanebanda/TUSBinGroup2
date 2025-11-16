@@ -41,7 +41,8 @@
 
           <button type="submit" class="login-btn">Login as Admin</button>
 
-
+          <p v-if="successMessage" class="message success-msg">{{ successMessage }}</p>
+          <p v-if="errorMessage" class="message error-msg">{{ errorMessage }}</p>
           <router-link to="/login">
             <button type="button" class="back-btn">Back to User Login</button>
           </router-link>
@@ -59,20 +60,39 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+// AXIOS REMOVED
 
 const email = ref('')
 const password = ref('')
 const showPassword = ref(false)
+const successMessage = ref('')
+const errorMessage = ref('')
 const router = useRouter()
 
-const handleLogin = () => {
-  console.log('Admin Email:', email.value)
-  console.log('Password:', password.value)
+const handleLogin = async () => {
+  // Clear previous messages
+  errorMessage.value = ''
+  successMessage.value = ''
 
-
-  if (email.value && password.value) {
-    router.push('/admindashboard')
+  if (!email.value || !password.value) {
+    errorMessage.value = "Please enter both email and password."
+    return
   }
+
+  // ----------------------------------------------------
+  // CLIENT-SIDE BYPASS: ALWAYS SUCCEEDS FOR NOW
+  // ----------------------------------------------------
+
+  // 1. Success Message
+  successMessage.value = "Admin Login successful! Redirecting (Bypass Mode)..."
+
+  // 2. Simulate storing an admin ID (Optional, but good practice)
+  console.log('Admin ID:', 999)
+
+  // 3. Redirect after a short delay
+  setTimeout(() => {
+    router.push('/admindashboard') // Redirect to the admin dashboard
+  }, 1000)
 }
 
 const togglePassword = () => {
@@ -81,6 +101,28 @@ const togglePassword = () => {
 </script>
 
 <style scoped>
+/* 💡 Added message styles for success/error feedback */
+.message {
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.success-msg {
+  background-color: #e8f5e9; /* Light Green */
+  color: #1b5e20; /* Dark Green */
+  border: 1px solid #1b5e20;
+}
+
+.error-msg {
+  background-color: #ffebee; /* Light Red */
+  color: #b71c1c; /* Dark Red */
+  border: 1px solid #b71c1c;
+}
+/* (Rest of the original styles...) */
 .login-container {
   display: flex;
   justify-content: center;
