@@ -1,20 +1,8 @@
 <template>
   <div class="home-page">
 
-    <!-- NAVBAR FOR LOGGED-IN USER -->
-    <nav class="navbar">
-      <div class="logo" @click="router.push('/')">
-        <img src="../images/logo.png" alt="Logo" />
-        <span>TUSBinRight++</span>
-      </div>
-
-      <ul class="nav-links">
-        <li @click="router.push('/')">Home</li>
-        <li @click="router.push('/search-items')">Search Items</li>
-        <li @click="router.push('/user-profile')">Profile</li>
-        <li class="logout" @click="logout">Logout</li>
-      </ul>
-    </nav>
+    <!-- GLOBAL NAVBAR (Header.vue) -->
+    <Header />
 
     <!-- WELCOME USER -->
     <div class="welcome-box">
@@ -48,8 +36,7 @@
         <div class="info-box">
           <p>
             <strong>TUSBinRight++</strong> helps your residents work out what to recycle where.
-            Our simple to use recycling search tool on your website or via our mobile apps incl.
-            barcode scanning. We can save you time and money dealing with questions.
+            Our simple recycling search tool via website or mobile (barcode scanning included).
           </p>
         </div>
       </div>
@@ -81,17 +68,13 @@
         <div class="info-box">
           <p>
             <strong>TUSBinRight++</strong> helps you save time, money and reduce contamination.
-            It also helps your residents work out what to recycle where. The scanning process
-            feels modern and engaging, improving app usability and satisfaction.
-            Encourages repeated use of the platform.
+            Helps users learn proper waste disposal habits with immediate, reliable feedback.
           </p>
         </div>
         <div class="info-box">
           <p>
-            Scanning ensures precise item recognition, reducing human error from spelling mistakes
-            or incorrect item names. Leads to more accurate waste categorization and cleaner
-            recycling streams. Helps users learn proper waste disposal habits by providing
-            immediate, reliable feedback.
+            Scanning ensures precise item recognition and reduces mistakes.
+            Leads to cleaner recycling streams and better sustainability.
           </p>
         </div>
       </div>
@@ -101,9 +84,9 @@
 </template>
 
 <script setup>
-
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
+import Header from "@/components/Header.vue";   // <-- Make sure this is correct!
 
 const router = useRouter();
 const user = ref({ fname: "", lname: "" });
@@ -117,71 +100,15 @@ onMounted(() => {
   }
 });
 
-const logout = () => {
-  localStorage.removeItem("loggedUser");
-  router.push("/login");
-};
-
 const goToSearchItems = () => {
   router.push("/search-items");
 };
-
 </script>
 
 <style scoped>
 .home-page {
   font-family: Arial, sans-serif;
   text-align: center;
-}
-
-
-.navbar {
-  background-color: #2d6a4f;
-  color: white;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
-.logo img {
-  height: 45px;
-}
-
-.logo span {
-  font-weight: bold;
-  font-size: 1.4rem;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 22px;
-}
-
-.nav-links li {
-  cursor: pointer;
-  padding: 6px 12px;
-  border-radius: 6px;
-}
-
-.nav-links li:hover {
-  background-color: #40916c;
-}
-
-.logout {
-  background-color: #d00000;
-}
-
-.logout:hover {
-  background-color: #a00000;
 }
 
 /* Welcome User */
@@ -191,7 +118,7 @@ const goToSearchItems = () => {
   color: #2d6a4f;
 }
 
-/* Existing homepage styling below */
+/* Hero Section */
 .hero {
   background: url("../images/BG.jpg") center/cover no-repeat;
   height: 72vh;
@@ -241,7 +168,7 @@ const goToSearchItems = () => {
   background-color: #2c7a7b;
 }
 
-/* Info sections remain the same */
+/* Info Sections */
 .info-section,
 .what-it-does {
   padding: 40px 20px;
