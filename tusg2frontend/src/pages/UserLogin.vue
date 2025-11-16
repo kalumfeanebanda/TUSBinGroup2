@@ -69,7 +69,8 @@ const successMessage = ref('')
 const errorMessage = ref('')
 
 // Correct API endpoint
-const API_URL = 'http://localhost/TUSBinGroup2/BinBackendG2/public/index.php/api/login'
+const API_URL = 'http://localhost/TUSBinGroup2/BinBackendG2/public/index.php/api/users/login'
+
 
 const handleLogin = async () => {
   errorMessage.value = ''
