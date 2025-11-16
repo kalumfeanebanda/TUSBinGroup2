@@ -68,7 +68,7 @@ const showPassword = ref(false)
 const successMessage = ref('')
 const errorMessage = ref('')
 
-// ✅Correct backend API URL (no spaces, newlines, or trailing slash)
+// Correct API endpoint
 const API_URL = 'http://localhost/TUSBinGroup2/BinBackendG2/public/index.php/api/login'
 
 const handleLogin = async () => {
@@ -89,20 +89,27 @@ const handleLogin = async () => {
         },
         {
           headers: { 'Content-Type': 'application/json' },
-          withCredentials: true, // ensures proper CORS handling
+          withCredentials: true,
         }
     )
 
     if (response.data.status === 'ok') {
+      const user = response.data.user
+
+      // SAVE USER DATA IN LOCALSTORAGE
+      localStorage.setItem('loggedUser', JSON.stringify(user))
+
       successMessage.value = 'Login successful! Redirecting...'
-      console.log('✅ User ID:', response.data.userID)
+      console.log('Logged-in user:', user)
 
       setTimeout(() => {
-        router.push('/') // Redirect after successful login
-      }, 1500)
+        router.push('/logged-in')   // Redirect to user dashboard
+      }, 1200)
+
     } else {
       errorMessage.value = response.data.message || 'Login failed. Please try again.'
     }
+
   } catch (err) {
     console.error('❌ Login Error:', err)
     errorMessage.value =
