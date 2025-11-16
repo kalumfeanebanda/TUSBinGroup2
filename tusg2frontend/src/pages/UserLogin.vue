@@ -90,7 +90,6 @@ const handleLogin = async () => {
         },
         {
           headers: { 'Content-Type': 'application/json' },
-          withCredentials: true,
         }
     )
 
