@@ -1,7 +1,7 @@
 <template>
-  <div class="profile-page">
+  <div class="home-page">
 
-
+    <!-- CUSTOM LOGGED-IN NAVBAR -->
     <nav class="navbar-pro">
       <div class="nav-left" @click="router.push('/logged-in-home')">
         <img src="@/assets/TUSBinLogo.jfif" class="nav-logo" />
@@ -20,52 +20,81 @@
     </nav>
 
 
-    <!-- USER PROFILE CONTAINER -->
-    <div class="profile-container">
-      <h1 class="title">User Profile</h1>
 
-      <div class="profile-card">
-
-        <!-- LEFT SIDE: Avatar + Edit Button -->
-        <div class="profile-left">
-          <div class="avatar"></div>
-          <button class="edit-btn">Edit Profile</button>
-        </div>
-
-        <!-- RIGHT SIDE: User Info -->
-        <div class="profile-info">
-          <p><strong>Name:</strong> {{ user.fname }} {{ user.lname }}</p>
-          <p><strong>Email:</strong> {{ user.email }}</p>
-        </div>
-
-      </div>
-
-      <!-- ACTION CARDS -->
-      <div class="actions">
-        <div class="action-card">
-          <img src="../images/search-icon.png" alt="Search" />
-          <h3>My Search History</h3>
-          <p>View items you searched</p>
-        </div>
-
-        <div class="action-card">
-          <img src="../images/check-icon.png" alt="Suggestions" />
-          <h3>My Suggestions</h3>
-          <p>View your suggestions</p>
-        </div>
-
-        <div class="action-card">
-          <img src="../images/location-icon.png" alt="Location" />
-          <h3>My Location Preference</h3>
-          <p>Set your location</p>
-        </div>
-      </div>
+    <!-- WELCOME USER -->
+    <div class="welcome-box-pro">
+      <p>Hello, <strong>{{ user.fname }} {{ user.lname }}</strong> 👋</p>
     </div>
 
 
-    <footer class="home-footer">
-      <p>© 2025 TUSBinRight++ | All Rights Reserved</p>
-    </footer>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="overlay">
+        <div class="hero-content">
+          <h1>Dispose Right with TUSBinRight++</h1>
+          <p>Find the right bin for your taste</p>
+          <div class="hero-buttons">
+            <button class="btn how-btn">How it works</button>
+            <button class="btn scan-btn" @click="goToSearchItems">Scan Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is this section -->
+    <section class="info-section">
+      <h2>What is this?</h2>
+      <div class="info-columns">
+        <div class="info-box">
+          <p>
+            <strong>TUSBinRight++</strong> is a detailed recycling search database with website
+            and mobile app including barcode scanning.
+          </p>
+        </div>
+        <div class="info-box">
+          <p>
+            <strong>TUSBinRight++</strong> helps your residents work out what to recycle where
+            using our search tool or mobile scanner.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how-section">
+      <h2>How it works:</h2>
+      <div class="steps">
+        <div>
+          <img src="../images/glass.png" height="60" />
+          <p>1. Enter it or scan</p>
+        </div>
+        <div>
+          <img src="../images/result.png" height="60" />
+          <p>2. Get instructions</p>
+        </div>
+        <div>
+          <img src="../images/bin.png" height="60" />
+          <p>3. Recycle the right way</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What it does -->
+    <section class="what-it-does">
+      <h2>What it does?</h2>
+      <div class="info-columns">
+        <div class="info-box">
+          <p>
+            <strong>TUSBinRight++</strong> helps reduce contamination and teaches users proper waste disposal.
+          </p>
+        </div>
+        <div class="info-box">
+          <p>
+            Barcode scanning ensures precise item recognition for cleaner recycling streams.
+          </p>
+        </div>
+      </div>
+    </section>
 
   </div>
 </template>
@@ -75,7 +104,7 @@ import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
-const user = ref({ fname: "", lname: "", email: "" });
+const user = ref({ fname: "", lname: "" });
 
 onMounted(() => {
   const saved = localStorage.getItem("loggedUser");
@@ -90,19 +119,24 @@ const logout = () => {
   localStorage.removeItem("loggedUser");
   router.push("/login");
 };
+
+const goToSearchItems = () => {
+  router.push("/search-items");
+};
 </script>
 
 <style scoped>
-
+/* NAVBAR */
 /* =======================
    UNIVERSAL LOGGED-IN NAVBAR
    ======================= */
 .navbar-pro {
-  box-sizing: border-box;
   width: 100%;
   background-color: #1b4332;
   padding: 12px 28px;
   max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
 
   display: flex;
   align-items: center;
@@ -193,115 +227,79 @@ const logout = () => {
 }
 
 /* GLOBAL FIX to prevent ANY page scroll */
-:host, .profile-page, body, html {
+:host, .home-page, body, html {
   overflow-x: hidden !important;
 }
 
 
-/* PAGE CONTAINER */
-.profile-page {
+/* PAGE STYLES */
+.home-page {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  min-height: 100vh;
+  text-align: center;
 }
 
-/* TITLE */
-.title {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 2rem;
+.welcome-box {
+  margin-top: 15px;
+  font-size: 1.2rem;
   color: #2d6a4f;
 }
 
-/* PROFILE CARD */
-.profile-card {
-  max-width: 750px;
-  margin: 30px auto;
-  padding: 25px;
+/* HERO SECTION */
+.hero {
+  background: url("../images/BG.jpg") center/cover no-repeat;
+  height: 72vh;
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 40px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-  flex-wrap: wrap;
-}
-
-.profile-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.avatar {
-  width: 130px;
-  height: 130px;
-  background-color: #d9d9d9;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-.edit-btn {
-  background-color: #4caf50;
+  justify-content: center;
   color: white;
-  padding: 8px 20px;
-  border-radius: 20px;
-  border: none;
+}
+
+.overlay {
+  background-color: rgba(0,0,0,0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: white;
   cursor: pointer;
 }
 
-.edit-btn:hover {
-  background-color: #3c8c42;
+.how-btn {
+  background-color: #4caf50;
 }
 
-.profile-info {
-  font-size: 1rem;
-  text-align: left;
-  color: #333;
+.scan-btn {
+  background-color: #2c7a7b;
 }
 
-.profile-info p {
-  margin-bottom: 10px;
+.info-section,
+.what-it-does {
+  padding: 40px 20px;
 }
 
-/* ACTION CARDS */
-.actions {
+.info-columns {
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  margin-top: 30px;
 }
 
-.action-card {
-  width: 220px;
-  background: white;
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
-  transition: 0.2s;
-  text-align: center;
+.info-box {
+  max-width: 400px;
+  text-align: left;
 }
 
-.action-card:hover {
-  transform: translateY(-5px);
-}
-
-.action-card img {
-  height: 45px;
-  margin-bottom: 10px;
-}
-
-.action-card h3 {
-  color: #2c7a7b;
-  margin-bottom: 6px;
-}
-
-.home-footer {
-  margin-top: 60px;
-  padding: 20px 0;
-  background-color: #2d6a4f;
-  color: white;
-  text-align: center;
+.how-section {
+  background-color: #93c47d;
+  padding: 40px 20px;
 }
 </style>
