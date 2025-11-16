@@ -103,7 +103,7 @@ const handleLogin = async () => {
       console.log('Logged-in user:', user)
 
       setTimeout(() => {
-        router.push('/logged-in')   // Redirect to user dashboard
+        router.push('/logged-in-home') // Redirect to user homepage
       }, 1200)
 
     } else {
