@@ -2,19 +2,23 @@
   <div class="profile-page">
 
 
-    <nav class="navbar">
-      <div class="logo" @click="router.push('/logged-in-home')">
-        <img src="@/assets/TUSBinLogo.jfif" alt="Logo" />
-        <span>TUSBinRight++</span>
+    <nav class="navbar-pro">
+      <div class="nav-left" @click="router.push('/logged-in-home')">
+        <img src="@/assets/TUSBinLogo.jfif" class="nav-logo" />
+        <span class="nav-title">TUSBinRight++</span>
       </div>
 
-      <ul class="nav-links">
-        <li @click="router.push('/logged-in-home')">Home</li>
-        <li @click="router.push('/search-items')">Search Items</li>
-        <li class="active">Profile</li>
-        <li class="logout" @click="logout">Logout</li>
+      <ul class="nav-center">
+        <li :class="{ active: current === 'home' }" @click="router.push('/logged-in-home')">Home</li>
+        <li :class="{ active: current === 'search' }" @click="router.push('/search-items')">Search Items</li>
+        <li :class="{ active: current === 'profile' }" @click="router.push('/user-profile')">Profile</li>
       </ul>
+
+      <div class="nav-right">
+        <button class="logout-btn" @click="logout">Logout</button>
+      </div>
     </nav>
+
 
     <!-- USER PROFILE CONTAINER -->
     <div class="profile-container">
@@ -90,57 +94,109 @@ const logout = () => {
 
 <style scoped>
 
-.navbar {
-  background-color: #2d6a4f;
-  color: white;
-  padding: 15px 35px;
+/* =======================
+   UNIVERSAL LOGGED-IN NAVBAR
+   ======================= */
+.navbar-pro {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #1b4332;
+  padding: 12px 28px;
+  max-width: 100vw;
+
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
+
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  overflow-x: hidden;       /* 👈 STOPS SCROLLING */
+  flex-wrap: nowrap;        /* 👈 FIX: prevents breaking */
 }
 
-.logo {
+/* ----- LEFT: Logo + Title ----- */
+.nav-left {
   display: flex;
   align-items: center;
+  gap: 10px;
   cursor: pointer;
+  flex-shrink: 0;           /* 👈 Prevents shrinking */
 }
 
-.logo img {
-  height: 45px;
-  margin-right: 10px;
+.nav-logo {
+  height: 42px;
 }
 
-.logo span {
+.nav-title {
+  color: #fff;
   font-size: 1.4rem;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
-.nav-links {
+/* ----- CENTER LINKS ----- */
+.nav-center {
   list-style: none;
   display: flex;
+  justify-content: center;
   gap: 22px;
-  font-size: 1rem;
+
+  flex-grow: 1;             /* 👈 MAIN FIX - elastic space */
+  min-width: 0;             /* 👈 ALLOWS shrinking safely */
 }
 
-.nav-links li {
-  padding: 8px 14px;
+.nav-center li {
+  color: white;
   cursor: pointer;
-  border-radius: 6px;
-  transition: 0.2s;
+  font-size: 1rem;
+  font-weight: 500;
+
+  padding: 6px 12px;
+  border-radius: 8px;
+
+  white-space: nowrap;      /* 👈 Stops wrapping */
+  transition: 0.25s ease;
 }
 
-.nav-links li:hover,
-.nav-links .active {
-  background-color: #40916c;
+.nav-center li:hover,
+.nav-center .active {
+  background-color: #2d6a4f;
+  font-weight: 600;
 }
 
-.logout {
+/* ----- RIGHT: Logout Button ----- */
+.nav-right {
+  flex-shrink: 0;           /* 👈 Prevents overflow */
+}
+
+.logout-btn {
   background-color: #d00000;
+  border: none;
+
+  padding: 6px 12px;        /* 👈 Slimmer, fits better */
+  font-size: 0.9rem;
+
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: 0.25s ease;
 }
 
-.logout:hover {
-  background-color: #a00000;
+.logout-btn:hover {
+  background-color: #900000;
 }
+
+/* GLOBAL FIX to prevent ANY page scroll */
+:host, .profile-page, body, html {
+  overflow-x: hidden !important;
+}
+
 
 /* PAGE CONTAINER */
 .profile-page {

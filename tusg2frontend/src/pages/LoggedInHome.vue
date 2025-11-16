@@ -1,28 +1,31 @@
 <template>
   <div class="home-page">
 
-    <!-- CUSTOM HEADER ONLY FOR LOGGED-IN USERS -->
-    <header class="header">
-      <div class="header-left" @click="router.push('/')">
-        <img src="@/assets/TUSBinLogo.jfif" class="logo" alt="Logo" />
-        <h1 class="brand">TUSBin</h1>
+    <!-- CUSTOM LOGGED-IN NAVBAR -->
+    <nav class="navbar-pro">
+      <div class="nav-left" @click="router.push('/logged-in-home')">
+        <img src="@/assets/TUSBinLogo.jfif" class="nav-logo" />
+        <span class="nav-title">TUSBinRight++</span>
       </div>
 
-      <div class="header-center">
-        <router-link to="/" class="nav-link">HOME</router-link>
-        <router-link to="/search-items" class="nav-link">SEARCH ITEMS</router-link>
-      </div>
+      <ul class="nav-center">
+        <li :class="{ active: current === 'home' }" @click="router.push('/logged-in-home')">Home</li>
+        <li :class="{ active: current === 'search' }" @click="router.push('/search-items')">Search Items</li>
+        <li :class="{ active: current === 'profile' }" @click="router.push('/user-profile')">Profile</li>
+      </ul>
 
-      <div class="header-right">
-        <router-link to="/user-profile" class="btn login-btn">PROFILE</router-link>
-        <button @click="logout" class="btn logout-btn">LOG OUT</button>
+      <div class="nav-right">
+        <button class="logout-btn" @click="logout">Logout</button>
       </div>
-    </header>
+    </nav>
+
+
 
     <!-- WELCOME USER -->
-    <div class="welcome-box">
+    <div class="welcome-box-pro">
       <p>Hello, <strong>{{ user.fname }} {{ user.lname }}</strong> 👋</p>
     </div>
+
 
     <!-- Hero Section -->
     <section class="hero">
@@ -38,20 +41,20 @@
       </div>
     </section>
 
-    <!-- What is this -->
+    <!-- What is this section -->
     <section class="info-section">
       <h2>What is this?</h2>
       <div class="info-columns">
         <div class="info-box">
           <p>
             <strong>TUSBinRight++</strong> is a detailed recycling search database with website
-            and mobile app including barcode scanning and search items.
+            and mobile app including barcode scanning.
           </p>
         </div>
         <div class="info-box">
           <p>
-            <strong>TUSBinRight++</strong> helps your residents work out what to recycle where.
-            Our simple recycling search tool via website or mobile (barcode scanning included).
+            <strong>TUSBinRight++</strong> helps your residents work out what to recycle where
+            using our search tool or mobile scanner.
           </p>
         </div>
       </div>
@@ -67,7 +70,7 @@
         </div>
         <div>
           <img src="../images/result.png" height="60" />
-          <p>2. Get disposal result and instructions</p>
+          <p>2. Get instructions</p>
         </div>
         <div>
           <img src="../images/bin.png" height="60" />
@@ -82,14 +85,12 @@
       <div class="info-columns">
         <div class="info-box">
           <p>
-            <strong>TUSBinRight++</strong> helps you save time, money and reduce contamination.
-            Helps users learn proper waste disposal habits with immediate, reliable feedback.
+            <strong>TUSBinRight++</strong> helps reduce contamination and teaches users proper waste disposal.
           </p>
         </div>
         <div class="info-box">
           <p>
-            Scanning ensures precise item recognition and reduces mistakes.
-            Leads to cleaner recycling streams and better sustainability.
+            Barcode scanning ensures precise item recognition for cleaner recycling streams.
           </p>
         </div>
       </div>
@@ -125,83 +126,113 @@ const goToSearchItems = () => {
 </script>
 
 <style scoped>
-/* ------------------ CUSTOM HEADER ------------------ */
-.header {
-  background-color: #066502;
-  color: white;
-  padding: 0.8rem 2rem;
+/* NAVBAR */
+/* =======================
+   UNIVERSAL LOGGED-IN NAVBAR
+   ======================= */
+.navbar-pro {
+  width: 100%;
+  background-color: #1b4332;
+  padding: 12px 28px;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #a5d6a7;
+  justify-content: space-between;
+
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  overflow-x: hidden;       /* 👈 STOPS SCROLLING */
+  flex-wrap: nowrap;        /* 👈 FIX: prevents breaking */
 }
 
-.header-left {
+/* ----- LEFT: Logo + Title ----- */
+.nav-left {
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  flex-shrink: 0;           /* 👈 Prevents shrinking */
 }
 
-.logo {
-  height: 50px;
-  object-fit: contain;
+.nav-logo {
+  height: 42px;
 }
 
-.brand {
-  font-size: 1.7rem;
-  margin: 0;
-  font-weight: bold;
+.nav-title {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
-.header-center {
+/* ----- CENTER LINKS ----- */
+.nav-center {
+  list-style: none;
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 22px;
+
+  flex-grow: 1;             /* 👈 MAIN FIX - elastic space */
+  min-width: 0;             /* 👈 ALLOWS shrinking safely */
 }
 
-.nav-link {
+.nav-center li {
   color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nav-link:hover {
-  color: #a5d6a7;
-}
-
-.header-right {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.btn {
-  color: white;
-  padding: 0.4rem 0.9rem;
-  border-radius: 4px;
-  text-decoration: none;
-  border: none;
   cursor: pointer;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 500;
+
+  padding: 6px 12px;
+  border-radius: 8px;
+
+  white-space: nowrap;      /* 👈 Stops wrapping */
+  transition: 0.25s ease;
 }
 
-.login-btn {
-  background-color: #2e7d32;
+.nav-center li:hover,
+.nav-center .active {
+  background-color: #2d6a4f;
+  font-weight: 600;
 }
 
-.login-btn:hover {
-  background-color: #388e3c;
+/* ----- RIGHT: Logout Button ----- */
+.nav-right {
+  flex-shrink: 0;           /* 👈 Prevents overflow */
 }
 
 .logout-btn {
-  background-color: #b00000;
+  background-color: #d00000;
+  border: none;
+
+  padding: 6px 12px;        /* 👈 Slimmer, fits better */
+  font-size: 0.9rem;
+
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: 0.25s ease;
 }
 
 .logout-btn:hover {
-  background-color: #800000;
+  background-color: #900000;
 }
 
-/* ------------------ Existing Styles ------------------ */
+/* GLOBAL FIX to prevent ANY page scroll */
+:host, .home-page, body, html {
+  overflow-x: hidden !important;
+}
+
+
+/* PAGE STYLES */
 .home-page {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -213,6 +244,7 @@ const goToSearchItems = () => {
   color: #2d6a4f;
 }
 
+/* HERO SECTION */
 .hero {
   background: url("../images/BG.jpg") center/cover no-repeat;
   height: 72vh;
@@ -224,27 +256,18 @@ const goToSearchItems = () => {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0,0,0,0.6);
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero-content {
-  text-align: center;
   z-index: 2;
-  padding: 30px;
-  border-radius: 10px;
 }
 
 .btn {
   padding: 10px 20px;
-  border: none;
   border-radius: 6px;
   color: white;
   cursor: pointer;
@@ -278,18 +301,5 @@ const goToSearchItems = () => {
 .how-section {
   background-color: #93c47d;
   padding: 40px 20px;
-  color: black;
-}
-
-.steps {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.steps p {
-  font-weight: bold;
-  margin-top: 10px;
 }
 </style>
