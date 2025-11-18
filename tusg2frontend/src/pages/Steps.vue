@@ -23,7 +23,8 @@
           <li class="active">Steps</li>
           <li @click="router.push('/items')">Items</li>
           <li @click="router.push('/bins')">Bins</li>
-          <li>User</li>
+          <li @click="router.push('/users')">Users</li>
+
           <li>Staff</li>
         </ul>
       </aside>
