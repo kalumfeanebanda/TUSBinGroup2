@@ -85,7 +85,7 @@ class Users extends ResourceController
             // Fetch user + password hash
             $userQuery = $db->query("
                 SELECT userID, fname, lname, email, password
-                FROM user
+                FROM users
                 WHERE email = ?
             ", [$data['email']]);
 
