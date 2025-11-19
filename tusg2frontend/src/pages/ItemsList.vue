@@ -76,7 +76,7 @@ onMounted(load)
     <!-- Navbar -->
     <header class="navbar">
       <div class="logo-section">
-        <img src="@/assets/recycle.jpg" alt="TUSBinRight++" class="logo" />
+        <img src="@/assets/recycle.jpg" alt="TUSBinRigcht++" class="logo" />
         <h1 class="title-text">TUSBinRight++</h1>
       </div>
       <nav class="nav-links">
