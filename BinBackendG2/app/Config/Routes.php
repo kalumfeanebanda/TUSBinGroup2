@@ -52,8 +52,8 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($r
     //ItemBin Routes
     $routes->get('itembin', 'ItemBin::index');                           // Get all
     $routes->post('itembin', 'ItemBin::create');                         // Create new
-    $routes->put('itembin/(:num)/(:num)', 'ItemBin::update/$1/$2');      // Update
-    $routes->delete('itembin/(:num)/(:num)', 'ItemBin::delete/$1/$2');   // Delete
+    $routes->put('itembin/(:num)/(:num)', 'ItemBin::update/$1');      // Update
+    $routes->delete('itembin/(:num)/(:num)', 'ItemBin::delete/$1');   // Delete
 
     //For admin
 
