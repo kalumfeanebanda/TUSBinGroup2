@@ -1,4 +1,148 @@
-WARNING - 2025-11-19 01:46:45 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:25:14 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
+ 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
+ 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
+ 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:25:14 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
+ 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
+ 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:25:37 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
+ 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
+ 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
+ 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:25:37 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
+ 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
+ 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:26:12 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
+ 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
+ 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
+ 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:26:12 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
+ 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
+ 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:26:42 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
+ 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
+ 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
+ 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:26:42 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
+ 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
+ 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:26:47 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
+ 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
+ 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
+ 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:26:47 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
+ 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
+ 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:26:48 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
+ 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
+ 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
+ 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:26:48 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
+ 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
+ 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
+ 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
+ 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
+ 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:28:43 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -8,7 +152,7 @@ WARNING - 2025-11-19 01:46:45 --> [DEPRECATED] Passing lowercase HTTP method "op
  7 SYSTEMPATH\Boot.php(388): CodeIgniter\CLI\Console->run()
  8 SYSTEMPATH\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
  9 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
-WARNING - 2025-11-19 01:46:45 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:28:43 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -18,7 +162,7 @@ WARNING - 2025-11-19 01:46:45 --> [DEPRECATED] Passing lowercase HTTP method "po
  7 SYSTEMPATH\Boot.php(388): CodeIgniter\CLI\Console->run()
  8 SYSTEMPATH\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
  9 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
-WARNING - 2025-11-19 01:46:52 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:28:55 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -30,7 +174,7 @@ WARNING - 2025-11-19 01:46:52 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:46:52 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:28:55 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -42,7 +186,7 @@ WARNING - 2025-11-19 01:46:52 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:47:22 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:28:58 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -54,7 +198,7 @@ WARNING - 2025-11-19 01:47:22 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:47:22 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:28:58 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -66,7 +210,7 @@ WARNING - 2025-11-19 01:47:22 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:48:24 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:29:07 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -78,7 +222,7 @@ WARNING - 2025-11-19 01:48:24 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:48:24 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:29:07 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -90,7 +234,7 @@ WARNING - 2025-11-19 01:48:24 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:48:29 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:29:14 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -102,7 +246,7 @@ WARNING - 2025-11-19 01:48:29 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:48:29 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:29:14 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -114,7 +258,53 @@ WARNING - 2025-11-19 01:48:29 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:48:56 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ERROR - 2025-11-19 01:29:14 --> mysqli_sql_exception: PROCEDURE tusbinright2.adm_Read_bins does not exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Read_b...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_b...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_b...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_b...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-11-19 01:29:14 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Read_bins does not exist
+[Method: GET, Route: api/bins]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:29:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Read_bins does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_bins()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_bins()')
+ 3 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:29:14 --> [Caused by] mysqli_sql_exception: PROCEDURE tusbinright2.adm_Read_bins does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Read_bins()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_bins()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_bins()')
+ 4 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:29:16 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -126,7 +316,7 @@ WARNING - 2025-11-19 01:48:56 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:48:56 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:29:16 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -138,7 +328,7 @@ WARNING - 2025-11-19 01:48:56 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:51:20 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:29:18 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -150,7 +340,7 @@ WARNING - 2025-11-19 01:51:20 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:51:20 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:29:18 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -162,7 +352,7 @@ WARNING - 2025-11-19 01:51:20 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:51:20 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:29:26 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -174,7 +364,7 @@ WARNING - 2025-11-19 01:51:20 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:51:20 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:29:26 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -186,7 +376,7 @@ WARNING - 2025-11-19 01:51:20 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:51:23 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:32:54 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -198,7 +388,7 @@ WARNING - 2025-11-19 01:51:23 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:51:23 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:32:54 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -210,7 +400,7 @@ WARNING - 2025-11-19 01:51:23 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:51:24 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:32:57 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -222,7 +412,7 @@ WARNING - 2025-11-19 01:51:24 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:51:24 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:32:57 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -234,7 +424,7 @@ WARNING - 2025-11-19 01:51:24 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:51:39 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:33:02 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -246,7 +436,7 @@ WARNING - 2025-11-19 01:51:39 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:51:39 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:33:02 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -258,7 +448,7 @@ WARNING - 2025-11-19 01:51:39 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:51:40 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:34:20 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -270,7 +460,7 @@ WARNING - 2025-11-19 01:51:40 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:51:40 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:34:20 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -282,7 +472,7 @@ WARNING - 2025-11-19 01:51:40 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:51:58 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:37:38 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -294,7 +484,7 @@ WARNING - 2025-11-19 01:51:58 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:51:58 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:37:38 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -306,7 +496,7 @@ WARNING - 2025-11-19 01:51:58 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:52:00 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:37:45 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -318,7 +508,7 @@ WARNING - 2025-11-19 01:52:00 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:52:00 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:37:45 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -330,7 +520,7 @@ WARNING - 2025-11-19 01:52:00 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:52:18 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:37:49 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -342,7 +532,7 @@ WARNING - 2025-11-19 01:52:18 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:52:18 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:37:49 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -354,7 +544,16 @@ WARNING - 2025-11-19 01:52:18 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:52:21 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+CRITICAL - 2025-11-19 01:37:49 --> Error: Call to a member function getAllItemBin() on null
+[Method: GET, Route: api/itembin]
+in APPPATH\Controllers\Api\ItemBin.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ItemBin->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ItemBin))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:38:02 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -366,7 +565,7 @@ WARNING - 2025-11-19 01:52:21 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:52:21 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:38:02 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -378,7 +577,7 @@ WARNING - 2025-11-19 01:52:21 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:52:37 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:39:19 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -390,7 +589,7 @@ WARNING - 2025-11-19 01:52:37 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:52:37 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:39:19 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -402,7 +601,7 @@ WARNING - 2025-11-19 01:52:37 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:52:37 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:39:22 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -414,7 +613,7 @@ WARNING - 2025-11-19 01:52:37 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:52:37 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:39:22 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -426,7 +625,7 @@ WARNING - 2025-11-19 01:52:37 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:53:39 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:39:24 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -438,7 +637,7 @@ WARNING - 2025-11-19 01:53:39 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:53:39 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:39:24 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -450,7 +649,53 @@ WARNING - 2025-11-19 01:53:39 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:53:51 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ERROR - 2025-11-19 01:39:24 --> mysqli_sql_exception: PROCEDURE tusbinright2.adm_Read_bins does not exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Read_b...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_b...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_b...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_b...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-11-19 01:39:24 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Read_bins does not exist
+[Method: GET, Route: api/bins]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:39:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Read_bins does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_bins()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_bins()')
+ 3 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:39:24 --> [Caused by] mysqli_sql_exception: PROCEDURE tusbinright2.adm_Read_bins does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Read_bins()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_bins()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_bins()')
+ 4 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:39:26 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -462,7 +707,7 @@ WARNING - 2025-11-19 01:53:51 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 01:53:51 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:39:26 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -474,75 +719,53 @@ WARNING - 2025-11-19 01:53:51 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 09:44:13 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CLI\Console.php(41): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\Boot.php(388): CodeIgniter\CLI\Console->run()
- 8 SYSTEMPATH\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
- 9 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
-WARNING - 2025-11-19 09:44:13 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CLI\Console.php(41): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\Boot.php(388): CodeIgniter\CLI\Console->run()
- 8 SYSTEMPATH\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
- 9 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
-WARNING - 2025-11-19 09:44:21 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 09:44:21 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 09:44:53 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 09:44:53 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 09:45:02 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ERROR - 2025-11-19 01:39:26 --> mysqli_sql_exception: PROCEDURE tusbinright2.adm_Read_bins does not exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Read_b...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_b...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_b...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_b...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-11-19 01:39:26 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Read_bins does not exist
+[Method: GET, Route: api/bins]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:39:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Read_bins does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_bins()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_bins()')
+ 3 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:39:26 --> [Caused by] mysqli_sql_exception: PROCEDURE tusbinright2.adm_Read_bins does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Read_bins()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_bins()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_bins()')
+ 4 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:39:42 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -554,7 +777,7 @@ WARNING - 2025-11-19 09:45:02 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 09:45:02 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:39:42 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -566,7 +789,57 @@ WARNING - 2025-11-19 09:45:02 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 09:45:04 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ERROR - 2025-11-19 01:39:42 --> mysqli_sql_exception: PROCEDURE tusbinright2.adm_Create_bin does not exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Create...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Create...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Create...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Models\BinModel.php(21): CodeIgniter\Database\BaseConnection->query('CALL adm_Create...', Array)
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Bins.php(32): App\Models\BinModel->createBin('recycle', 'recycle')
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Bins->create()
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-11-19 01:39:42 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Create_bin does not exist
+[Method: POST, Route: api/bins]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Models\BinModel.php(21): CodeIgniter\Database\BaseConnection->query('CALL adm_Create_bin(?, ?, @new_id)', [...])
+ 2 APPPATH\Controllers\Api\Bins.php(32): App\Models\BinModel->createBin('recycle', 'recycle')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->create()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:39:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Create_bin does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Create_bin(\'recycle\', \'recycle\', @new_id)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Create_bin(\'recycle\', \'recycle\', @new_id)')
+ 3 APPPATH\Models\BinModel.php(21): CodeIgniter\Database\BaseConnection->query('CALL adm_Create_bin(?, ?, @new_id)', [...])
+ 4 APPPATH\Controllers\Api\Bins.php(32): App\Models\BinModel->createBin('recycle', 'recycle')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->create()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:39:42 --> [Caused by] mysqli_sql_exception: PROCEDURE tusbinright2.adm_Create_bin does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Create_bin(\'recycle\', \'recycle\', @new_id)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Create_bin(\'recycle\', \'recycle\', @new_id)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Create_bin(\'recycle\', \'recycle\', @new_id)')
+ 4 APPPATH\Models\BinModel.php(21): CodeIgniter\Database\BaseConnection->query('CALL adm_Create_bin(?, ?, @new_id)', [...])
+ 5 APPPATH\Controllers\Api\Bins.php(32): App\Models\BinModel->createBin('recycle', 'recycle')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:39:45 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -578,7 +851,7 @@ WARNING - 2025-11-19 09:45:04 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 09:45:04 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:39:45 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -590,7 +863,57 @@ WARNING - 2025-11-19 09:45:04 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:14:15 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ERROR - 2025-11-19 01:39:45 --> mysqli_sql_exception: PROCEDURE tusbinright2.adm_Create_bin does not exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Create...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Create...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Create...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Models\BinModel.php(21): CodeIgniter\Database\BaseConnection->query('CALL adm_Create...', Array)
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Bins.php(32): App\Models\BinModel->createBin('recycle', 'recycle')
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Bins->create()
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-11-19 01:39:45 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Create_bin does not exist
+[Method: POST, Route: api/bins]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Models\BinModel.php(21): CodeIgniter\Database\BaseConnection->query('CALL adm_Create_bin(?, ?, @new_id)', [...])
+ 2 APPPATH\Controllers\Api\Bins.php(32): App\Models\BinModel->createBin('recycle', 'recycle')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->create()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:39:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Create_bin does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Create_bin(\'recycle\', \'recycle\', @new_id)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Create_bin(\'recycle\', \'recycle\', @new_id)')
+ 3 APPPATH\Models\BinModel.php(21): CodeIgniter\Database\BaseConnection->query('CALL adm_Create_bin(?, ?, @new_id)', [...])
+ 4 APPPATH\Controllers\Api\Bins.php(32): App\Models\BinModel->createBin('recycle', 'recycle')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->create()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:39:45 --> [Caused by] mysqli_sql_exception: PROCEDURE tusbinright2.adm_Create_bin does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Create_bin(\'recycle\', \'recycle\', @new_id)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Create_bin(\'recycle\', \'recycle\', @new_id)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Create_bin(\'recycle\', \'recycle\', @new_id)')
+ 4 APPPATH\Models\BinModel.php(21): CodeIgniter\Database\BaseConnection->query('CALL adm_Create_bin(?, ?, @new_id)', [...])
+ 5 APPPATH\Controllers\Api\Bins.php(32): App\Models\BinModel->createBin('recycle', 'recycle')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:40:03 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -602,7 +925,7 @@ WARNING - 2025-11-19 10:14:15 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:14:15 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:40:03 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -614,7 +937,53 @@ WARNING - 2025-11-19 10:14:15 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:14:30 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ERROR - 2025-11-19 01:40:03 --> mysqli_sql_exception: PROCEDURE tusbinright2.adm_Read_bins does not exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Read_b...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_b...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_b...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_b...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-11-19 01:40:03 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Read_bins does not exist
+[Method: GET, Route: api/bins]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:40:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Read_bins does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_bins()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_bins()')
+ 3 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:40:03 --> [Caused by] mysqli_sql_exception: PROCEDURE tusbinright2.adm_Read_bins does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Read_bins()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_bins()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_bins()')
+ 4 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:40:04 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -626,7 +995,7 @@ WARNING - 2025-11-19 10:14:30 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:14:30 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:40:04 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -638,7 +1007,7 @@ WARNING - 2025-11-19 10:14:30 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:18:25 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:40:08 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -650,7 +1019,7 @@ WARNING - 2025-11-19 10:18:25 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:18:25 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:40:08 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -662,7 +1031,53 @@ WARNING - 2025-11-19 10:18:25 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:22:59 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ERROR - 2025-11-19 01:40:08 --> mysqli_sql_exception: PROCEDURE tusbinright2.adm_Read_bins does not exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Read_b...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_b...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_b...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_b...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-11-19 01:40:08 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Read_bins does not exist
+[Method: GET, Route: api/bins]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:40:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Read_bins does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_bins()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_bins()')
+ 3 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:40:08 --> [Caused by] mysqli_sql_exception: PROCEDURE tusbinright2.adm_Read_bins does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Read_bins()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_bins()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_bins()')
+ 4 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:40:08 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -674,7 +1089,7 @@ WARNING - 2025-11-19 10:22:59 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:22:59 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:40:08 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -686,7 +1101,7 @@ WARNING - 2025-11-19 10:22:59 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:24:46 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:40:10 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -698,7 +1113,7 @@ WARNING - 2025-11-19 10:24:46 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:24:46 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:40:10 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -710,7 +1125,53 @@ WARNING - 2025-11-19 10:24:46 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:24:54 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+ERROR - 2025-11-19 01:40:10 --> mysqli_sql_exception: PROCEDURE tusbinright2.adm_Read_bins does not exist in C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Read_b...', 0)
+#1 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_b...')
+#2 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_b...')
+#3 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\app\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_b...')
+#4 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+#5 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+#6 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\TUSBinGroup2\BinBackendG2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-11-19 01:40:10 --> CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Read_bins does not exist
+[Method: GET, Route: api/bins]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:40:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: PROCEDURE tusbinright2.adm_Read_bins does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_bins()')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_bins()')
+ 3 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-19 01:40:10 --> [Caused by] mysqli_sql_exception: PROCEDURE tusbinright2.adm_Read_bins does not exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('CALL adm_Read_bins()', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('CALL adm_Read_bins()')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('CALL adm_Read_bins()')
+ 4 APPPATH\Controllers\Api\Bins.php(13): CodeIgniter\Database\BaseConnection->query('CALL adm_Read_bins()')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\Bins->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\Bins))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:40:11 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -722,7 +1183,7 @@ WARNING - 2025-11-19 10:24:54 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:24:54 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:40:11 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -734,7 +1195,7 @@ WARNING - 2025-11-19 10:24:54 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:25:13 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:40:15 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -746,7 +1207,7 @@ WARNING - 2025-11-19 10:25:13 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:25:13 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:40:15 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -758,7 +1219,16 @@ WARNING - 2025-11-19 10:25:13 --> [DEPRECATED] Passing lowercase HTTP method "po
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:25:27 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+CRITICAL - 2025-11-19 01:40:15 --> Error: Call to a member function getAllItemBin() on null
+[Method: GET, Route: api/itembin]
+in APPPATH\Controllers\Api\ItemBin.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Api\ItemBin->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\ItemBin))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-11-19 01:40:23 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
@@ -770,315 +1240,7 @@ WARNING - 2025-11-19 10:25:27 --> [DEPRECATED] Passing lowercase HTTP method "op
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:25:27 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:26:55 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:26:55 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:26:57 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:26:57 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:34:31 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:34:31 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:43:32 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:43:32 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:43:33 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:43:33 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:43:37 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:43:37 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:43:37 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:43:37 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:44:33 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:44:33 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:45:08 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:45:08 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:45:28 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:45:28 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:51:06 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 10:51:06 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 15:03:46 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CLI\Console.php(41): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\Boot.php(388): CodeIgniter\CLI\Console->run()
- 8 SYSTEMPATH\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
- 9 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
-WARNING - 2025-11-19 15:03:46 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CLI\Console.php(41): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\Boot.php(388): CodeIgniter\CLI\Console->run()
- 8 SYSTEMPATH\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
- 9 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
-WARNING - 2025-11-19 15:03:52 --> [DEPRECATED] Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
- 1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "options" is deprecated. Use uppercase HTTP method like "OPTIONS".', 16384)
- 2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
- 3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))
- 4 APPPATH\Config\Routes.php(13): CodeIgniter\Router\RouteCollection->group('api', [...], Object(Closure))
- 5 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\xampp\\htdocs\\TUSBinGroup2\\BinBackendG2\\app\\Config\\Routes.php')
- 6 SYSTEMPATH\CodeIgniter.php(821): CodeIgniter\Router\RouteCollection->loadRoutes()
- 7 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(null)
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-WARNING - 2025-11-19 15:03:52 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
+WARNING - 2025-11-19 01:40:23 --> [DEPRECATED] Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST". in SYSTEMPATH\Router\RouteCollection.php on line 1026.
  1 SYSTEMPATH\Router\RouteCollection.php(1026): trigger_error('Passing lowercase HTTP method "post" is deprecated. Use uppercase HTTP method like "POST".', 16384)
  2 APPPATH\Config\Routes.php(16): CodeIgniter\Router\RouteCollection->match([...], 'login', 'Users::login')
  3 SYSTEMPATH\Router\RouteCollection.php(799): CodeIgniter\Router\RouteCollection::{closure}(Object(CodeIgniter\Router\RouteCollection))

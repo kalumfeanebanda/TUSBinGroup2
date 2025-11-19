@@ -15,11 +15,24 @@ const routes = [
     { path: '/register', name: 'register', component: Register },
     { path: '/adminlogin', name: 'adminlogin', component: AdminLogin },
     { path: '/admindashboard', name: 'admindashboard', component: AdminDashboard },
+
     { path: '/search-items', name: 'search-items', component: SearchItems },
-    { path: '/steps', name: 'steps', component: () => import('@/pages/Steps.vue') },//route to go to steps
+
+    { path: '/logged-in-home', name: 'logged-in-home', component: () => import('@/pages/LoggedInHome.vue') },
+
+    { path: '/user-profile', name: 'user-profile', component: () => import('@/pages/UserProfile.vue') },
+
+    { path: '/steps', name: 'steps', component: () => import('@/pages/Steps.vue') },
     { path: '/items', name: 'items', component: () => import('@/pages/ItemsList.vue') },
     { path: '/bins', name: 'bins', component: () => import('@/pages/BinsList.vue') },
-    { path: '/users', name: 'users', component: () => import('@/pages/UserList.vue') }
+    { path: '/users', name: 'users', component: () => import('@/pages/UserList.vue') },
+    { path: '/itembin',name: 'itembin',component: ()=>import('@/pages/ItemBin.vue')},
+
+
+    { path: '/item-result', name: 'item-result', component: () => import('@/pages/ItemResult.vue') },
+
+    { path: '/users/new', name: 'user-create', component: () => import('@/pages/UserForm.vue') },
+    { path: '/users/:id/edit', name: 'user-edit', component: () => import('@/pages/UserForm.vue') }
 ]
 
 
