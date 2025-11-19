@@ -61,6 +61,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import axios from 'axios'
 
 const email = ref('')
 const password = ref('')
@@ -69,14 +70,9 @@ const successMessage = ref('')
 const errorMessage = ref('')
 const router = useRouter()
 
-// --- MULTI-ADMIN CREDENTIALS LIST ---
-const ADMIN_ACCOUNTS = [
-  { email: 'Kalum@gmail.com', password: 'Kalum123' },
-  { email: 'Raiyan@gmail.com', password: 'Raiyan123' },
-  { email: 'Daud@gmail.com', password: 'Daud123' },
-  { email: 'Xiya@gmail.com', password: 'Xiya123' },
-  { email: 'Favour@gmail.com', password: 'Favour123' },
-];
+
+const API_URL = "/api/admin/login";
+
 
 const handleLogin = async (e) => {
   e.preventDefault();
@@ -89,21 +85,39 @@ const handleLogin = async (e) => {
     return;
   }
 
-  // Check if the entered credentials match any account in the list
-  const valid = ADMIN_ACCOUNTS.some(account =>
-      account.email === email.value && account.password === password.value
-  );
+  try {
+    const response = await axios.post(
+        API_URL,
+        {
+          email: email.value.trim(),
+          password: password.value.trim(),
+        },
+        {
+          headers: { 'Content-Type': 'application/json' },
+        }
+    )
 
-  if (valid) {
-    successMessage.value = "Admin Login successful! Redirecting in 1.5 seconds...";
+    if (response.data.status === 'ok') {
+      const admin = response.data.admin
+      localStorage.setItem('loggedAdmin', JSON.stringify(admin))
 
-    // Redirect to the admin dashboard
-    setTimeout(() => {
-      router.push('/admindashboard');
-    }, 1500);
+      successMessage.value = 'Admin Login successful! Redirecting...'
+      console.log('Logged-in admin:', admin)
 
-  } else {
-    errorMessage.value = "Invalid email or password. Please use one of the authorized admin accounts.";
+      setTimeout(() => {
+        router.push('/admindashboard');
+      }, 1200);
+
+    } else {
+      errorMessage.value = response.data.message || 'Login failed. Please try again.'
+    }
+
+  } catch (err) {
+    console.error('❌ Admin Login Error:', err)
+    errorMessage.value =
+        err.response?.data?.message ||
+        err.response?.data?.messages?.error ||
+        'Network or Server Error. Check that XAMPP/WAMP is running and the URL is correct.'
   }
 }
 
@@ -245,4 +259,15 @@ input {
 }
 </style>
 
+***
 
+### **Final Instructions for Testing**
+
+1.  **Replace ALL THREE FILES** with the code provided above.
+2.  Ensure your **XAMPP/WAMP/PHP server** is running.
+3.  Ensure your **Vue development server (`npm run dev`)** is running.
+4.  Log in using a known-good user from your database, for example:
+* **Email:** `Kalum@gmail.com`
+* **Password:** `Kalum123` (Assuming this is the plain-text password)
+
+This combination of fixes (correct route mapping, guaranteed CORS headers, and robust URL) should finally allow CodeIgniter to find the `Admin` class. Please let me know the status code you get now (200 OK, 401 Unauthorized, or 500 Server Error).
