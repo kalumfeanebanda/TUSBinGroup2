@@ -13,7 +13,7 @@ const route = useRoute()
 const hideLayout = computed(() => {
   return [
     '/admindashboard',
-    '/bins',
+   // '/bins',
     '/items',
     '/logged-in-home',
     '/user-profile'// hide global header on logged-in-home
@@ -24,7 +24,7 @@ const hideLayout = computed(() => {
 const hideFooter = computed(() => {
   return [
     '/admindashboard',
-    '/bins',
+   // '/bins',
     '/items',
     '/user-profile'     // hide global footer on user-profile
   ].includes(route.path)

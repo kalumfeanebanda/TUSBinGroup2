@@ -80,19 +80,6 @@ onMounted(load)
 </script>
 
 <template>
-  <header class="navbar">
-    <div class="logo-section">
-      <img src="@/assets/recycle.jpg" alt="TUSBinRight++" class="logo" />
-      <h1 class="title-text">TUSBinRight++</h1>
-    </div>
-    <nav class="nav-links">
-      <router-link to="/">Home</router-link>
-      <router-link to="/users">User</router-link>
-      <router-link to="/admin">Admin</router-link>
-      <router-link to="/menu">Menu</router-link>
-      <router-link to="/adminlogin">Logout</router-link>
-    </nav>
-  </header>
 
 
 
@@ -117,7 +104,7 @@ onMounted(load)
       <div class="form-row">
         <label>Description:</label>
         <input v-model="form.binDesc" placeholder="Enter description" />
-      </div>cd
+      </div>
       <div class="form-actions">
         <button class="btn save" @click="saveBin">{{ editing ? 'Save Changes' : 'Create Bin' }}</button>
         <button class="btn cancel" @click="cancelForm">Cancel</button>
@@ -156,12 +143,7 @@ onMounted(load)
   </section>
 
 
-  <footer class="footer">
-    <p><strong>Contact Us</strong></p>
-    <p>Technological University of Shannon</p>
-    <p>support@tusbinright.tus.ie | (087) 066 0662</p>
-    <p>© 2025 TUSBinRight++. All rights reserved. Developed by Group 2</p>
-  </footer>
+
 
 </template>
 
@@ -185,7 +167,7 @@ onMounted(load)
   max-width: 900px;
 }
 
-/* Header */
+
 .bins-header {
   display: flex;
   justify-content: space-between;
@@ -207,12 +189,7 @@ onMounted(load)
   align-items: center;
 }
 
-.search-box {
-  padding: 0.45rem 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  min-width: 200px;
-}
+
 
 .btn {
   color: #fff;
@@ -222,7 +199,7 @@ onMounted(load)
   font-weight: 600;
   font-size: 0.85rem;
   cursor: pointer;
-  transition: none; /* disables hover transitions */
+  transition: none;
 }
 
 .btn.refresh { background-color: purple; }
@@ -326,45 +303,6 @@ onMounted(load)
 }
 .bin-form .btn.cancel:hover {
   background-color: #888;
-}
-
-.footer {
-  background-color: #2e7d32;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  border-top: 3px solid #1b5e20;
-}
-
-
-
-/* header */
-.navbar {
-  background-color: #4caf50;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.logo-section {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.logo {
-  width: 45px;
-  border-radius: 50%;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  margin-left: 1.25rem;
-  font-weight: bold;
 }
 
 </style>
