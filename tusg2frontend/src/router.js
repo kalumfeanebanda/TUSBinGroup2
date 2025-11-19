@@ -26,7 +26,7 @@ const routes = [
     { path: '/items', name: 'items', component: () => import('@/pages/ItemsList.vue') },
     { path: '/bins', name: 'bins', component: () => import('@/pages/BinsList.vue') },
     { path: '/users', name: 'users', component: () => import('@/pages/UserList.vue') },
-
+    { path: '/itembin',name: 'itembin',component: ()=>import('@/pages/ItemBin.vue')},
 
 
     { path: '/item-result', name: 'item-result', component: () => import('@/pages/ItemResult.vue') },

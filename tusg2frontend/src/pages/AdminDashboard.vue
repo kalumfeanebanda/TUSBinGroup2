@@ -24,6 +24,7 @@
           <li @click="goTo('items')" :class="{ active: activeTab === 'items' }">Items</li>
           <li @click="goTo('user')" :class="{ active: activeTab === 'user' }">User</li>
           <li @click="goTo('staff')" :class="{ active: activeTab === 'staff' }">Staff</li>
+          <li @click="goTo('itembin')" :class="{ active: activeTab === 'itembin' }">itembin</li>
         </ul>
       </aside>
 
