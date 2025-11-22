@@ -1,4 +1,5 @@
-<?php namespace App\Controllers\Api;
+<?php
+namespace App\Controllers\Api;
 
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\API\ResponseTrait;
@@ -10,10 +11,11 @@ class Admin extends ResourceController
     protected $format = 'json';
 
     // ======================
-    // CORS Handling (Copied directly from your working Users.php)
+    // CORS Handling
     // ======================
     protected function handleCors(): ?Response
     {
+        // SAME AS Users.php !!!
         $this->response->setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
         $this->response->setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
         $this->response->setHeader('Access-Control-Allow-Headers', 'Content-Type, X-Requested-With, Authorization');
@@ -31,11 +33,14 @@ class Admin extends ResourceController
     // ======================
     public function login()
     {
+        // Debug: verify Admin controller is actually hit
+        log_message('error', '🔥 Admin::login() CALLED');
+
         // 1. Handle CORS Pre-flight
         $response = $this->handleCors();
         if ($response) return $response;
 
-        // 2. Get data from JSON body
+        // 2. Get JSON body
         $data = $this->request->getJSON(true);
 
         if (empty($data['email']) || empty($data['password'])) {
@@ -44,39 +49,47 @@ class Admin extends ResourceController
 
         try {
             $db = \Config\Database::connect();
-            $email = trim($data['email']);
+
+            $email = strtolower(trim($data['email']));
             $password = trim($data['password']);
 
-            // CRITICAL: Fetch admin user from the 'admin_user' table
+            // Debug: show email being searched
+            log_message('error', '🔍 Searching admin email: ' . $email);
+
+            // Case-insensitive email match
             $adminQuery = $db->query("
                 SELECT admin_id, name, email, password
                 FROM admin_user
-                WHERE email = ?
+                WHERE LOWER(email) = LOWER(?)
             ", [$email]);
 
             $admin = $adminQuery->getRow();
 
             if (!$admin) {
+                log_message('error', '❌ Admin NOT found');
                 return $this->failUnauthorized('Invalid email or password.');
             }
 
             $storedHash = trim($admin->password);
 
-            // CRITICAL: Verify password
+            // Debug: found admin
+            log_message('error', '✅ Admin found: ' . $admin->email);
+
             if (password_verify($password, $storedHash)) {
 
-                // SUCCESS → return sanitized admin info
+                log_message('error', '🔐 Password verified successfully');
+
                 return $this->respond([
                     'status' => 'ok',
                     'message' => 'Admin Login successful!',
                     'admin' => [
                         'admin_id' => $admin->admin_id,
-                        'name' => $admin->name,
-                        'email' => $admin->email
+                        'name'     => $admin->name,
+                        'email'    => $admin->email
                     ]
                 ]);
-
             } else {
+                log_message('error', '❌ Password does NOT match');
                 return $this->failUnauthorized('Invalid email or password.');
             }
 

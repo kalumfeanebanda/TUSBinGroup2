@@ -5,7 +5,6 @@
         <h2 class="title">Welcome Admin!</h2>
         <p class="subtitle">Enter your credentials to access the admin dashboard</p>
 
-        <!-- Using v-on:submit and handling preventDefault in the JS function -->
         <form v-on:submit="handleLogin">
           <label>Email</label>
           <input
@@ -39,17 +38,16 @@
             Forgot Password?
           </router-link>
 
-
           <button type="submit" class="login-btn">Login as Admin</button>
 
           <p v-if="successMessage" class="message success-msg">{{ successMessage }}</p>
           <p v-if="errorMessage" class="message error-msg">{{ errorMessage }}</p>
+
           <router-link to="/login">
             <button type="button" class="back-btn">Back to User Login</button>
           </router-link>
         </form>
       </div>
-
 
       <div class="login-image">
         <img src="@/assets/recycle.jpg" alt="Recycle" />
@@ -61,7 +59,6 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import axios from 'axios'
 
 const email = ref('')
 const password = ref('')
@@ -70,55 +67,48 @@ const successMessage = ref('')
 const errorMessage = ref('')
 const router = useRouter()
 
+// 🔥 Hard-coded admin list (no backend needed)
+const adminAccounts = [
+  { email: "Raiyan@gmail.com", password: "Admin123", name: "Raiyan" },
+  { email: "Kalum@gmail.com", password: "Admin123", name: "Kalum" },
+  { email: "Favour@gmail.com", password: "Admin123", name: "Favour" },
+  { email: "Xiya@gmail.com", password: "Admin123", name: "Xiya" },
+  { email: "Dauud@gmail.com", password: "Admin123", name: "Dauud" },
+]
 
-const API_URL = "/api/admin/login";
+const handleLogin = (e) => {
+  e.preventDefault()
+  errorMessage.value = ''
+  successMessage.value = ''
 
+  const enteredEmail = email.value.trim()
+  const enteredPassword = password.value.trim()
 
-const handleLogin = async (e) => {
-  e.preventDefault();
-
-  errorMessage.value = '';
-  successMessage.value = '';
-
-  if (!email.value || !password.value) {
-    errorMessage.value = "Please enter both email and password.";
-    return;
+  if (!enteredEmail || !enteredPassword) {
+    errorMessage.value = "Please enter both email and password."
+    return
   }
 
-  try {
-    const response = await axios.post(
-        API_URL,
-        {
-          email: email.value.trim(),
-          password: password.value.trim(),
-        },
-        {
-          headers: { 'Content-Type': 'application/json' },
-        }
-    )
+  // 🔍 Check admin list
+  const admin = adminAccounts.find(
+      a =>
+          a.email.toLowerCase() === enteredEmail.toLowerCase() &&
+          a.password === enteredPassword
+  )
 
-    if (response.data.status === 'ok') {
-      const admin = response.data.admin
-      localStorage.setItem('loggedAdmin', JSON.stringify(admin))
-
-      successMessage.value = 'Admin Login successful! Redirecting...'
-      console.log('Logged-in admin:', admin)
-
-      setTimeout(() => {
-        router.push('/admindashboard');
-      }, 1200);
-
-    } else {
-      errorMessage.value = response.data.message || 'Login failed. Please try again.'
-    }
-
-  } catch (err) {
-    console.error('❌ Admin Login Error:', err)
-    errorMessage.value =
-        err.response?.data?.message ||
-        err.response?.data?.messages?.error ||
-        'Network or Server Error. Check that XAMPP/WAMP is running and the URL is correct.'
+  if (!admin) {
+    errorMessage.value = "Invalid email or password."
+    return
   }
+
+  // Save admin info
+  localStorage.setItem("loggedAdmin", JSON.stringify(admin))
+
+  successMessage.value = "Login successful! Redirecting..."
+
+  setTimeout(() => {
+    router.push("/admindashboard")
+  }, 1200)
 }
 
 const togglePassword = () => {
@@ -126,8 +116,8 @@ const togglePassword = () => {
 }
 </script>
 
+
 <style scoped>
-/* 💡 Added message styles for success/error feedback */
 .message {
   padding: 0.75rem;
   margin-top: 1rem;
@@ -138,17 +128,17 @@ const togglePassword = () => {
 }
 
 .success-msg {
-  background-color: #e8f5e9; /* Light Green */
-  color: #1b5e20; /* Dark Green */
+  background-color: #e8f5e9;
+  color: #1b5e20;
   border: 1px solid #1b5e20;
 }
 
 .error-msg {
-  background-color: #ffebee; /* Light Red */
-  color: #b71c1c; /* Dark Red */
+  background-color: #ffebee;
+  color: #b71c1c;
   border: 1px solid #b71c1c;
 }
-/* (Rest of the original styles...) */
+
 .login-container {
   display: flex;
   justify-content: center;
@@ -206,7 +196,6 @@ input {
   font-size: 1rem;
 }
 
-
 .login-btn {
   background-color: #1b5e20;
   color: white;
@@ -224,7 +213,6 @@ input {
 .login-btn:hover {
   background-color: #145a17;
 }
-
 
 .back-btn {
   background-color: #b71c1c;
@@ -259,15 +247,4 @@ input {
 }
 </style>
 
-***
 
-### **Final Instructions for Testing**
-
-1.  **Replace ALL THREE FILES** with the code provided above.
-2.  Ensure your **XAMPP/WAMP/PHP server** is running.
-3.  Ensure your **Vue development server (`npm run dev`)** is running.
-4.  Log in using a known-good user from your database, for example:
-* **Email:** `Kalum@gmail.com`
-* **Password:** `Kalum123` (Assuming this is the plain-text password)
-
-This combination of fixes (correct route mapping, guaranteed CORS headers, and robust URL) should finally allow CodeIgniter to find the `Admin` class. Please let me know the status code you get now (200 OK, 401 Unauthorized, or 500 Server Error).

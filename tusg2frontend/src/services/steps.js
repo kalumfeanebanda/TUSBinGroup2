@@ -1,43 +1,42 @@
 import api from '@/lib/api'
 
-// This file implements the actual API calls for the Steps resource.
-
-/**
- * Fetches all steps from the API.
- * @returns {Promise<Array>} List of steps.
- */
+// ===============================
+// Fetch all steps
+// GET /api/steps
+// ===============================
 export async function listSteps() {
-    // Corresponds to GET /api/steps
     const r = await api.get('/steps')
-    return r.data.data // Assuming the API returns { status: 'ok', data: [...] }
+    return r.data.data
 }
 
-/**
- * Creates a new step.
- * @param {object} data - { stepTitle, stepDesc }
- */
+// ===============================
+// Create a new step
+// POST /api/steps
+// ===============================
 export async function createStep(data) {
-    // Corresponds to POST /api/steps
-    const r = await api.post('/steps', data)
-    return r.data
+    return (await api.post('/steps', {
+        itemCodeID: data.itemCodeID,
+        stepTitle: data.stepTitle,
+        stepDesc: data.stepDesc
+    })).data
 }
 
-/**
- * Updates an existing step.
- * @param {number} id - The ID of the step to update.
- * @param {object} data - { stepTitle, stepDesc }
- */
+// ===============================
+// Update existing step
+// PUT /api/steps/{id}
+// ===============================
 export async function updateStep(id, data) {
-    // Corresponds to PUT /api/steps/{id}
-    const r = await api.put(`/steps/${id}`, data)
-    return r.data
+    return (await api.put(`/steps/${id}`, {
+        itemCodeID: data.itemCodeID,
+        stepTitle: data.stepTitle,
+        stepDesc: data.stepDesc
+    })).data
 }
 
-/**
- * Deletes a step.
- * @param {number} id - The ID of the step to delete.
- */
+// ===============================
+// Delete step
+// DELETE /api/steps/{id}
+// ===============================
 export async function deleteStep(id) {
-    // Corresponds to DELETE /api/steps/{id}
-    await api.delete(`/steps/${id}`)
+    return await api.delete(`/steps/${id}`)
 }

@@ -1,7 +1,6 @@
 <template>
   <div class="dashboard-container">
 
-
     <header class="navbar">
       <div class="logo-section">
         <img src="@/assets/recycle.jpg" alt="TUSBinRight++" class="logo" />
@@ -42,8 +41,14 @@
             </div>
           </div>
 
+          <!-- CREATE/UPDATE FORM -->
           <div v-if="showForm" class="step-form">
             <h3>{{ editing ? 'Update Step' : 'Create New Step' }}</h3>
+
+            <div class="form-row">
+              <label>Item Code ID:</label>
+              <input v-model="form.itemCodeID" type="number" placeholder="Enter itemCodeID" />
+            </div>
 
             <div class="form-row">
               <label>Step Title:</label>
@@ -63,15 +68,17 @@
             </div>
           </div>
 
+          <!-- STATUS MESSAGES -->
           <div v-if="loading" class="state">Loading…</div>
           <div v-else-if="error" class="state error">{{ error }}</div>
           <div v-else-if="steps.length === 0" class="state">No steps found.</div>
 
+          <!-- TABLE -->
           <table v-else class="steps-table">
             <thead>
             <tr>
               <th>prepStepId</th>
-              <th>binTypeID</th>
+              <th>itemCodeID</th>
               <th>stepOrder</th>
               <th>stepTitle</th>
               <th>stepLongDesc</th>
@@ -81,7 +88,7 @@
             <tbody>
             <tr v-for="i in steps" :key="i.prepStepId">
               <td class="muted">{{ i.prepStepId }}</td>
-              <td class="muted">{{ i.binTypeID }}</td>
+              <td class="muted">{{ i.itemCodeID }}</td>
               <td class="muted">{{ i.stepOrder }}</td>
               <td>{{ i.stepTitle }}</td>
               <td>{{ i.stepDesc }}</td>
@@ -92,8 +99,10 @@
             </tr>
             </tbody>
           </table>
+
         </section>
       </main>
+
     </div>
 
     <footer class="footer">
@@ -109,27 +118,29 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-
 import { listSteps, deleteStep, createStep, updateStep } from '@/services/steps.js'
 
 const router = useRouter()
+
 const steps = ref([])
 const loading = ref(true)
 const error = ref('')
 
 const showForm = ref(false)
 const editing = ref(null)
-// Initialize form fields to match the API (stepTitle, stepDesc)
-const form = ref({ stepTitle: '', stepDesc: '' })
+
+const form = ref({
+  itemCodeID: '',
+  stepTitle: '',
+  stepDesc: ''
+})
 
 async function load() {
   loading.value = true
   error.value = ''
   try {
-    // This will now call the real API endpoint
     steps.value = await listSteps()
-  } catch(err) {
-    console.error("Error loading steps:", err)
+  } catch (err) {
     error.value = err?.message || "Couldn't load steps"
   } finally {
     loading.value = false
@@ -139,47 +150,48 @@ async function load() {
 function openCreate() {
   showForm.value = true
   editing.value = null
-  form.value = { stepTitle: '', stepDesc: '' }
+  form.value = { itemCodeID: '', stepTitle: '', stepDesc: '' }
 }
 
 function openEdit(step) {
   showForm.value = true
   editing.value = step
-  // Ensure form fields map correctly to the step object properties
-  form.value = { stepTitle: step.stepTitle, stepDesc: step.stepDesc }
+  form.value = {
+    itemCodeID: step.itemCodeID,
+    stepTitle: step.stepTitle,
+    stepDesc: step.stepDesc
+  }
 }
 
 function cancel() {
   showForm.value = false
   editing.value = null
-  form.value = { stepTitle: '', stepDesc: '' }
+  form.value = { itemCodeID: '', stepTitle: '', stepDesc: '' }
 }
 
 async function save() {
+  if (!form.value.stepTitle)
+    return window.alert("Step title required")
+
   try {
-
-
-    if (!form.value.stepTitle) return window.alert("Step title required")
-
     if (editing.value) {
-      // Use stepID for update
       await updateStep(editing.value.prepStepId, form.value)
       window.alert("Step updated!")
     } else {
       await createStep(form.value)
       window.alert("Step created!")
     }
-
     cancel()
     await load()
+
   } catch (err) {
     window.alert(err?.response?.data?.message || "Error saving step")
   }
 }
 
 async function remove(id) {
-  // Use window.confirm/alert as mandated to be avoided, but required here for basic functionality
   if (!window.confirm("Delete this step?")) return
+
   try {
     await deleteStep(id)
     await load()
