@@ -39,45 +39,39 @@ class Steps extends ResourceController
     public function create()
     {
         $input = $this->request->getJSON(true);
-        $title = $input['stepTitle'] ?? '';
-        // ADDED: Read the separate description field from the frontend
-        $desc = $input['stepDesc'] ?? '';
 
-        if (empty($title)) {
-            return $this->fail('Step title is required', 400);
+        $itemCodeID = $input['itemCodeID'] ?? null;
+        $title      = $input['stepTitle'] ?? '';
+        $desc       = $input['stepDesc'] ?? '';
+
+        if (!$itemCodeID || empty($title)) {
+            return $this->fail('itemCodeID and stepTitle are required', 400);
         }
 
         $db = \Config\Database::connect();
-        // CHANGED: The SP call now uses TWO parameters: title and description
-        // You will need to create sp_add_step with two params in Step 3.
-        $db->query("CALL sp_add_step(?, ?)", [$title, $desc]);
+        $db->query("CALL sp_add_step(?, ?, ?)", [$itemCodeID, $title, $desc]);
 
-        return $this->respondCreated(['status'=>'ok','message'=>'Step added']);
+        return $this->respondCreated(['status'=>'ok', 'message'=>'Step added']);
     }
 
-    /**
-     * Updates an existing step.
-     * Corresponds to: PUT /api/steps/{id}
-     * Uses stored procedure: CALL sp_update_step(?, ?)
-     */
     public function update($id = null)
     {
         $input = $this->request->getJSON(true);
-        $title = $input['stepTitle'] ?? '';
-        // ADDED: Read the separate description field from the frontend
-        $desc = $input['stepDesc'] ?? '';
 
-        if (is_null($id) || empty($title)) {
-            return $this->fail('Invalid request or missing step ID/title', 400);
+        $itemCodeID = $input['itemCodeID'] ?? null;
+        $title      = $input['stepTitle'] ?? '';
+        $desc       = $input['stepDesc'] ?? '';
+
+        if (!$id || !$itemCodeID || empty($title)) {
+            return $this->fail('Missing required fields', 400);
         }
 
         $db = \Config\Database::connect();
-        // CHANGED: The SP call now uses THREE parameters: ID, title, and description
-        // You will need to create sp_update_step with three params in Step 3.
-        $db->query("CALL sp_update_step(?, ?, ?)", [$id, $title, $desc]);
+        $db->query("CALL sp_update_step(?, ?, ?, ?)", [$id, $itemCodeID, $title, $desc]);
 
-        return $this->respond(['status'=>'ok','message'=>'Step updated']);
+        return $this->respond(['status'=>'ok', 'message'=>'Step updated']);
     }
+
 
     /**
      * Deletes a step.

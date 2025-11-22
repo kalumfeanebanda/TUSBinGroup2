@@ -44,9 +44,10 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($r
 
     // Step routes (The Steps Controller handles CRUD for /api/steps)
     $routes->get('steps', 'Steps::index');
-    $routes->post('steps', 'Steps::create'); // FIXES YOUR 404 ERROR
+    $routes->post('steps', 'Steps::create');
     $routes->put('steps/(:num)', 'Steps::update/$1');
     $routes->delete('steps/(:num)', 'Steps::delete/$1');
+
 
 
     //ItemBin Routes
