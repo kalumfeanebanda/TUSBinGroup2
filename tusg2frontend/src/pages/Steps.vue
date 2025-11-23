@@ -22,8 +22,6 @@
           <li class="active">Steps</li>
           <li @click="router.push('/items')">Items</li>
           <li @click="router.push('/bins')">Bins</li>
-          <li>User</li>
-          <li>Staff</li>
         </ul>
       </aside>
 
@@ -41,23 +39,23 @@
             </div>
           </div>
 
-          <!-- CREATE/UPDATE FORM -->
+          <!-- FORM -->
           <div v-if="showForm" class="step-form">
             <h3>{{ editing ? 'Update Step' : 'Create New Step' }}</h3>
 
             <div class="form-row">
               <label>Item Code ID:</label>
-              <input v-model="form.itemCodeID" type="number" placeholder="Enter itemCodeID" />
+              <input v-model="form.itemCodeID" type="number" />
             </div>
 
             <div class="form-row">
               <label>Step Title:</label>
-              <input v-model="form.stepTitle" placeholder="Enter step title" />
+              <input v-model="form.stepTitle" />
             </div>
 
             <div class="form-row">
-              <label>Description:</label>
-              <input v-model="form.stepDesc" placeholder="Enter description" />
+              <label>Long Description:</label>
+              <input v-model="form.stepDesc" />
             </div>
 
             <div class="form-actions">
@@ -68,7 +66,6 @@
             </div>
           </div>
 
-          <!-- STATUS MESSAGES -->
           <div v-if="loading" class="state">Loading…</div>
           <div v-else-if="error" class="state error">{{ error }}</div>
           <div v-else-if="steps.length === 0" class="state">No steps found.</div>
@@ -77,40 +74,36 @@
           <table v-else class="steps-table">
             <thead>
             <tr>
-              <th>prepStepId</th>
+              <th>prepStepID</th>
               <th>itemCodeID</th>
               <th>stepOrder</th>
-              <th>stepTitle</th>
+              <th>stepDesc (Short)</th>
               <th>stepLongDesc</th>
               <th>Actions</th>
             </tr>
             </thead>
+
             <tbody>
-            <tr v-for="i in steps" :key="i.prepStepId">
-              <td class="muted">{{ i.prepStepId }}</td>
+            <tr v-for="i in steps" :key="i.prepStepID">
+              <td class="muted">{{ i.prepStepID }}</td>
               <td class="muted">{{ i.itemCodeID }}</td>
               <td class="muted">{{ i.stepOrder }}</td>
-              <td>{{ i.stepTitle }}</td>
               <td>{{ i.stepDesc }}</td>
+              <td>{{ i.stepLongDesc }}</td>
+
               <td class="actions">
                 <button class="btn update" @click="openEdit(i)">Update</button>
-                <button class="btn delete" @click="remove(i.prepStepId)">Delete</button>
+                <button class="btn delete" @click="remove(i.prepStepID)">Delete</button>
               </td>
             </tr>
             </tbody>
           </table>
 
+
         </section>
       </main>
 
     </div>
-
-    <footer class="footer">
-      <p><strong>Contact Us</strong></p>
-      <p>Technological University of Shannon</p>
-      <p>support@tusbinright.tus.ie | (087) 066 0662</p>
-      <p>© 2025 TUSBinRight++. All rights reserved. Developed by Group 2</p>
-    </footer>
 
   </div>
 </template>
@@ -137,14 +130,12 @@ const form = ref({
 
 async function load() {
   loading.value = true
-  error.value = ''
   try {
     steps.value = await listSteps()
   } catch (err) {
     error.value = err?.message || "Couldn't load steps"
-  } finally {
-    loading.value = false
   }
+  loading.value = false
 }
 
 function openCreate() {
@@ -155,11 +146,12 @@ function openCreate() {
 
 function openEdit(step) {
   showForm.value = true
-  editing.value = step
+  editing.value = step   // <- keep whole object
+
   form.value = {
     itemCodeID: step.itemCodeID,
-    stepTitle: step.stepTitle,
-    stepDesc: step.stepDesc
+    stepTitle: step.stepDesc,     // short title
+    stepDesc: step.stepLongDesc   // long desc
   }
 }
 
@@ -170,20 +162,18 @@ function cancel() {
 }
 
 async function save() {
-  if (!form.value.stepTitle)
-    return window.alert("Step title required")
-
   try {
     if (editing.value) {
-      await updateStep(editing.value.prepStepId, form.value)
+      // 🔥 FIXED: use correct key exactly like DB
+      await updateStep(editing.value.prepStepID, form.value)
       window.alert("Step updated!")
     } else {
       await createStep(form.value)
       window.alert("Step created!")
     }
+
     cancel()
     await load()
-
   } catch (err) {
     window.alert(err?.response?.data?.message || "Error saving step")
   }
@@ -193,6 +183,7 @@ async function remove(id) {
   if (!window.confirm("Delete this step?")) return
 
   try {
+    // 🔥 FIXED: delete receives correct ID
     await deleteStep(id)
     await load()
   } catch (err) {
@@ -202,6 +193,7 @@ async function remove(id) {
 
 onMounted(load)
 </script>
+
 
 <style scoped>
 
