@@ -79,6 +79,64 @@ class Items extends ResourceController
 
 
 
+    public function searchBarcode()
+    {
+        $code = trim((string)$this->request->getGet('code'));
+        if ($code === '') {
+            return $this->response->setStatusCode(400)->setJSON(['message' => 'Missing code']);
+        }
+
+        $db = \Config\Database::connect();
+
+        // Call our barcode result SP
+        $res1 = $db->query("CALL sp_ResultPageBarcode(?)", [$code]);
+
+        // header row (Item + BinType + ruleNote)
+        $header = $res1->getRowArray() ?: null;
+
+        // second result set: steps
+        $conn = $db->connID;
+        $conn->next_result();
+        $stepsRes = $conn->store_result();
+
+        $prepSteps = [];
+        if ($stepsRes) {
+            while ($row = $stepsRes->fetch_assoc()) {
+                $prepSteps[] = [
+                    'stepOrder' => (int)$row['stepOrder'],
+                    'stepDesc'  => $row['stepDesc'],
+                ];
+            }
+            $stepsRes->free();
+        }
+
+        // drain leftovers
+        while ($conn->more_results() && $conn->next_result()) {
+            if ($tmp = $conn->store_result()) { $tmp->free(); }
+        }
+
+        if (!$header) {
+            return $this->response->setStatusCode(404)->setJSON(['message' => 'Item not found for this barcode']);
+        }
+
+        return $this->response->setJSON([
+            'itemID'   => (int)$header['itemID'],
+            'itemName' => $header['itemName'],
+            'itemDesc' => $header['itemDesc'],
+            'createdAt'=> $header['createdAt'],
+            'recommendedBin' => $header['binTypeID'] ? [
+                'binTypeID' => (int)$header['binTypeID'],
+                'binName'   => $header['binName'],
+                'binDesc'   => $header['binDesc'],
+            ] : null,
+            'ruleNote'  => $header['ruleNote'] ?? '',
+            'prepSteps' => $prepSteps,
+        ]);
+    }
+
+
+
+
     public function resultP($id = null)
     {
         $itemID = (int)$id;
