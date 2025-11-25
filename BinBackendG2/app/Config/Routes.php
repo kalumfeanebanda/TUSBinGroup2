@@ -32,6 +32,7 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($r
     //search + result routes
     $routes->get('items/search-names', 'Items::searchNames');
     $routes->get('items/(:num)', 'Items::resultP/$1');
+    $routes->get('items/search-barcode', 'Items::searchBarcode');
 
 
     // Item routes
@@ -55,6 +56,15 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'], static function($r
     $routes->post('itembin', 'ItemBin::create');                         // Create new
     $routes->put('itembin/(:num)/(:num)', 'ItemBin::update/$1');      // Update
     $routes->delete('itembin/(:num)/(:num)', 'ItemBin::delete/$1');   // Delete
+
+
+    //itemcodes Routes
+    $routes->get('itemcodes', 'ItemCodes::index');
+    $routes->post('itemcodes', 'ItemCodes::create');
+    $routes->put('itemcodes/(:num)', 'ItemCodes::update/$1');
+    $routes->delete('itemcodes/(:num)', 'ItemCodes::delete/$1');
+
+
 
     //For admin
 
