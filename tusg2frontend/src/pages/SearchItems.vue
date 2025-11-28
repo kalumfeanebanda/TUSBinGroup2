@@ -82,7 +82,6 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import BarcodeScanner from "@/components/BarcodeScanner.vue";
-import { searchNames } from "@/services/items";
 import FeedbackModal from "@/components/FeedbackModal.vue";
 import { searchNames, searchByBarcode } from '@/services/items'
 

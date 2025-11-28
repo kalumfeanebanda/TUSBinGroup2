@@ -55,7 +55,7 @@
 
             <div class="form-row">
               <label>Long Description:</label>
-              <input v-model="form.stepDesc" />
+              <textarea v-model="form.stepLongDesc" rows="3"></textarea>
             </div>
 
             <div class="form-actions">
@@ -77,8 +77,8 @@
               <th>prepStepID</th>
               <th>itemCodeID</th>
               <th>stepOrder</th>
-              <th>stepDesc (Short)</th>
-              <th>stepLongDesc</th>
+              <th>Step Title</th>
+              <th>Long Description</th>
               <th>Actions</th>
             </tr>
             </thead>
@@ -88,7 +88,7 @@
               <td class="muted">{{ i.prepStepID }}</td>
               <td class="muted">{{ i.itemCodeID }}</td>
               <td class="muted">{{ i.stepOrder }}</td>
-              <td>{{ i.stepDesc }}</td>
+              <td>{{ i.stepTitle }}</td>
               <td>{{ i.stepLongDesc }}</td>
 
               <td class="actions">
@@ -98,7 +98,6 @@
             </tr>
             </tbody>
           </table>
-
 
         </section>
       </main>
@@ -125,7 +124,7 @@ const editing = ref(null)
 const form = ref({
   itemCodeID: '',
   stepTitle: '',
-  stepDesc: ''
+  stepLongDesc: ''
 })
 
 async function load() {
@@ -141,30 +140,29 @@ async function load() {
 function openCreate() {
   showForm.value = true
   editing.value = null
-  form.value = { itemCodeID: '', stepTitle: '', stepDesc: '' }
+  form.value = { itemCodeID: '', stepTitle: '', stepLongDesc: '' }
 }
 
 function openEdit(step) {
   showForm.value = true
-  editing.value = step   // <- keep whole object
+  editing.value = step
 
   form.value = {
     itemCodeID: step.itemCodeID,
-    stepTitle: step.stepDesc,     // short title
-    stepDesc: step.stepLongDesc   // long desc
+    stepTitle: step.stepTitle,
+    stepLongDesc: step.stepLongDesc
   }
 }
 
 function cancel() {
   showForm.value = false
   editing.value = null
-  form.value = { itemCodeID: '', stepTitle: '', stepDesc: '' }
+  form.value = { itemCodeID: '', stepTitle: '', stepLongDesc: '' }
 }
 
 async function save() {
   try {
     if (editing.value) {
-      // 🔥 FIXED: use correct key exactly like DB
       await updateStep(editing.value.prepStepID, form.value)
       window.alert("Step updated!")
     } else {
@@ -174,6 +172,7 @@ async function save() {
 
     cancel()
     await load()
+
   } catch (err) {
     window.alert(err?.response?.data?.message || "Error saving step")
   }
@@ -183,7 +182,6 @@ async function remove(id) {
   if (!window.confirm("Delete this step?")) return
 
   try {
-    // 🔥 FIXED: delete receives correct ID
     await deleteStep(id)
     await load()
   } catch (err) {
@@ -193,7 +191,6 @@ async function remove(id) {
 
 onMounted(load)
 </script>
-
 
 <style scoped>
 

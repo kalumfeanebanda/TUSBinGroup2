@@ -91,10 +91,7 @@ class Filters extends BaseFilters
      *
      * @var array<string, list<string>>
      */
-    public array $methods = [
-        'put'    => ['csrf', 'csrf' => ['except' => ['api/*']]],
-        'delete' => ['csrf', 'csrf' => ['except' => ['api/*']]]
-    ];
+    public array $methods = [];
 
 
     /**
