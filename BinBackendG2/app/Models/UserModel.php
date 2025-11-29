@@ -26,7 +26,9 @@ class UserModel extends Model
 
     // READ ALL
     public function getAllUsers()
+
     {
+
         $db = \Config\Database::connect();
         $query = $db->query('CALL adm_Read_users()');
         $data = $query->getResultArray();
@@ -36,6 +38,10 @@ class UserModel extends Model
 
         return $data;
     }
+
+
+
+
 
     // UPDATE
     public function updateUser(int $id, string $fname, string $lname, string $email, string $password): bool
