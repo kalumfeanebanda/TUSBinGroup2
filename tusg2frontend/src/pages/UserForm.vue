@@ -63,8 +63,27 @@ onMounted(async () => {
   }
 })
 
+const validatePassword = () => {
+  const regex =
+      /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+  return regex.test(form.value.password);
+};
+
+
+
+
+
 // Save (create or update)
 async function saveUser() {
+  if (!isEdit.value && !validatePassword()) {
+    alert("Password must be 8+ characters, include 1 uppercase letter, 1 number & 1 special character.");
+    return;
+  }
+
+
+
+
   try {
     // Map frontend fields to backend fields
     const payload = {

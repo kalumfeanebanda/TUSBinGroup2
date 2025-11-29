@@ -3,6 +3,8 @@
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\API\ResponseTrait;
 use CodeIgniter\HTTP\Response;
+use App\Models\UserModel;
+
 
 class Users extends ResourceController
 {
