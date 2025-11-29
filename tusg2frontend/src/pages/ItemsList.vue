@@ -96,7 +96,7 @@ onMounted(load)
           <li @click="router.push('/admindashboard')">Steps</li>
           <li class="active">Items</li>
           <li @click="router.push('/bins')">Bins</li>
-          <li @click="router.push('/users')">Users</li>
+          <li>User</li>
           <li>Staff</li>
         </ul>
       </aside>
