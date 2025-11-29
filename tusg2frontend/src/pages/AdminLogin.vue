@@ -5,8 +5,7 @@
         <h2 class="title">Welcome Admin!</h2>
         <p class="subtitle">Enter your credentials to access the admin dashboard</p>
 
-        <!-- Using v-on:submit and handling preventDefault in the JS function -->
-        <form v-on:submit="handleLogin">
+        <form @submit="handleLogin">
           <label>Email</label>
           <input
               v-model="email"
@@ -39,17 +38,16 @@
             Forgot Password?
           </router-link>
 
-
           <button type="submit" class="login-btn">Login as Admin</button>
 
           <p v-if="successMessage" class="message success-msg">{{ successMessage }}</p>
           <p v-if="errorMessage" class="message error-msg">{{ errorMessage }}</p>
+
           <router-link to="/login">
             <button type="button" class="back-btn">Back to User Login</button>
           </router-link>
         </form>
       </div>
-
 
       <div class="login-image">
         <img src="@/assets/recycle.jpg" alt="Recycle" />
@@ -69,42 +67,42 @@ const successMessage = ref('')
 const errorMessage = ref('')
 const router = useRouter()
 
-// --- MULTI-ADMIN CREDENTIALS LIST ---
-const ADMIN_ACCOUNTS = [
-  { email: 'Kalum@gmail.com', password: 'Kalum123' },
-  { email: 'Raiyan@gmail.com', password: 'Raiyan123' },
-  { email: 'Daud@gmail.com', password: 'Daud123' },
-  { email: 'Xiya@gmail.com', password: 'Xiya123' },
-  { email: 'Favour@gmail.com', password: 'Favour123' },
-];
+// ✅ Hardcoded admin accounts
+const admins = [
+  { email: "Raiyan@gmail.com",  password: "Admin123", name: "Raiyan" },
+  { email: "Kalum@gmail.com",   password: "Admin123", name: "Kalum" },
+  { email: "Favour@gmail.com",  password: "Admin123", name: "Favour" },
+  { email: "Xiya@gmail.com",    password: "Admin123", name: "Xiya" },
+  { email: "Dauud@gmail.com",   password: "Admin123", name: "Dauud" }
+]
 
 const handleLogin = async (e) => {
-  e.preventDefault();
+  e.preventDefault()
 
-  errorMessage.value = '';
-  successMessage.value = '';
+  errorMessage.value = ""
+  successMessage.value = ""
 
-  if (!email.value || !password.value) {
-    errorMessage.value = "Please enter both email and password.";
-    return;
+  const enteredEmail = email.value.trim()
+  const enteredPass = password.value.trim()
+
+  const found = admins.find(
+      a => a.email.toLowerCase() === enteredEmail.toLowerCase() &&
+          a.password === enteredPass
+  )
+
+  if (!found) {
+    errorMessage.value = "Invalid admin email or password."
+    return
   }
 
-  // Check if the entered credentials match any account in the list
-  const valid = ADMIN_ACCOUNTS.some(account =>
-      account.email === email.value && account.password === password.value
-  );
+  // Save admin to local storage
+  localStorage.setItem("loggedAdmin", JSON.stringify(found))
 
-  if (valid) {
-    successMessage.value = "Admin Login successful! Redirecting in 1.5 seconds...";
+  successMessage.value = "Admin Login successful! Redirecting..."
 
-    // Redirect to the admin dashboard
-    setTimeout(() => {
-      router.push('/admindashboard');
-    }, 1500);
-
-  } else {
-    errorMessage.value = "Invalid email or password. Please use one of the authorized admin accounts.";
-  }
+  setTimeout(() => {
+    router.push("/admindashboard")
+  }, 1200)
 }
 
 const togglePassword = () => {
@@ -113,7 +111,6 @@ const togglePassword = () => {
 </script>
 
 <style scoped>
-/* 💡 Added message styles for success/error feedback */
 .message {
   padding: 0.75rem;
   margin-top: 1rem;
@@ -124,17 +121,17 @@ const togglePassword = () => {
 }
 
 .success-msg {
-  background-color: #e8f5e9; /* Light Green */
-  color: #1b5e20; /* Dark Green */
+  background-color: #e8f5e9;
+  color: #1b5e20;
   border: 1px solid #1b5e20;
 }
 
 .error-msg {
-  background-color: #ffebee; /* Light Red */
-  color: #b71c1c; /* Dark Red */
+  background-color: #ffebee;
+  color: #b71c1c;
   border: 1px solid #b71c1c;
 }
-/* (Rest of the original styles...) */
+
 .login-container {
   display: flex;
   justify-content: center;
@@ -192,7 +189,6 @@ input {
   font-size: 1rem;
 }
 
-
 .login-btn {
   background-color: #1b5e20;
   color: white;
@@ -210,7 +206,6 @@ input {
 .login-btn:hover {
   background-color: #145a17;
 }
-
 
 .back-btn {
   background-color: #b71c1c;
@@ -244,5 +239,3 @@ input {
   border-radius: 12px;
 }
 </style>
-
-

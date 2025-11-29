@@ -82,8 +82,8 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import BarcodeScanner from "@/components/BarcodeScanner.vue";
-import { searchNames } from "@/services/items";
 import FeedbackModal from "@/components/FeedbackModal.vue";
+import { searchNames, searchByBarcode } from '@/services/items'
 
 
 const router = useRouter();
@@ -95,6 +95,7 @@ const router = useRouter();
 const barcodeSearch = ref("");   // for manual barcode entry
 const showScanner = ref(false);
 const matches = ref([]);
+
 
 
 
@@ -174,20 +175,34 @@ const handleNameNotFound = (q) => {
 
 
 
- 
 
 
-const submitBarcode = () => {
-  if (!barcodeSearch.value.trim()) {
+
+const submitBarcode = async () => {
+  const code = barcodeSearch.value.trim();
+  if (!code) {
     alert("Please enter or scan a barcode first!");
     return;
   }
 
-  const found = false;                      
-  if (!found) showFeedback.value = true;
+  try {
+    const data = await searchByBarcode(code);
 
-  alert(`Submitted Barcode: ${barcodeSearch.value}`);
-  barcodeSearch.value = "";
+
+    goToResult(data.itemID);
+
+  } catch (err) {
+    console.error(err);
+
+    if (err?.response?.status === 404) {
+
+      handleNameNotFound(code);
+    } else {
+      alert("Barcode search failed. Please try again.");
+    }
+  } finally {
+    barcodeSearch.value = "";
+  }
 };
 
 

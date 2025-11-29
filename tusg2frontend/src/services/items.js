@@ -32,3 +32,10 @@ export async function getItem(id) {
     const r = await api.get(`/items/${id}`)
     return r.data
 }
+
+export async function searchByBarcode(code) {
+    const r = await api.get('/items/search-barcode', {
+        params: { code }
+    })
+    return r.data
+}
