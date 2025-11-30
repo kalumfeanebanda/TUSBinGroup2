@@ -159,6 +159,7 @@ onMounted(load)
 .btn.refresh {
   background-color: #0275d8; /* blue */
 }
+
 .btn.view {
   background-color: #0275d8;
 }
