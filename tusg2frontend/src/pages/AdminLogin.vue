@@ -67,7 +67,7 @@ const successMessage = ref('')
 const errorMessage = ref('')
 const router = useRouter()
 
-// ✅ Hardcoded admin accounts
+
 const admins = [
   { email: "Raiyan@gmail.com",  password: "Admin123", name: "Raiyan" },
   { email: "Kalum@gmail.com",   password: "Admin123", name: "Kalum" },
