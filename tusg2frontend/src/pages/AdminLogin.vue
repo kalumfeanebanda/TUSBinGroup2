@@ -67,7 +67,7 @@ const successMessage = ref('')
 const errorMessage = ref('')
 const router = useRouter()
 
-// 🔥 Hard-coded admin list (no backend needed)
+
 const adminAccounts = [
   { email: "Raiyan@gmail.com", password: "Admin123", name: "Raiyan" },
   { email: "Kalum@gmail.com", password: "Admin123", name: "Kalum" },
