@@ -25,6 +25,7 @@
           <li @click="goTo('user')" :class="{ active: activeTab === 'user' }">User</li>
           <li @click="goTo('staff')" :class="{ active: activeTab === 'staff' }">Staff</li>
           <li @click="goTo('itembin')" :class="{ active: activeTab === 'itembin' }">itembin</li>
+          <li @click="goTo('itemcodes')" :class="{ active: activeTab === 'itemcodes' }">Barcodes</li>
         </ul>
       </aside>
 
@@ -34,6 +35,7 @@
         <div class="cards">
           <RouterLink to="/items" class="card items-card">Items</RouterLink>
           <RouterLink to="/bins" class="card bins-card">Bins</RouterLink>
+          <RouterLink to="/itemcodes"  class="card itemcodes-card">Barcodes</RouterLink>
           <button class="card location-card">Location</button>
         </div>
       </main>
