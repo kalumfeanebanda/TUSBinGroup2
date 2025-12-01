@@ -27,9 +27,10 @@
         {{ saving ? (isEdit ? 'Saving…' : 'Creating…') : (isEdit ? 'Save' : 'Create') }}
       </button>
 
-      <button type="button" class="ghost" @click="$emit('cancel')" :disabled="saving">
+      <button type="button" class="ghost" @click="onCancel" :disabled="saving">
         Cancel
       </button>
+
 
       <span v-if="error" class="error">{{ error }}</span>
     </div>
@@ -38,38 +39,34 @@
 
 <script setup>
 import { computed, reactive, watch, ref, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { createItemCode, updateItemCode, listItemCodes } from '@/services/itemCodes'
 import { listItems } from '@/services/items'
 
-const props = defineProps({
-  code: { type: Object, default: null }
+const route = useRoute()
+const router = useRouter()
+
+
+const editId = computed(() => {
+  const id = route.params.id
+  return id ? Number(id) : null
 })
 
-const emit = defineEmits(['saved', 'cancel'])
+const isEdit = computed(() => !!editId.value)
 
 const items = ref([])
-
 const takenItemIds = ref([])
 
-const isEdit = computed(() => !!props.code?.codeID)
-
 const local = reactive({
-  itemID: props.code?.itemID ?? 0,
-  codeValue: props.code?.codeValue ?? ''
-})
-
-watch(() => props.code, (c) => {
-  local.itemID = c?.itemID ?? 0
-  local.codeValue = c?.codeValue ?? ''
+  itemID: 0,
+  codeValue: ''
 })
 
 const saving = ref(false)
 const error = ref('')
 
-
 function isItemTaken(itemID) {
-
-  if (isEdit.value && itemID === props.code?.itemID) return false
+  if (isEdit.value && itemID === local.itemID) return false
   return takenItemIds.value.includes(itemID)
 }
 
@@ -83,23 +80,44 @@ async function onSubmit() {
       codeValue: local.codeValue
     }
 
-    const res = isEdit.value
-        ? await updateItemCode(props.code.codeID, payload)
-        : await createItemCode(payload)
+    if (isEdit.value && editId.value) {
+      await updateItemCode(editId.value, payload)
+      alert('Barcode updated!')
+    } else {
+      await createItemCode(payload)
+      alert('Barcode created!')
+    }
 
-    emit('saved', res)
+    router.push('/itemcodes')
   } catch (e) {
+    console.error(e)
     error.value = e?.response?.data?.message || 'Request failed'
   } finally {
     saving.value = false
   }
 }
 
-onMounted(async () => {
+function onCancel() {
+  if (saving.value) return
+  router.push('/itemcodes')
+}
 
+onMounted(async () => {
   items.value = await listItems()
   const codes = await listItemCodes()
   takenItemIds.value = codes.map(c => c.itemID)
+
+  if (isEdit.value && editId.value) {
+    const current = codes.find(c => Number(c.codeID) === editId.value)
+    if (!current) {
+      alert('Barcode not found.')
+      router.push('/itemcodes')
+      return
+    }
+    local.itemID = current.itemID
+    local.codeValue = current.codeValue
+  }
+
 })
 </script>
 

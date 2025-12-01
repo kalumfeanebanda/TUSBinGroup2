@@ -205,6 +205,10 @@ function goTo(tab) {
   background: #4cc97f;
 }
 
+.itemcodes-card{
+  background: mediumpurple;
+}
+
 .location-card {
   background: #4db8c9;
 }

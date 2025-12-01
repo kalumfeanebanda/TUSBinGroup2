@@ -8,7 +8,7 @@
       <div v-else-if="error" class="status error">{{ error }}</div>
 
       <div v-else class="result-card">
-        <p class="found-via">Found via: NAME</p>
+       
 
         <!-- Item details -->
         <div class="info-block">

@@ -76,6 +76,7 @@ onMounted(load)
         <td>{{ c.itemID }}</td>
         <td>{{ c.codeValue }}</td>
         <td class="actions">
+          <button class="btn view">View</button>
           <button class="btn update" @click="openEdit(c.codeID)">Update</button>
           <button class="btn delete" @click="onDelete(c.codeID)">Delete</button>
         </td>
@@ -135,6 +136,18 @@ onMounted(load)
 .btn.refresh { background-color: purple; }
 .btn.update { background-color: var(--green); }
 .btn.delete { background-color: var(--red); }
+
+.btn.view {
+  background-color: #0275d8; /* blue */
+}
+
+.btn.update {
+  background-color: #4b8b3b; /* green */
+}
+
+.btn.delete {
+  background-color: #d9534f; /* red */
+}
 
 .bins-table {
   width: 100%;

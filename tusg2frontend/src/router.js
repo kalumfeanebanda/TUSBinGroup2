@@ -6,7 +6,6 @@ import Register from './pages/UserRegister.vue'
 import AdminLogin from './pages/AdminLogin.vue'
 import AdminDashboard from './pages/AdminDashboard.vue'
 import SearchItems from './pages/SearchItems.vue'
-import ItemCodesPage from './pages/ItemCodesPage.vue'
 
 
 const routes = [
@@ -18,8 +17,6 @@ const routes = [
     { path: '/admindashboard', name: 'admindashboard', component: AdminDashboard },
 
     { path: '/search-items', name: 'search-items', component: SearchItems },
-
-    { path: '/itemcodes', name: 'itemcodes', component: ItemCodesPage },
 
     { path: '/logged-in-home', name: 'logged-in-home', component: () => import('@/pages/LoggedInHome.vue') },
 

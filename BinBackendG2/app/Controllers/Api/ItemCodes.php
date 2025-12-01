@@ -9,7 +9,7 @@ class ItemCodes extends ResourceController
     public function index()
     {
         $db = \Config\Database::connect();
-        $q  = $db->query("CALL sp_get_itemcodes()");
+        $q  = $db->query("CALL ADM_Read_itemcodes()");
         $rows = $q->getResultArray();
 
         if (method_exists($q, 'nextResult')) $q->nextResult();
@@ -25,7 +25,7 @@ class ItemCodes extends ResourceController
         $codeValue = $input['codeValue'] ?? '';
 
         $db = \Config\Database::connect();
-        $db->query("CALL sp_add_itemcode(?, ?)", [$itemID, $codeValue]);
+        $db->query("CALL ADM_Create_itemcode(?, ?)", [$itemID, $codeValue]);
 
         return $this->respondCreated(['status' => 'ok', 'message' => 'ItemCode added']);
     }
@@ -37,7 +37,7 @@ class ItemCodes extends ResourceController
         $codeValue = $input['codeValue'] ?? '';
 
         $db = \Config\Database::connect();
-        $db->query("CALL sp_update_itemcode(?, ?, ?)", [$id, $itemID, $codeValue]);
+        $db->query("CALL ADM_Update_itemcode(?, ?, ?)", [$id, $itemID, $codeValue]);
 
         return $this->respond(['status' => 'ok', 'message' => 'ItemCode updated']);
     }
@@ -45,7 +45,7 @@ class ItemCodes extends ResourceController
     public function delete($id = null)
     {
         $db = \Config\Database::connect();
-        $db->query("CALL sp_delete_itemcode(?)", [$id]);
+        $db->query("CALL ADM_Delete_itemcode(?)", [$id]);
 
         return $this->respondDeleted(['status' => 'ok', 'message' => 'ItemCode deleted']);
     }
