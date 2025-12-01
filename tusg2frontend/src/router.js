@@ -6,6 +6,7 @@ import Register from './pages/UserRegister.vue'
 import AdminLogin from './pages/AdminLogin.vue'
 import AdminDashboard from './pages/AdminDashboard.vue'
 import SearchItems from './pages/SearchItems.vue'
+import ItemCodesPage from './pages/ItemCodesPage.vue'
 
 
 const routes = [
@@ -18,6 +19,8 @@ const routes = [
 
     { path: '/search-items', name: 'search-items', component: SearchItems },
 
+    { path: '/itemcodes', name: 'itemcodes', component: ItemCodesPage },
+
     { path: '/logged-in-home', name: 'logged-in-home', component: () => import('@/pages/LoggedInHome.vue') },
 
     { path: '/user-profile', name: 'user-profile', component: () => import('@/pages/UserProfile.vue') },
@@ -27,6 +30,12 @@ const routes = [
     { path: '/bins', name: 'bins', component: () => import('@/pages/BinsList.vue') },
     { path: '/users', name: 'users', component: () => import('@/pages/UserList.vue') },
     { path: '/itembin',name: 'itembin',component: ()=>import('@/pages/ItemBin.vue')},
+
+
+    { path: '/itemcodes', name: 'itemcodes', component: () => import('@/pages/ItemCodesList.vue')},
+    { path: '/itemcodes/new', name: 'itemcode-create', component: () => import('@/pages/ItemCodeFormC+U.vue')},
+    { path: '/itemcodes/:id/edit', name: 'itemcode-edit', component: () => import('@/pages/ItemCodeFormC+U.vue')},
+
 
 
     { path: '/item-result', name: 'item-result', component: () => import('@/pages/ItemResult.vue') },
